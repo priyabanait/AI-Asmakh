@@ -92,7 +92,7 @@ export default function Buy() {
         <div className="absolute inset-0" />
         
         {/* Hero Text Box - Mobile and Desktop */}
-        <div className="absolute left-1/2 bottom-[355px] lg:bottom-[150px] mb-4 transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[58%] px-4 sm:px-0">
+        <div className="absolute left-1/2 bottom-[355px] lg:bottom-[160px] mb-4 transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[58%] px-4 sm:px-0">
           <div className="bg-[#8C8C8C66] backdrop-blur-md border border-[#8C8C8C66] rounded-md p-4 sm:p-6 md:p-12 shadow-lg">
             <p className="text-center text-xl sm:text-2xl md:text-3xl font-semibold text-white">LUXURY PROPERTIES FOR LEASE</p>
             <div className="w-[60%] sm:w-[50%] md:w-[40%] h-[1px] bg-gray-300 md:mb-2 mt-4 sm:mt-6 md:mt-8 mx-auto my-2 sm:my-4"></div>

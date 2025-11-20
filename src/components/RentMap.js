@@ -57,7 +57,7 @@ export default function Sale() {
       <section className="relative lg:mb-[50px] w-full min-h-[50vh] md:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
-          src="/Home page (2).png"
+          src="/e2a4624c82afeb7461113d23daa704d9218a5bd9.png"
           alt="City Skyline"
           fill
           className="object-cover"

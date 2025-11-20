@@ -68,7 +68,7 @@ export default function PropertyDetails() {
   return (
     <div>
     
-    <div className="w-full min-h-screen bg-[#F5F7FA] p-4 sm:p-6 mt-20">
+    <div className="w-full  bg-[#F5F7FA] p-4 sm:p-6 mt-20">
       {/* Back Button */}
       <div className="bg-gray-200 text-sm flex items-center w-32 sm:w-40 p-2 sm:p-3 mb-4 rounded-md cursor-pointer">
   <button className="flex items-center gap-2 text-[#10284C] font-semibold">
