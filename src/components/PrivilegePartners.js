@@ -264,7 +264,7 @@ export default function Profit() {
       <section className="relative lg:h-screen h-[140vh] w-full text-white">
   {/* Background Image */}
   <Image
-     src="/png/download.jpg"
+     src="WhatsApp Image 2025-11-08 at 10.47.12 PM.jpeg"
     alt="City Skyline"
     fill
     className="object-fill"
@@ -272,7 +272,7 @@ export default function Profit() {
   />
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-white/20 bg-opacity-60"></div>
+  {/* <div className="absolute inset-0 bg-white/20 bg-opacity-60"></div> */}
 
   {/* Content */}
   <div
@@ -469,7 +469,7 @@ export default function Profit() {
       <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C]  uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
           STORY FROM OUR CLIENTS
         </h2>
-        <div className="w-20 h-[2px] bg-gray-300 mx-auto"></div>
+        <div className="w-[30%] h-[2px] bg-gray-300 mx-auto"></div>
       </div>
 
       {/* Testimonial Cards Row */}

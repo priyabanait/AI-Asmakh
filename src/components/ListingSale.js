@@ -57,7 +57,7 @@ export default function Sale() {
       <section className="relative lg:mb-[50px] w-full min-h-[50vh] md:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
-          src="/Home page (2).png"
+          src="/902cae874699fd9c9c5d9434e4c89be550197da7.jpg"
           alt="City Skyline"
           fill
           className="object-cover"
@@ -162,7 +162,7 @@ export default function Sale() {
       </section>
       
       {/* Mobile Properties Grid */}
-      <div className="block lg:hidden bg-[#F9F9F9] py-8 px-4">
+      <div className="block lg:hidden bg-[#F9F9F9] py-8 mt-20 px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-7xl mx-auto">
           {properties.map((property, index) => (
             <div
@@ -228,39 +228,41 @@ export default function Sale() {
         </div>
       </div>
 
-      <div className="w-full hidden md:flex justify-center pt-10 py-10">
-      <div className="flex flex-wrap justify-center gap-4 bg-[#8C8C8C66] md:px-10 p-4 rounded-md shadow-md">
-  {/* Filter Items */}
-  {["Property Type", "Location", "Beds", "Baths", "Price"].map((label, index) => (
-    <div
-      key={index}
-      className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md w-[180px] shadow-lg hover:bg-[#10284C] transition"
-    >
-      <div className="flex items-center gap-3">
-        {/* Icon + Divider */}
-        <div className="flex items-center gap-2">
-          <MapPin size={16} />
-          <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+      <div className="hidden md:flex w-full justify-center pt-6 ">
+  <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 rounded-md shadow-md 
+                  gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+
+    {/* Filter Items */}
+    {["Property Type", "Location", "Beds", "Baths", "Price"].map((label, index) => (
+      <div
+        key={index}
+        className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
+                   rounded-md shadow-lg hover:bg-[#10284C] transition"
+      >
+        <div className="flex items-center gap-3">
+          {/* Icon + Divider */}
+          <div className="flex items-center gap-2">
+            <MapPin size={16} />
+            <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+          </div>
+
+          {/* Label */}
+          <span className="text-sm font-medium">{label}</span>
         </div>
 
-        {/* Label */}
-        <span className="text-sm font-medium">{label}</span>
+        {/* Down Arrow */}
+        <ArrowDown size={16} className="opacity-80" />
       </div>
-
-      {/* Down Arrow */}
-      <ArrowDown size={16} className="opacity-80" />
-    </div>
-  ))}
-
-  {/* More Filters Button */}
-  <button className="flex items-center justify-center ml-10 bg-[#0B1F3A]/40 text-white px-6 py-3 rounded-md w-[180px] font-medium shadow-lg hover:bg-[#5c1eff] transition">
+    ))}
+     {/* More Filters Button */}
+  <button className="flex items-center justify-center  bg-[#0B1F3A]/40 text-white px-6 py-3 rounded-md  font-medium shadow-lg hover:bg-[#5c1eff] transition">
     <span>+ More Filters</span>
   </button>
+  </div>
 </div>
 
-      </div>
 
-      <div className="hidden lg:block w-[100%] h-[1px] bg-gray-300 my-4 mt-6 px-10"></div>
+      <div className="hidden lg:block w-[100%] h-[1px] my-6 bg-gray-300  px-10"></div>
 
       {/* ---------- READY TO FIND SECTION ---------- */}
     
@@ -268,7 +270,7 @@ export default function Sale() {
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
       <div className="hidden lg:block bg-gray-50">
         {/* Header Bar */}
-        <div className="bg-white  border-gray-200 px-4 sm:px-6 lg:px-8 py-4">
+        <div className="bg-white  border-gray-200 px-4 sm:px-6 lg:px-8 ">
           <div className="hidden lg:flex max-w-full mx-auto  items-center justify-between">
             {/* LIST/MAP Toggle Buttons */}
             <div className="flex items-center  bg-[#001730] rounded-lg p-1">

@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { Search, Mic, ArrowDown } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <div>
 
    
-    <section className="hidden md:flex relative w-full min-h-screen  items-center justify-center overflow-hidden">
+    <section className="hidden lg:flex relative w-full min-h-screen  items-center justify-center overflow-hidden">
 
     <Image
       src="/images/Banner.jpg"
@@ -20,7 +21,7 @@ export default function Hero() {
     <div className="absolute inset-0 bg-black/20 md:bg-transparent" />
   
     {/* MAIN BOX */}
-    <div
+    <motion.div
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
@@ -28,7 +29,7 @@ export default function Hero() {
         relative z-10 lg:text-left text-center font-bold text-[#001730]
         px-4 md:px-4 lg:px-8
         border border-white/10 backdrop-blur-sm bg-white/20 
-        p-5 sm:p-6 md:p-5 lg:p-6 
+        p-5 sm:p-6 md:p-5 lg:p-8 
   
         mx-auto
         mt-16 sm:mt-24 md:mt-40 lg:mt-52
@@ -37,30 +38,29 @@ export default function Hero() {
         max-w-[360px] sm:max-w-[550px] md:max-w-[770px] lg:max-w-[900px]
   
         max-h-[750px] sm:max-h-[550px] md:max-h-[430px] lg:max-h-[500px]
-        rounded-[5px]
+        rounded-md
       "
     >
   
       {/* HEADING */}
-      <h1 className="text-xl sm:text-2xl mx-20 lg:mx-0  md:text-[27px] lg:text-[36px] p-0 md:p-2 lg:p-3 mb-2 md:mb-3 lg:mb-4 leading-tight">
+      <h1 className="text-xl sm:text-2xl mx-20 lg:mx-0  md:text-[27px] lg:text-[36px] mb-2 md:mb-3 lg:mb-4 leading-tight">
         REDEFINING REAL ESTATE
       </h1>
   
       {/* Line */}
-      <div className="w-[80%] h-[0.2px] mt-2 lg:mt-3 bg-[#FFFFFF] mx-auto  lg:mx-0 mb-3 md:mb-4 lg:mb-5"></div>
+      <div className="w-[90%] h-[0.2px] mt-2 lg:mt-3 bg-[#FFFFFF] mx-auto  lg:mx-0 mb-3  lg:mb-2"></div>
   
       {/* DESCRIPTION */}
       <p
-        className="mb-3 text-[10px] sm:text-[11px] text-left mx-2 lg:mx-0 md:text-[12px] lg:text-[14px]"
-        style={{ fontWeight: "300" }}
+        className="mb-3 text-[10px] font-semibold sm:text-[11px] text-left mx-2 lg:mx-0 md:text-[12px] lg:text-xs"
+        
       >
-        Our commitment goes beyond buildings. We craft experiences, transform
-        spaces into iconic destinations, and leave a legacy of sophistication
-        and innovation across Qatar
+       Our commitment goes beyond buildings. We craft experiences, transform spaces into iconic destinations, 
+       and leave a legacy of sophistication and innovation across Qatar
       </p>
   
       {/* BUTTONS */}
-      <div className="hidden lg:flex flex-wrap gap-2 md:gap-4 lg:gap-6 mt-4 md:mt-6 lg:mt-8">
+      <div className="hidden lg:flex flex-wrap gap-2 md:gap-2 lg:gap-2 mt-4  lg:mt-6">
   
         <button
           style={{ backgroundColor: "#001730", borderRadius: "5px", height: "35px" }}
@@ -79,7 +79,7 @@ export default function Hero() {
         >
           BUY
         </button>
-  
+        
         <button
           style={{ borderRadius: "5px", height: "35px" }}
           className="flex items-center justify-center gap-2
@@ -93,6 +93,7 @@ export default function Hero() {
         </button>
   
       </div>
+      <div className="w-[90%] h-[0.2px]  bg-[#FFFFFF] my-2 "></div>
       {/* <div className="p-4 bg-gray-400 rounded-md shadow-md gap-4 flex flex-wrap lg:hidden">
 
 <button
@@ -117,12 +118,12 @@ export default function Hero() {
 
   
       {/* SEARCH BAR */}
-      <div className="mt-5 md:mt-8 lg:mt-10 flex flex-col sm:flex-row gap-2 md:gap-3">
+      <div className="mt-5 lg:mt-2 flex flex-col sm:flex-row gap-2 md:gap-3">
   
         {/* Input */}
-        <div className="flex items-center bg-white/90 backdrop-blur-md rounded-[5px]
+        <div className="flex items-center bg-white/90 backdrop-blur-md rounded-md
                         border border-white/30 px-2
-                        w-full sm:w-[70%] md:w-[65%] lg:w-[60%]
+                        w-full  lg:w-[63%]
                         shadow-md h-[40px] md:h-[45px]">
   
           <div className="p-2 bg-[#10284C] rounded-md mr-2 flex items-center justify-center h-[28px] w-[28px]">
@@ -140,10 +141,10 @@ export default function Hero() {
   
         {/* Search Button */}
         <button
-          className="w-full sm:w-[120px] md:w-[140px] lg:w-[180px]
+          className="w-full  lg:w-[210px]
                      text-white text-[11px] md:text-[12px] lg:text-[13px]
                      shadow-lg hover:bg-[#022d5e] transition-all duration-300
-                     bg-[#001730] rounded-[5px]
+                     bg-[#001730] rounded-md
                      h-[40px] md:h-[45px]"
         >
           Search
@@ -151,10 +152,10 @@ export default function Hero() {
   
       </div>
   
-    </div>
+    </motion.div>
     
   </section>
-  <section className="lg:hidden relative w-full min-h-screen  items-center justify-center overflow-hidden">
+  <section className="lg:hidden relative w-full min-h-screen  items-center justify-center" style={{ overflow: 'visible' }}>
 
 {/* BACKGROUND VIDEO OR IMAGE */}
 <Image
@@ -170,10 +171,10 @@ export default function Hero() {
 <div className="absolute inset-0"></div>
 
 {/* MAIN CONTENT */}
-<div className="relative mt-24  text-center justify-center flex flex-col items-center  w-full h-full px-8">
+<div className="absolute bottom-[-90px] text-center justify-center flex flex-col items-center  w-full h-full px-8">
 
   {/* GLASS CARD */}
-  <div className="backdrop-blur-sm bg-white/20 rounded-md p-6 w-full  text-center shadow-lg border border-white/10">
+  <div className="backdrop-blur-sm  bg-white/20 rounded-md p-6 w-full  text-center shadow-lg border border-white/10">
 
     <h2 className="text-2xl font-semibold tracking-wider text-gray-800 px-8">
       REDEFINING  REAL ESTATE
@@ -193,21 +194,23 @@ export default function Hero() {
   </div>
 
   {/* BUTTONS */}
-  <div className="bg-white/20 rounded-md mt-4  p-4 shadow-lg border border-white/10  backdrop-blur-sm ">
+  <div className="bg-white/20 rounded-md mt-2  p-4 shadow-lg border border-white/10  backdrop-blur-sm ">
   <div className="flex gap-5  ">
-    <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-lg font-semibold shadow-md">
+    <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-md font-semibold shadow-md">
       RENT
     </button>
-    <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-lg font-semibold shadow-md">
+    <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-md font-semibold shadow-md">
       BUY
     </button>
   </div>
   </div>
 
   {/* SEARCH BAR */}
-  <div className="bg-white/20 rounded-md mt-4  p-2  shadow-lg border border-white/10  backdrop-blur-sm ">
- <div className="flex items-center w-full px-8 bg-white rounded-md shadow-md   py-3">
-    <Search className="text-gray-500" size={20} />
+  <div className="bg-white/20 rounded-md mt-2  p-2  shadow-lg border border-white/10  backdrop-blur-sm ">
+ <div className="flex items-center mx-4 px-4 bg-white rounded-md shadow-md   py-3">
+ <div className="p-2 bg-[#10284C] rounded-md flex items-center justify-center h-[32px] w-[32px]">
+            <Search className="text-white h-4 w-4" />
+          </div>
     <input
       type="text"
       placeholder="Type here..."
@@ -217,34 +220,35 @@ export default function Hero() {
   </div>
  </div>
 
+</div>
+
   {/* FILTER BUTTON */}
-  <div className="bg-white/20 rounded-md mt-4  p-4 px-20 shadow-lg border border-white/10  backdrop-blur-sm ">
- <div className="flex w-full   bg-[#0A2A4C] text-white px-4 py-3 rounded-lg shadow-md items-center">
+  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white/20 rounded-md p-4 px-20 shadow-lg border border-white/10 backdrop-blur-sm z-50">
+    <div className="flex w-full bg-[#0A2A4C] text-white px-4 py-3 rounded-md shadow-md items-center">
 
-{/* LEFT SIDE: Icon + Divider + Text */}
-<div className="flex items-center gap-3">
+      {/* LEFT SIDE: Icon + Divider + Text */}
+      <div className="flex items-center gap-3">
 
-  {/* ICON */}
-  <img
-    src="/Icon (10).png"      // change to your icon path
-    alt="Filter Icon"
-    className="w-5 h-5"
-  />
+        {/* ICON */}
+        <img
+          src="/Icon (10).png"
+          alt="Filter Icon"
+          className="w-5 h-5"
+        />
 
-  {/* VERTICAL DIVIDER */}
-  <div className="h-5 w-[1px] bg-white/20"></div>
+        {/* VERTICAL DIVIDER */}
+        <div className="h-5 w-[1px] bg-white"></div>
 
-  {/* TEXT */}
-  <span className="font-medium text-sm">Filters</span>
-</div>
+        {/* TEXT */}
+        <span className="font-medium text-sm">Filters</span>
+      </div>
 
-{/* ARROW ICON */}
-<ArrowDown size={18} className="ml-24" />
+      {/* ARROW ICON */}
+      <ArrowDown size={18} className="ml-24" />
 
-</div>
- </div>
+    </div>
+  </div>
 
-</div>
 </section>
 </div>
   );

@@ -1,7 +1,7 @@
 'use client'
 
 import Header from '../../../components/Header'
-import Rent from '../../../components/Rent'
+import Rent from '../../../components/RentMap'
 import Footer from '../../../components/Footer'
 
 export default function RentPage() {

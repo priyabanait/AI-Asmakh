@@ -74,7 +74,7 @@ export default function Commercial() {
       <section className="relative w-full min-h-[70vh] sm:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
-          src="/Home page (2).png"
+          src="/23379e142bc98489adf77bfce009fb32d7ebb0ef.jpg"
           alt="City Skyline"
           fill
           className="object-cover"
@@ -85,7 +85,7 @@ export default function Commercial() {
         <div className="absolute inset-0" />
 
         {/* 🔍 Search Bar (Half on BG, Half outside) */}
-        <div className="absolute left-1/2 lg:bottom-20 bottom-56 shadow-md transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[50%] px-4 sm:px-0">
+        <div className="absolute left-1/2 lg:bottom-[110px] bottom-56 shadow-md transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[50%] px-4 sm:px-0">
   <div className="grid grid-cols-2 md:grid-cols-4 gap-3 shadow-md md:gap-6  mb-10 md:mb-10">
     {[
       { value: "34", label: "Total Projects" },
@@ -115,9 +115,11 @@ export default function Commercial() {
 <div className="absolute w-full flex justify-center px-4 lg:px-40 bottom-14 lg:bottom-[-45px]">
   <div
     className="
-      flex w-full overflow-x-auto sm:flex-wrap border border-white/20
-      lg:mx-24 justify-center gap-3 sm:gap-4 lg:mt-0
-      bg-[#8C8C8C66] p-3 lg:p-4 rounded-md shadow-md
+      grid w-full overflow-x-auto sm:overflow-visible
+      border border-white/20 lg:mx-24 bg-[#8C8C8C66]
+      p-3 lg:p-8 lg:px-8 rounded-md shadow-md gap-3 sm:gap-4
+      grid-cols-3 sm:grid-cols-3 lg:grid-cols-3
+      justify-center 
     "
   >
     {["LUXURY", "COMMERCIAL", "INDUSTRIAL"].map((label, index) => (
@@ -125,9 +127,7 @@ export default function Commercial() {
         key={index}
         className="
           flex items-center justify-center bg-[#0B1F3A] text-white
-          px-4 py-2 rounded-md 
-          w-[100px] lg:w-[260px]
-          shadow-lg hover:bg-[#10284C] transition
+          px-4 py-2 rounded-md shadow-lg hover:bg-[#10284C] transition
         "
       >
         <span className="text-xs sm:text-sm font-medium">{label}</span>
@@ -191,33 +191,36 @@ export default function Commercial() {
       </section>
 
       {/* Desktop Filter Items */}
-      <div className="hidden md:flex w-full justify-center pt-20 py-10">
-        <div className="flex w-full flex-wrap justify-center gap-4 bg-[#8C8C8C66] p-4 lg:mx-20 rounded-md shadow-md">
-          {/* Filter Items */}
-          {["Property Type", "Location", "Status", "Date"].map((label, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md w-[280px] shadow-lg hover:bg-[#10284C] transition"
-            >
-              <div className="flex items-center gap-3">
-                {/* Icon + Divider */}
-                <div className="flex items-center gap-2">
-                  <MapPin size={16} />
-                  <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
-                </div>
+      <div className="hidden md:flex w-full justify-center pt-16">
+  <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 px-20 rounded-md shadow-md 
+                  gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-                {/* Label */}
-                <span className="text-sm font-medium">{label}</span>
-              </div>
+    {/* Filter Items */}
+    {["Property Type", "Location", "Status", "Date"].map((label, index) => (
+      <div
+        key={index}
+        className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
+                   rounded-md shadow-lg hover:bg-[#10284C] transition"
+      >
+        <div className="flex items-center gap-3">
+          {/* Icon + Divider */}
+          <div className="flex items-center gap-2">
+            <MapPin size={16} />
+            <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+          </div>
 
-              {/* Down Arrow */}
-              <ArrowDown size={16} className="opacity-80" />
-            </div>
-          ))}
+          {/* Label */}
+          <span className="text-sm font-medium">{label}</span>
         </div>
+
+        {/* Down Arrow */}
+        <ArrowDown size={16} className="opacity-80" />
       </div>
+    ))}
+  </div>
+</div>
        
-      <div className="w-[100%] h-[1px] bg-gray-300 my-4 mt-14  sm:my-6 lg:mt-20 px-4 sm:px-6 md:px-10"></div>
+      <div className="w-[100%] h-[1px] bg-gray-300 my-4 mt-14  lg:mt-6 px-4 sm:px-6 md:px-10"></div>
       <div className="text-gray-600 text-center lg:text-right px-4 sm:px-6 md:px-10 text-xs sm:text-sm font-medium">
               Showing 10 of 50
             </div>

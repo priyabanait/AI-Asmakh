@@ -195,7 +195,7 @@ export default function PrivilegeProgram() {
         backgroundSize: "60px 60px",
         overflowX: "hidden",
       }}
-      className="bg-gray-100 py-16 md:py-20 3xl:py-24 4xl:py-28 px-4 sm:px-6 lg:px-8 3xl:px-12 4xl:px-16"
+      className="relative bg-gray-100 py-16 md:py-20 3xl:py-24 4xl:py-28 px-4 sm:px-6 lg:px-8 3xl:px-12 4xl:px-16"
     >
       <div className="container-custom text-center">
         <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C]  uppercase mb-2 3xl:mb-3 4xl:mb-4">
@@ -278,7 +278,7 @@ export default function PrivilegeProgram() {
                       className={`
                         bg-white shadow-sm p-6 text-center
                         ${isCenter ? "shadow-lg" : "shadow-sm"}
-                        transition-all duration-300
+                        transition-all duration-300 
                       `}
                     >
                       <div className="flex justify-center items-center h-[60px] mb-4">
@@ -291,11 +291,11 @@ export default function PrivilegeProgram() {
                             fontSize: "clamp(16px, 4vw, 20px)",
                             color: "#2D3748",
                           }}
-                          className="font-bold mb-3"
+                          className="font-bold "
                         >
                           {item.title}
                         </h3>
-
+                        <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
                         <p
                           style={{
                             fontSize: "clamp(12px, 3.5vw, 15px)",
@@ -362,7 +362,7 @@ export default function PrivilegeProgram() {
                 >
                   {item.title}
                 </h3>
-
+                <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
                 <p
                   style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
                   className="p-0 leading-relaxed mb-0"
@@ -399,7 +399,7 @@ export default function PrivilegeProgram() {
                 >
                   {item.title}
                 </h3>
-
+                <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
                 <p
                   style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
                   className="p-0 leading-relaxed mb-0"

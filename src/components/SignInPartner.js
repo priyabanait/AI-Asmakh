@@ -9,7 +9,7 @@ export default function LoginPage() {
         {/* Background Image for Mobile */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/407 (1).png')" }}
+          style={{ backgroundImage: "url('/WhatsApp Image 2025-11-08 at 10.47.12 PM.jpeg')" }}
         />
         
         {/* Dark Overlay */}
@@ -74,7 +74,7 @@ export default function LoginPage() {
         {/* LEFT IMAGE (2/3 WIDTH) */}
         <div
           className="w-2/3 h-screen bg-cover bg-center"
-          style={{ backgroundImage: "url('/407 (1).png')" }}
+          style={{ backgroundImage: "url('/WhatsApp Image 2025-11-08 at 10.47.12 PM.jpeg')" }}
         />
 
         {/* RIGHT IMAGE (1/3 WIDTH) */}

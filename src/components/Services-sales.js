@@ -73,16 +73,15 @@ export default function Rent() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-visible">
+      <section className="relative w-full bg-gray-200 min-h-screen flex items-center justify-center overflow-visible">
   {/* Background Image */}
   <Image
-    src="/Home page (2).png"
+     src="/Image (14).png"  
     alt="City Skyline"
     fill
-    className="object-cover"
+    className="object-fill block lg:hidden"
     priority
   />
-
   {/* Dark Overlay (optional if you want to dim background) */}
   <div className="absolute inset-0 " />
 
@@ -141,7 +140,15 @@ export default function Rent() {
     </div>
   </div>
 
-
+  <div className="absolute right-0 bottom-0 h-full w-[40%] hidden md:block">
+    <Image
+     src="/Image (14).png"  // ← replace with image exported from Figma
+      alt="Building"
+      fill
+      className="object-contain object-bottom"
+      style={{ objectPosition: 'bottom' }}
+    />
+  </div>
   {/* 🔍 Search Bar (Half on BG, Half outside if needed) */}
  
 </section>

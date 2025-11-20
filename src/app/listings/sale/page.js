@@ -1,7 +1,7 @@
 'use client'
 
 import Header from '../../../components/Header'
-import Sale from '../../../components/Sale'
+import Sale from '../../../components/SaleMap'
 import Footer from '../../../components/Footer'
 
 export default function SalePage() {

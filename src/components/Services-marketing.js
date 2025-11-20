@@ -97,13 +97,13 @@ export default function Rent() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-screen flex items-center justify-center overflow-visible">
+      <section className="relative w-full bg-gray-200 min-h-screen flex items-center justify-center overflow-visible">
   {/* Background Image */}
   <Image
-    src="/Home page (2).png"
+     src="/Image (15).png"  
     alt="City Skyline"
     fill
-    className="object-cover"
+    className="object-fill block lg:hidden"
     priority
   />
 
@@ -164,7 +164,15 @@ export default function Rent() {
       </div>
     </div>
   </div>
-
+ <div className="absolute right-0 bottom-0 h-full w-[40%] hidden md:block">
+    <Image
+     src="/Image (15).png"  // ← replace with image exported from Figma
+      alt="Building"
+      fill
+      className="object-contain object-bottom"
+      style={{ objectPosition: 'bottom' }}
+    />
+  </div>
 
 
   {/* 🔍 Search Bar (Half on BG, Half outside if needed) */}
@@ -296,14 +304,14 @@ export default function Rent() {
       </div>
 
       {/* Plans */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full  px-10 p-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full  lgpx-10 p-4">
   {blogs.map((blog, i) => (
     <div
       key={i}
       className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
       {/* Image Section with Overlapping Button and Text Overlay */}
-      <div className="relative w-full h-[300px] md:h-[500px]">
+      <div className="relative w-full h-[400px] md:h-[500px]">
         <Image
           src={blog.image}
           alt={blog.title}
@@ -339,7 +347,7 @@ export default function Rent() {
               Ready to Maximize Your Investment Returns ?
               </h2>
               <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[60%] h-[1.5px] bg-gray-300 my-2 md:my-2"></div>
-              <p className="text-base md:text-base text-[#333333] leading-relaxed mr-36">
+              <p className="text-base md:text-base text-[#333333] leading-relaxed  lgmr-36">
               Let our experienced team handle your property management with world-class standards while you enjoy peace of mind and optimized returns. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
               </p>
             </div>

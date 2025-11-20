@@ -42,7 +42,7 @@ export default function Header() {
   const dropdowns = {
     HOME: [
       { label: 'Home', path: '/' },
-      { label: 'Privilege Program', path: '/#privilege-program' },
+      { label: 'Privilege Program', path: '/PrevilageProgramPage' },
       
     ],
     'ABOUT US': [
@@ -57,7 +57,7 @@ export default function Header() {
     LISTINGS: [
       { label: 'Sale Map', path: '/listings/sale' },
       { label: 'Listing Sale', path: '/listings/listing-sale' },
-      { label: 'Buy', path: '/listings/buy' },
+      // { label: 'Buy', path: '/listings/buy' },
       { label: 'Rent Map', path: '/listings/rent' },
       { label: 'Listing Rent', path: '/listings/listing-rent' },
       { label: 'Commercial', path: '/commercial' },
@@ -85,22 +85,22 @@ export default function Header() {
   return (
     <header
       style={{ height: '52px', minHeight: '52px' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border border-white/50 shadow-lg backdrop-blur-md bg-white/50 ${
-        scrolled ? 'rounded-none' : 'rounded-[5px] mx-0 md:mx-2 mt-1 md:mt-4'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border border-white/50 shadow-lg backdrop-blur-lg bg-white/50 ${
+        scrolled ? 'rounded-none' : 'rounded-[5px] mx-0 lg:mx-2 mt-1 lg:mt-4'
       }`}
     >
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-2 md:py-0">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-0">
         <div className="flex items-center justify-between relative">
           {/* Mobile Logo */}
-          <div className="flex md:hidden order-1 relative w-36 h-10">
+          <div className="flex lg:hidden order-1 relative w-36 h-10">
             <Image src="/images/Al-asmakh.png" alt="Al-Asmakh Logo" fill className="object-contain" />
           </div>
 
           {/* Mobile Menu Icon */}
-          <div className="md:hidden order-2">
+          <div className="lg:hidden order-2">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md hover:bg-white/20 transition-all duration-300"
+              className="inline-flex items-center justify-center p-2 rounded-lg hover:bg-white/20 transition-all duration-300"
               style={{ color: '#001730' }}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -117,12 +117,12 @@ export default function Header() {
           </div>
 
           {/* Desktop Logo */}
-          <div className="hidden md:flex flex-shrink-0 mr-2 md:mr-5 relative w-32 md:w-[180px] h-10 md:h-12 z-[100]">
+          <div className="hidden lg:flex flex-shrink-0 mr-2 lg:mr-5 relative w-32 lg:w-[180px] h-10 lg:h-12 z-[100]">
             <Image src="/images/Al-asmakh.png" alt="Al-Asmakh Logo" fill className="object-contain" priority />
           </div>
 
           {/* Desktop Menu with dropdowns */}
-          <nav className="hidden md:flex items-center gap-6 relative text-[#001730] text-sm font-medium">
+          <nav className="hidden lg:flex items-center gap-6 relative text-[#001730] text-sm font-medium">
             {['HOME', 'LISTINGS', 'SERVICES', 'DEVELOPMENT', 'ABOUT US', 'CONTACT'].map((item) => (
               <div
                 key={item}
@@ -175,14 +175,14 @@ export default function Header() {
           {/* Mobile Menu Backdrop */}
           {mobileMenuOpen && (
             <div
-              className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 top-[52px]"
+              className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 top-[52px]"
               onClick={() => setMobileMenuOpen(false)}
             />
           )}
 
           {/* Mobile Menu */}
           <div
-            className={`md:hidden fixed top-[52px] left-0 right-0 bg-white/95 backdrop-blur-md border-t border-white/20 shadow-xl z-50 transition-all duration-300 ease-in-out overflow-hidden ${
+            className={`lg:hidden fixed top-[52px] left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-white/20 shadow-xl z-50 transition-all duration-300 ease-in-out overflow-hidden ${
               mobileMenuOpen
                 ? 'max-h-screen opacity-100'
                 : 'max-h-0 opacity-0 pointer-events-none'
@@ -200,7 +200,7 @@ export default function Header() {
                         setMobileOpenDropdown(mobileOpenDropdown === item ? null : item)
                       }
                     }}
-                    className="flex items-center justify-between text-left px-4 py-3 text-sm font-medium text-[#001730] hover:bg-gray-100 rounded-md transition-all duration-200 w-full"
+                    className="flex items-center justify-between text-left px-4 py-3 text-sm font-medium text-[#001730] hover:bg-gray-100 rounded-lg transition-all duration-200 w-full"
                   >
                     <span>{item}</span>
                     {dropdowns[item] && (
@@ -224,7 +224,7 @@ export default function Header() {
                           <button
                             key={idx}
                             onClick={() => handleNavigation(sub.path)}
-                            className="text-left px-4 py-2 text-xs text-[#001730] hover:bg-gray-100 rounded-md transition-all duration-200 w-full"
+                            className="text-left px-4 py-2 text-xs text-[#001730] hover:bg-gray-100 rounded-lg transition-all duration-200 w-full"
                           >
                             {sub.label}
                           </button>
@@ -273,7 +273,7 @@ export default function Header() {
           </div>
 
           {/* Right side - Language + Profile */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <div
               className={`flex items-center gap-1 whitespace-nowrap font-semibold rounded-lg px-2 py-1 ${
                 isTranslating ? 'opacity-50 pointer-events-none' : ''

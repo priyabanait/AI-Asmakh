@@ -8,7 +8,7 @@ function AboutUs() {
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-visible">
       {/* Background Image */}
       <Image
-        src="/WhatsApp Image 2025-11-09 at 11.06.08 PM.jpeg"
+        src="/64f1105774e6cfad5b7a1de490c1415c3d850ec4.jpg"
         alt="City Skyline"
         fill
         className="object-cover"

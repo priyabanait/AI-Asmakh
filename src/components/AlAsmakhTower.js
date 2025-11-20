@@ -135,7 +135,7 @@ export default function AlAsmakhTower() {
                 >
                   {projects[activeSlide].title}
                 </h2>
-
+                <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
                 {/* SEPARATOR LINE */}
                
 
@@ -244,11 +244,11 @@ export default function AlAsmakhTower() {
   className="hidden lg:flex flex-col justify-center px-4 md:px-0"
 >
   <h2
-    className="font-bold text-[#00254D] mb-4 text-4xl md:mb-5 uppercase tracking-wide"
+    className="font-bold text-[#00254D] text-4xl  uppercase tracking-wide"
   >
     {projects[activeSlide].title}
   </h2>
-
+  <div className="w-[30%] h-[1px]  bg-gray-300  my-4 "></div>
   <div className="flex items-center gap-2 mb-4 md:mb-5">
     <MapPin
       size={20}
@@ -264,21 +264,21 @@ export default function AlAsmakhTower() {
   </div>
 
   <p
-    className="text-gray-700 mb-6 mr-60 md:mb-8 leading-relaxed"
+    className="text-gray-700 mb-6 mr-60 lg:mb-16 leading-relaxed"
     style={{ fontSize: "clamp(14px, 1.1vw, 18px)" }}
   >
     {projects[activeSlide].description}
   </p>
 
   <button
-    className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-6 md:px-8 py-3 md:py-3.5 rounded-lg hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg w-fit"
+    className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-6 md:px-8 py-3 md:py-3.5 rounded-md hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg w-fit"
     style={{ fontSize: "clamp(14px, 1.1vw, 16px)" }}
   >
     <span>Details</span>
     <FaArrowRight size={16} className="ml-16" />
   </button>
 
-  <div className="flex items-center gap-2 mt-6 md:mt-8">
+  <div className="flex items-center ml-10 gap-2 mt-6 md:mt-16">
   {projects.map((_, index) => (
     <div key={index} className="flex items-center">
       <button
