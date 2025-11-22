@@ -223,7 +223,7 @@ export default function Hero() {
 </div>
 
   {/* FILTER BUTTON */}
-  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white/20 rounded-md p-4 px-20 shadow-lg border border-white/10 backdrop-blur-sm z-50">
+  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white/20 rounded-md p-4 px-14 shadow-lg border border-white/10 backdrop-blur-sm z-50">
     <div className="flex w-full bg-[#0A2A4C] text-white px-4 py-3 rounded-md shadow-md items-center">
 
       {/* LEFT SIDE: Icon + Divider + Text */}

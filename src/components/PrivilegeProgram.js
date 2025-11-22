@@ -4,6 +4,32 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 export default function PrivilegeProgram() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
   // Image Icon Components
   const LeasingIcon = () => (
     <Image 
@@ -189,31 +215,40 @@ export default function PrivilegeProgram() {
 
   return (
     <section
+      ref={sectionRef}
       style={{
-        
-      
         backgroundSize: "60px 60px",
         overflowX: "hidden",
       }}
-      className="relative bg-gray-100 py-16 md:py-20 3xl:py-24 4xl:py-28 px-4 sm:px-6 lg:px-8 3xl:px-12 4xl:px-16"
+      className="relative bg-gray-100 py-16 lg:py-20 3xl:py-24 4xl:py-28 px-4  lg:px-8 3xl:px-12 4xl:px-16"
     >
       <div className="container-custom text-center">
-        <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C]  uppercase mb-2 3xl:mb-3 4xl:mb-4">
+        <h2 
+          className={`text-[27px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-4 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+          }`}
+        >
           OUR REAL ESTATE SERVICES 
         </h2>
 
-        <div className="w-32 3xl:w-40 4xl:w-48 h-[1px] mt-4 3xl:mt-5 4xl:mt-6 bg-gray-300 mx-auto mb-6 3xl:mb-8 4xl:mb-10"></div>
+        <div 
+          className={`w-32 3xl:w-40 4xl:w-48 h-[1px] mt-4 3xl:mt-5 4xl:mt-6 bg-gray-300 mx-auto mb-6 3xl:mb-8 4xl:mb-10 transition-all duration-1000 delay-200 ${
+            isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+          }`}
+        ></div>
 
         <p
           style={{ fontSize: "clamp(14px, 1vw, 18px)", color: "#919191" }}
-          className="max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl mx-auto mb-8 3xl:mb-10 4xl:mb-12 font-normal "
+          className={`max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl mx-auto mb-8 3xl:mb-10 4xl:mb-12 font-normal transition-all duration-1000 delay-300 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
         >
           From luxury residences to commercial developments, we deliver trusted services that turn your real estate goals into reality.
         </p>
 
         {/* Mobile Carousel - Only visible on mobile */}
         <div 
-          className="block sm:hidden relative" 
+          className="block lg:hidden relative" 
           style={{ 
             overflow: "hidden",
             width: "100%",
@@ -240,7 +275,7 @@ export default function PrivilegeProgram() {
             }}
           >
             <div
-              className="flex transition-transform duration-300 ease-in-out"
+              className="flex transition-transform duration-500 ease-out"
               style={{
                 transform: `translateX(calc(50vw - 125px - ${currentIndex * 266}px))`,
                 willChange: "transform",
@@ -278,10 +313,11 @@ export default function PrivilegeProgram() {
                       className={`
                         bg-white shadow-sm p-6 text-center
                         ${isCenter ? "shadow-lg" : "shadow-sm"}
-                        transition-all duration-300 
+                        transition-all duration-500 ease-out
+                        ${isCenter ? "hover:scale-105" : ""}
                       `}
                     >
-                      <div className="flex justify-center items-center h-[60px] mb-4">
+                      <div className={`flex justify-center items-center h-[60px] mb-4 transition-transform duration-300 ${isCenter ? "hover:scale-110" : ""}`}>
                         {item.icon}
                       </div>
 
@@ -319,10 +355,10 @@ export default function PrivilegeProgram() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`transition-all duration-300 ${
+                className={`transition-all duration-300 hover:scale-125 ${
                   index === currentIndex
-                    ? "w-2 h-2 bg-gray-800"
-                    : "w-2 h-2 border border-gray-800 bg-transparent"
+                    ? "w-2 h-2 bg-gray-800 scale-125"
+                    : "w-2 h-2 border border-gray-800 bg-transparent hover:bg-gray-400"
                 }`}
                 style={{
                   borderRadius: "2px",
@@ -334,11 +370,11 @@ export default function PrivilegeProgram() {
         </div>
 
         {/* Desktop Grid - Hidden on mobile */}
-        <div className="hidden sm:block">
+        <div className="hidden lg:block">
           {/* Top Row - 3 blocks */}
           <div
             className="
-              grid grid-cols-1 sm:grid-cols-3
+              grid grid-cols-1 lg:grid-cols-3
               gap-6 3xl:gap-8 4xl:gap-10
               mb-6 3xl:mb-8 4xl:mb-10 px-40
             "
@@ -346,23 +382,32 @@ export default function PrivilegeProgram() {
             {services.slice(0, 3).map((item, index) => (
               <div
                 key={index}
-                style={{ borderRadius: "8px", width: "100%" }}
-                className="
+                style={{
+                  borderRadius: "8px",
+                  width: "100%",
+                  transitionDelay: `${400 + index * 100}ms`,
+                }}
+                className={`
                   bg-white shadow-sm p-6 3xl:p-8 4xl:p-10
-                  hover:shadow-lg transition-all duration-300 text-center
-                "
+                  hover:shadow-lg hover:scale-105 hover:-translate-y-2
+                  transition-all duration-500 text-center
+                  ${isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-12'
+                  }
+                `}
               >
-                <div className="flex justify-center items-center h-[70px] mb-4 3xl:mb-5 4xl:mb-6">
+                <div className="flex justify-center items-center h-[70px] mb-4 3xl:mb-5 4xl:mb-6 transform transition-transform duration-300 hover:scale-110">
                   {item.icon}
                 </div>
 
                 <h3
                   style={{ fontSize: "clamp(18px, 1.2vw, 22px)", color: "#2D3748" }}
-                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5"
+                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C]"
                 >
                   {item.title}
                 </h3>
-                <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
+                <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
                   style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
                   className="p-0 leading-relaxed mb-0"
@@ -376,30 +421,39 @@ export default function PrivilegeProgram() {
           {/* Bottom Row - 4 blocks */}
           <div
             className="
-              grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+              grid grid-cols-1  lg:grid-cols-4
               gap-6 3xl:gap-8 4xl:gap-10
             "
           >
             {services.slice(3, 7).map((item, index) => (
               <div
                 key={index + 3}
-                style={{ borderRadius: "8px", width: "100%" }}
-                className="
+                style={{
+                  borderRadius: "8px",
+                  width: "100%",
+                  transitionDelay: `${700 + index * 100}ms`,
+                }}
+                className={`
                   bg-white shadow-sm p-6 3xl:p-8 4xl:p-10
-                  hover:shadow-lg transition-all duration-300 text-center
-                "
+                  hover:shadow-lg hover:scale-105 hover:-translate-y-2
+                  transition-all duration-500 text-center
+                  ${isVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-12'
+                  }
+                `}
               >
-                <div className="flex justify-center items-center h-[70px] mb-4 3xl:mb-5 4xl:mb-6">
+                <div className="flex justify-center items-center h-[70px] mb-4 3xl:mb-5 4xl:mb-6 transform transition-transform duration-300 hover:scale-110">
                   {item.icon}
                 </div>
 
                 <h3
                   style={{ fontSize: "clamp(18px, 1.2vw, 22px)", color: "#2D3748" }}
-                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5"
+                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C]"
                 >
                   {item.title}
                 </h3>
-                <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
+                <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
                   style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
                   className="p-0 leading-relaxed mb-0"
@@ -412,7 +466,7 @@ export default function PrivilegeProgram() {
         </div>
 
         {/* Mobile Transaction Advisory - Below carousel */}
-        {/* <div className="block sm:hidden mt-8">
+        {/* <div className="block lg:hidden mt-8">
           <div
             style={{ borderRadius: "8px", width: "100%", maxWidth: "320px", margin: "0 auto" }}
             className="

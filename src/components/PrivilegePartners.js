@@ -261,7 +261,7 @@ export default function Profit() {
           priority
         />
       </div> */}
-      <section className="relative lg:h-screen h-[140vh] w-full text-white">
+      <section className="relative h-auto min-h-[100vh] lg:h-screen w-full text-white">
   {/* Background Image */}
   <Image
      src="WhatsApp Image 2025-11-08 at 10.47.12 PM.jpeg"
@@ -277,65 +277,63 @@ export default function Profit() {
   {/* Content */}
   <div
     className="
-      relative z-10 
-      flex items-center justify-end 
-      h-full px-6 md:px-20
-
-      /* MOBILE OVERRIDE BELOW */
-      md:static
-      absolute bottom-0 left-0 right-0 
-      md:bottom-auto md:left-auto md:right-auto
+      absolute lg:static
+      bottom-0 left-0 right-0 
+      lg:bottom-auto lg:left-auto lg:right-auto
+      z-10 
+      flex items-center justify-center lg:justify-end 
+      h-full px-4 lg:px-20 py-6 lg:py-0
     "
   >
     <div
       className="
-        max-w-lg space-y-6 text-center lg:text-left
+        max-w-lg space-y-3 lg:space-y-6 text-center lg:text-left
 
         /* MOBILE BACKGROUND */
-        bg-white/20 backdrop-blur-md p-6 rounded-t-xl
-        md:bg-transparent md:backdrop-blur-0 md:p-0 md:rounded-none
+        bg-white/20 backdrop-blur-md p-3 rounded-t-xl
+        lg:bg-transparent lg:backdrop-blur-0 lg:p-0 lg:rounded-none
       "
     >
       <div>
-        <h1 className="text-xl md:text-3xl lg:text-3xl font-semibold leading-tight">
+        <h1 className="text-lg lg:text-3xl font-semibold leading-tight">
           TURNING YOUR <br /> PROPERTY INTO PROFIT
         </h1>
-        <div className="flex-1 h-px bg-white/20 my-4 mb-4"></div>
-        <p className="lg:text-gray-400 text-white mt-2 text-[0.8rem]">
+        <div className="flex-1 h-px bg-white/20 my-3 lg:my-4 mb-3 lg:mb-4"></div>
+        <p className="lg:text-gray-400 text-white mt-2 text-[0.75rem] lg:text-[0.8rem]">
           Your complete real estate partner — from concept to completion, and beyond.
         </p>
       </div>
 
       {/* Info Boxes */}
-      <div className="space-y-3 mt-6">
-        <div className="bg-white/30 bg-opacity-60 p-4 rounded-lg">
-          <h3 className="font-semibold">Expert Knowledge</h3>
-          <p className="lg:text-gray-400 text-white text-sm">
+      <div className="space-y-2 lg:space-y-3 mt-3 lg:mt-6">
+        <div className="bg-white/30 bg-opacity-60 p-3 lg:p-4 rounded-md">
+          <h3 className="font-semibold text-sm lg:text-base">Expert Knowledge</h3>
+          <p className="lg:text-gray-400 text-white text-xs lg:text-sm mt-1">
             Our development team transforms visionary ideas into architectural
-            landmarks that define Qatar’s urban landscape.
+            landmarks that define Qatar's urban landscape.
           </p>
         </div>
 
-        <div className="bg-white/30 bg-opacity-60 p-4 rounded-lg">
-          <h3 className="font-semibold">Personalized Service</h3>
-          <p className="lg:text-gray-400 text-white text-sm">
+        <div className="bg-white/30 bg-opacity-60 p-3 lg:p-4 rounded-md">
+          <h3 className="font-semibold text-sm lg:text-base">Personalized Service</h3>
+          <p className="lg:text-gray-400 text-white text-xs lg:text-sm mt-1">
             We take the time to understand your needs and offer personalized
             solutions to ensure a seamless real estate experience.
           </p>
         </div>
 
-        <div className="bg-white/30 bg-opacity-60 p-4 rounded-lg">
-          <h3 className="font-semibold">Trusted Partnerships</h3>
-          <p className="lg:text-gray-400 text-white text-sm">
+        <div className="bg-white/30 bg-opacity-60 p-3 lg:p-4 rounded-md">
+          <h3 className="font-semibold text-sm lg:text-base">Trusted Partnerships</h3>
+          <p className="lg:text-gray-400 text-white text-xs lg:text-sm mt-1">
             These prestigious partnerships underscore our capability to manage
-            large-scale, complex projects and our trusted position within Qatar’s
+            large-scale, complex projects and our trusted position within Qatar's
             development landscape.
           </p>
         </div>
 
-        <div className="bg-white/30 bg-opacity-60 p-4 rounded-lg">
-          <h3 className="font-semibold">Comprehensive Support</h3>
-          <p className="lg:text-gray-400 text-white text-sm">
+        <div className="bg-white/30 bg-opacity-60 p-3 lg:p-4 rounded-md">
+          <h3 className="font-semibold text-sm lg:text-base">Comprehensive Support</h3>
+          <p className="lg:text-gray-400 text-white text-xs lg:text-sm mt-1">
             From property search to finalizing the deal, we provide comprehensive
             support at every step of the process.
           </p>
@@ -346,27 +344,27 @@ export default function Profit() {
 </section>
 
       {/* Section Title + Cards */}
-      <div className="relative w-full py-12 px-4 lg:px-16 overflow-hidden">
-      <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-semibold text-[#10284C]  uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+      <div className="relative w-full py-6 lg:py-12 px-4 lg:px-16 overflow-hidden">
+      <h2 className="text-[22px] lg:text-[36px] font-semibold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
           FEATURED PROPERTIES
         </h2>
-        <div className="flex-1 h-px bg-gray-300 my-4 mx-auto lg:w-[20%] w-[60%] mb-4"></div>
-        <p className="text-gray-500 max-w-2xl mx-auto mb-12 text-center">
+        <div className="flex-1 h-px bg-gray-300 my-3 lg:my-4 mx-auto lg:w-[20%] w-[60%] mb-3 lg:mb-4"></div>
+        <p className="text-gray-500 max-w-2xl mx-auto mb-8 lg:mb-12 text-center text-sm lg:text-base px-2 lg:px-0">
           From luxury residences to commercial developments, we deliver trusted
           services that turn your real estate goals into reality.
         </p>
 
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4"
+          className="flex gap-4 lg:gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-4"
         >
           {properties.map((property, index) => (
             <div
               key={index}
-              className="w-[270px] sm:w-[320px] md:w-[350px] p-4  bg-gray-200 border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0"
+              className="w-[250px] lg:w-[350px] p-3 lg:p-4 bg-gray-200 border border-gray-200 rounded-md overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 flex-shrink-0"
             >
               {/* Image Section */}
-              <div className="relative w-full h-[220px]">
+              <div className="relative w-full h-[180px] lg:h-[220px]">
                 <Image
                   src={property.image}
                   alt={property.title}
@@ -377,63 +375,66 @@ export default function Profit() {
 
               {/* Property Info */}
               <div className="py-2">
-                <h3 className="font-bold text-[#10284C] text-base  mb-1 leading-snug line-clamp-2">
+                <h3 className="font-bold text-[#10284C] text-sm lg:text-base mb-1 leading-snug line-clamp-2">
                   {property.title}
                 </h3>
 
                 {/* Location */}
-                <div className="flex items-center text-[#10284C] text-sm mb-3">
+                <div className="flex items-center text-[#10284C] text-xs lg:text-sm mb-2 lg:mb-3">
                   <Image
                     src="/Vector.png"
                     alt="Location"
-                    width={16}
-                    height={16}
-                    className="mr-2"
+                    width={14}
+                    height={14}
+                    className="mr-1.5 lg:mr-2 lg:w-4 lg:h-4"
                   />
-                  <span>{property.location}</span>
+                  <span className="line-clamp-1">{property.location}</span>
                 </div>
 
                 {/* Bed/Bath/Area Info */}
-                <div className="flex items-center justify-between text-[#10284C] text-sm mb-4">
-                  <div className="flex items-center gap-1 bg-white shadow p-2 lg:px-6 px-4 rounded-md">
+                <div className="flex items-center justify-between text-[#10284C] text-xs lg:text-sm mb-3 lg:mb-4 gap-1">
+                  <div className="flex items-center gap-1 bg-white shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md">
                     <Image
                       src="/Icon (1).png"
                       alt="Beds"
-                      width={18}
-                      height={18}
+                      width={14}
+                      height={14}
+                      className="lg:w-[18px] lg:h-[18px]"
                     />
                     <span>{property.beds}</span>
                   </div>
-                  <div className="flex items-center gap-1 bg-white shadow p-2 lg:px-6 px-4 rounded-md">
+                  <div className="flex items-center gap-1 bg-white shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md">
                     <Image
                       src="/Icon.png"
                       alt="Baths"
-                      width={18}
-                      height={18}
+                      width={14}
+                      height={14}
+                      className="lg:w-[18px] lg:h-[18px]"
                     />
                     <span>{property.baths}</span>
                   </div>
-                  <div className="flex items-center gap-1 bg-white shadow p-2 lg:px-6 px-4 rounded-md">
+                  <div className="flex items-center gap-1 bg-white shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md">
                     <Image
                       src="/Icon (2).png"
                       alt="Area"
-                      width={18}
-                      height={18}
+                      width={14}
+                      height={14}
+                      className="lg:w-[18px] lg:h-[18px]"
                     />
                     <span>{property.area}</span>
                   </div>
                 </div>
 
                 {/* Price and Button */}
-                <div className="flex items-center justify-between">
-                  <p className="text-base font-bold text-[#10284C]">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-sm lg:text-base font-bold text-[#10284C]">
                     {property.price}
                   </p>
 
-                  <button className="bg-[#10284C] text-white text-sm font-semibold px-5 py-2 rounded flex items-center gap-2 transition hover:bg-[#1b3a70]">
-  <Link href="/propertydetails" className="flex items-center gap-2">
+                  <button className="bg-[#10284C] text-white text-xs lg:text-sm font-semibold px-3 lg:px-5 py-1.5 lg:py-2 rounded flex items-center gap-1 lg:gap-2 transition hover:bg-[#1b3a70]">
+  <Link href="/propertydetails" className="flex items-center gap-1 lg:gap-2">
     <span>Details</span>
-    <FaArrowRight size={14} className="lg:ml-6 ml-2" />
+    <FaArrowRight size={12} className="lg:w-[14px] lg:h-[14px] lg:ml-6 ml-1" />
   </Link>
 </button>
                 </div>
@@ -442,10 +443,10 @@ export default function Profit() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-6">
-          <button className="bg-[#10284C] text-white text-sm font-semibold px-5 py-2 rounded flex items-center justify-center gap-2 transition hover:bg-[#1b3a70]">
+        <div className="flex justify-center mt-4 lg:mt-6">
+          <button className="bg-[#10284C] text-white text-xs lg:text-sm font-semibold px-4 lg:px-5 py-1.5 lg:py-2 rounded flex items-center justify-center gap-2 transition hover:bg-[#1b3a70]">
             <span>View All</span>
-            <FaArrowRight size={14} className="ml-20" />
+            <FaArrowRight size={12} className="lg:w-[14px] lg:h-[14px] ml-4 lg:ml-20" />
           </button>
         </div>
 
@@ -453,23 +454,23 @@ export default function Profit() {
         {showScrollButton && (
           <button
             onClick={scrollRight}
-            className="absolute right-2 md:right-4 top-1/2 transform -translate-y-1/2 
-                     bg-white border border-gray-300 rounded-md  p-2 md:p-3 md:px-6
+            className="absolute right-2 lg:right-4 top-1/2 transform -translate-y-1/2 
+                     bg-white border border-gray-300 rounded-md  p-2 lg:p-3 lg:px-6
                      shadow-md z-10 hover:shadow-lg transition"
           >
             <FaArrowRight
-              className="text-[#10284C] w-6 h-6 md:w-6 md:h-6"
+              className="text-[#10284C] w-6 h-6 lg:w-6 lg:h-6"
             />
           </button>
         )}
       </div>
-      <section className="bg-gray-100 py-16 pl-12 md:pl-16 lg:pl-24 pr-6 md:pr-12 lg:pr-24 relative overflow-visible">
+      <section className="bg-gray-100 py-8 lg:py-16 px-4 lg:px-24 relative overflow-visible">
       {/* Section Heading */}
-      <div className="text-center mb-12">
-      <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C]  uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+      <div className="text-center mb-8 lg:mb-12">
+      <h2 className="text-[22px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
           STORY FROM OUR CLIENTS
         </h2>
-        <div className="w-[30%] h-[2px] bg-gray-300 mx-auto"></div>
+        <div className="w-[40%] lg:w-[30%] h-[2px] bg-gray-300 mx-auto"></div>
       </div>
 
       {/* Testimonial Cards Row */}
@@ -481,17 +482,17 @@ export default function Profit() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.6 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24 w-full max-w-7xl overflow-visible"
+            className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-24 w-full max-w-7xl overflow-visible px-2 lg:px-0"
           >
             {visibleTestimonials.map(
               (t, i) =>
                 t && (
                   <div
                     key={i}
-                    className="relative bg-gray-200 shadow-md rounded-lg p-6 pl-16 md:pl-20 hover:shadow-xl transition overflow-visible"
+                    className="relative bg-gray-200 shadow-md rounded-md p-4 lg:p-6 pl-14 lg:pl-20 hover:shadow-xl transition overflow-visible"
                   >
                     {/* Image - positioned to overlap left edge, starting from half */}
-                    <div className="absolute -left-[45px] md:-left-[60px] top-1/2 -translate-y-1/2 w-[90px] h-[90px] md:w-[120px] md:h-[120px] rounded-lg overflow-hidden flex-shrink-0 z-10">
+                    <div className="absolute left-[10px] lg:-left-[60px] top-1/2 -translate-y-1/2 w-[70px] h-[70px] lg:w-[120px] lg:h-[120px] rounded-md overflow-hidden flex-shrink-0 z-10">
                       <Image
                         src={t.image}
                         alt={t.name}
@@ -502,17 +503,17 @@ export default function Profit() {
 
                     {/* Text */}
                     <div className="text-left relative z-0">
-                      <h3 className="text-[#10284C] font-semibold text-base md:text-lg mb-2 flex items-center justify-between">
+                      <h3 className="text-[#10284C] ml-10 lg:ml-0 font-semibold text-sm lg:text-lg mb-2 flex items-center justify-between">
                         {t.name}
                         <Image 
                           src="/SVG.png" 
                           alt="quote" 
-                          width={20} 
-                          height={20} 
-                          className="object-contain"
+                          width={16}
+                          height={16}
+                          className="lg:w-5 lg:h-5 object-contain"
                         />
                       </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
+                      <p className="text-gray-600 ml-10 lg:ml-0 text-xs lg:text-sm leading-relaxed">
                         {t.text}
                       </p>
                     </div>
@@ -541,16 +542,16 @@ export default function Profit() {
     </section>
 
     {/* Latest Real Estate Blogs Section */}
-    <section className="bg-white py-16 px-4 md:px-8 lg:px-16">
+    <section className="bg-white py-8 lg:py-16 px-4 lg:px-16">
       {/* Section Heading */}
-      <div className="lg:hidden text-center mb-12">
-      <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C]  uppercase mb-2 text-left 3xl:mb-3 4xl:mb-4">
+      <div className="lg:hidden text-center mb-8 lg:mb-12">
+      <h2 className="text-[22px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
       Explore Events
         </h2>
-        <div className="w-50 h-[2px] bg-gray-300 "></div>
+        <div className="w-32 lg:w-50 mx-auto h-[2px] bg-gray-300"></div>
       </div>
       <div className="hidden lg:block text-center mb-12">
-      <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C]  uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+      <h2 className="text-[27px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
       LATEST REAL ESTATE BLOGS
         </h2>
         <div className="w-40 h-[2px] bg-gray-300 mx-auto"></div>
@@ -558,14 +559,14 @@ export default function Profit() {
 
       {/* Mobile Version - Show one blog initially, all when View All is clicked */}
       <div className="block lg:hidden">
-        <div className="grid grid-cols-1 gap-6 w-full max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 gap-4 lg:gap-6 w-full max-w-7xl mx-auto">
           {mobileBlogs.map((blog, i) => (
             <div
               key={i}
-              className="bg-white shadow-md rounded-md overflow-hidden  transition-shadow duration-300"
+              className="bg-white shadow-md rounded-md overflow-hidden transition-shadow duration-300"
             >
               {/* Image Section with Overlapping Button and Text Overlay */}
-              <div className="relative w-full h-[400px] md:h-[400px]">
+              <div className="relative w-full h-[300px] lg:h-[400px]">
                 <Image
                   src={blog.image}
                   alt={blog.title}
@@ -573,17 +574,17 @@ export default function Profit() {
                   className="object-fill"
                 />
                 {/* EXPLORE Button - overlapping top-left corner, partially on image and white space */}
-                <button className="absolute top-8 left-4 -translate-y-1/2 bg-[#10284C] text-white text-xs font-semibold px-4 py-2 rounded flex items-center gap-2 hover:bg-[#1b3a70] transition z-10 shadow-md">
+                <button className="absolute top-6 left-3 lg:top-8 lg:left-4 -translate-y-1/2 bg-[#10284C] text-white text-[10px] lg:text-xs font-semibold px-3 lg:px-4 py-1.5 lg:py-2 rounded flex items-center gap-1.5 lg:gap-2 hover:bg-[#1b3a70] transition z-10 shadow-md">
                   <span>EXPLORE</span>
-                  <FaArrowRight size={12} className="ml-6" />
+                  <FaArrowRight size={10} className="lg:w-3 lg:h-3 ml-2 lg:ml-6" />
                 </button>
                 
                 {/* Text Overlay - absolute positioned at bottom with transparent dark gray background */}
-                <div className="absolute bottom-0 left-0 right-0 bg-[#10284C]/50 backdrop-blur-sm p-6 z-10">
-                  <h3 className="text-white font-bold text-lg md:text-xl mb-3">
+                <div className="absolute bottom-0 left-0 right-0 bg-[#10284C]/50 backdrop-blur-sm p-4 lg:p-6 z-10">
+                  <h3 className="text-white font-bold text-base lg:text-lg xl:text-xl mb-2 lg:mb-3">
                     {blog.title}
                   </h3>
-                  <p className="text-white text-sm md:text-base leading-relaxed opacity-90">
+                  <p className="text-white text-xs lg:text-sm xl:text-base leading-relaxed opacity-90">
                     {blog.description}
                   </p>
                 </div>
@@ -594,13 +595,13 @@ export default function Profit() {
 
         {/* View All Button - Only show when not all blogs are displayed */}
         {!showAllBlogs && (
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-6 lg:mt-8">
             <button
               onClick={() => setShowAllBlogs(true)}
-              className="bg-[#10284C] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#1b3a70] transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2"
+              className="bg-[#10284C] text-white px-6 lg:px-8 py-2.5 lg:py-3 rounded-md font-semibold hover:bg-[#1b3a70] transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2 text-sm lg:text-base"
             >
               <span>View All</span>
-              <FaArrowRight size={16} />
+              <FaArrowRight size={14} className="lg:w-4 lg:h-4" />
             </button>
           </div>
         )}
@@ -617,15 +618,15 @@ export default function Profit() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl"
             >
               {visibleBlogs.map((blog, i) => (
                 <div
                   key={i}
-                  className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white shadow-md rounded-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 >
                   {/* Image Section with Overlapping Button and Text Overlay */}
-                  <div className="relative w-full h-[300px] md:h-[400px]">
+                  <div className="relative w-full h-[300px] lg:h-[400px]">
                     <Image
                       src={blog.image}
                       alt={blog.title}
@@ -640,10 +641,10 @@ export default function Profit() {
                     
                     {/* Text Overlay - absolute positioned at bottom with transparent dark gray background */}
                     <div className="absolute bottom-0 left-0 right-0 bg-[#10284C]/50 backdrop-blur-sm p-6 z-10">
-                      <h3 className="text-white font-bold text-lg md:text-xl mb-3">
+                      <h3 className="text-white font-bold text-lg lg:text-xl mb-3">
                         {blog.title}
                       </h3>
-                      <p className="text-white text-sm md:text-base leading-relaxed opacity-90">
+                      <p className="text-white text-sm lg:text-base leading-relaxed opacity-90">
                         {blog.description}
                       </p>
                     </div>
@@ -670,7 +671,7 @@ export default function Profit() {
         </div>
       </div>
     </section>
-    <section className="relative w-full lg:h-screen h-[150vh] flex items-center">
+    <section className="relative w-full h-auto lg:h-screen flex items-center py-6 lg:py-0">
       {/* Background Image */}
       <Image
         src="/WhatsApp Image 2025-11-07 at 10.45.55 PM.jpeg"
@@ -680,61 +681,61 @@ export default function Profit() {
       />
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col md:flex-row w-full h-full px-6 md:px-12 lg:px-14 items-center justify-between">
+      <div className="relative z-10 flex flex-col lg:flex-row w-full h-full px-4 lg:px-14 items-center justify-between py-6 lg:py-0">
         {/* Left Side Title - Overlaid on background */}
-        <div className="text-white md:w-1/2 flex flex-col lg:mt-40 mt-20 h-full ">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-center lg:text-left font-semibold mb-3">
+        <div className="text-white lg:w-1/2 flex flex-col mt-6 lg:mt-40 mb-4 lg:mb-0 h-full">
+          <h2 className="text-xl lg:text-4xl text-center lg:text-left font-semibold mb-2 lg:mb-3">
             How Can We Help You Today?
           </h2>
-          <div className="h-[0.5px] w-[70%] bg-white mx-auto lg:mx-0 mb-4 "></div>
+          <div className="h-[0.5px] w-[70%] bg-white mx-auto lg:mx-0 mb-3 lg:mb-4"></div>
         </div>
 
         {/* Right Side - Form Panel and Map */}
-        <div className="md:w-1/2 max-w-2xl flex flex-col">
+        <div className="lg:w-1/2 max-w-2xl w-full flex flex-col">
           {/* Form Panel - Translucent */}
-          <div className="bg-blue-50/10 backdrop-blur-sm p-6 lg:px-16 rounded-lg shadow-xl relative overflow-visible">
+          <div className="bg-blue-50/10 backdrop-blur-sm p-4 lg:p-6 lg:px-16 rounded-md shadow-xl relative overflow-visible">
             {/* Form Header */}
-            <h3 className="text-[#10284C] md:px-10 text-sm text-center md:text-base font-medium mb-3">
+            <h3 className="text-[#10284C] lg:px-10 text-xs lg:text-sm xl:text-base text-center font-medium mb-2 lg:mb-3">
               Fill out the form below and our experts will get back to you within 24 hour
             </h3>
-            <div className="h-[1px] w-60 bg-white 300 mb-4 mx-auto"></div>
+            <div className="h-[1px] w-40 lg:w-60 bg-white 300 mb-3 lg:mb-4 mx-auto"></div>
 
 
-            <form className="space-y-4">
+            <form className="space-y-3 lg:space-y-4">
               {/* First Row: Name and Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
                 <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Name</label>
+                  <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Name</label>
                   <input
                     type="text"
                     placeholder="John Carter"
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C]"
+                    className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C]"
                   />
                 </div>
                 <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Email</label>
+                  <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Email</label>
                   <input
                     type="email"
                     placeholder="example@email.com"
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C]"
+                    className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C]"
                   />
                 </div>
               </div>
 
               {/* Second Row: Phone and Property Type */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
                 <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Phone</label>
+                  <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Phone</label>
                   <input
                     type="text"
                     placeholder="(123) 456 - 789"
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C]"
+                    className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C]"
                   />
                 </div>
                 <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Property Type</label>
+                  <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Property Type</label>
                   <select
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-500 focus:outline-none focus:border-[#10284C]"
+                    className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm text-gray-500 focus:outline-none focus:border-[#10284C]"
                   >
                     <option>Choose a Type</option>
                     <option>Apartment</option>
@@ -746,27 +747,27 @@ export default function Profit() {
 
               {/* Message Textarea */}
               <div>
-                <label className="block text-[#10284C] text-sm font-medium mb-2">Message</label>
+                <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Message</label>
                 <textarea
                   placeholder="Tell us more about your requirement like budget ,area & others .."
-                  rows={4}
-                  className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] resize-none"
+                  rows={3}
+                  className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C] resize-none"
                 ></textarea>
               </div>
 
               {/* Submit Button */}
               <button
                 type="submit"
-                className="bg-[#10284C] text-white px-8 py-2.5 rounded-md flex items-center justify-end gap-2 hover:bg-[#0d2142] transition"
+                className="bg-[#10284C] text-white px-6 lg:px-8 py-2 lg:py-2.5 rounded-md flex items-center justify-center lg:justify-end gap-2 hover:bg-[#0d2142] transition w-full lg:w-auto"
               >
-                <span>Submit</span>
-                <FaArrowRight size={14} className="ml-10" />
+                <span className="text-sm">Submit</span>
+                <FaArrowRight size={12} className="lg:w-[14px] lg:h-[14px] ml-2 lg:ml-10" />
               </button>
             </form>
           </div>
 
           {/* Map Section - Below the blur card */}
-          <div className="mt-6 w-full h-[20vh] rounded-md overflow-hidden bg-gray-200 border border-gray-300 relative">
+          <div className="mt-3 mb-4 lg:mb-0 lg:mt-6 w-full h-[15vh] lg:h-[20vh] rounded-md overflow-hidden bg-gray-200 border border-gray-300 relative">
             <Image
               src="/675.png"
               alt="Map"
@@ -777,8 +778,8 @@ export default function Profit() {
         </div>
       </div>
     </section>
-    <section className="w-full py-16 bg-white">
-      <div className="max-w-[1400px] mx-auto px-4">
+    <section className="w-full py-8 lg:py-16 bg-white">
+      <div className="max-w-[1400px] mx-auto px-4 lg:px-4">
         {/* Mobile Version - Show one office at a time with auto-slide */}
         <div className="block lg:hidden">
           <div className="overflow-hidden">
@@ -790,36 +791,36 @@ export default function Profit() {
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="bg-gray-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex overflow-hidden">
+                <div className="bg-gray-200 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex overflow-hidden">
                   {/* Left Section - Office Information */}
-                  <div className="flex-1 p-6">
-                    <h3 className="text-2xl font-bold text-[#10284C] mb-1">
+                  <div className="flex-1 p-4 lg:p-6">
+                    <h3 className="text-lg lg:text-2xl font-bold text-[#10284C] mb-1">
                       {offices[mobileOfficeIndex].title}
                     </h3>
-                    <p className="text-gray-500 text-sm mb-4">{offices[mobileOfficeIndex].subtitle}</p>
+                    <p className="text-gray-500 text-xs lg:text-sm mb-3 lg:mb-4">{offices[mobileOfficeIndex].subtitle}</p>
                     
                     {/* Separator Line */}
-                    <div className="h-[1px] w-60 bg-gray-400 mb-4"></div>
+                    <div className="h-[1px] w-40 lg:w-60 bg-gray-400 mb-3 lg:mb-4"></div>
                     
                     {/* Contact Details */}
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2 text-gray-700 text-sm">
-                        <MapPin className="w-4 h-4 text-gray-400" /> {offices[mobileOfficeIndex].address}
+                    <div className="space-y-1.5 lg:space-y-2">
+                      <div className="flex items-center gap-2 text-gray-700 text-xs lg:text-sm">
+                        <MapPin className="w-3 h-3 lg:w-4 lg:h-4 text-gray-400" /> <span className="line-clamp-1">{offices[mobileOfficeIndex].address}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-700 text-sm">
-                        <Phone className="w-4 h-4 text-gray-400" /> {offices[mobileOfficeIndex].phone}
+                      <div className="flex items-center gap-2 text-gray-700 text-xs lg:text-sm">
+                        <Phone className="w-3 h-3 lg:w-4 lg:h-4 text-gray-400" /> {offices[mobileOfficeIndex].phone}
                       </div>
-                      <div className="flex items-center gap-2 text-gray-700 text-sm">
-                        <Mail className="w-4 h-4 text-gray-400" /> {offices[mobileOfficeIndex].email}
+                      <div className="flex items-center gap-2 text-gray-700 text-xs lg:text-sm">
+                        <Mail className="w-3 h-3 lg:w-4 lg:h-4 text-gray-400" /> <span className="line-clamp-1">{offices[mobileOfficeIndex].email}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-gray-700 text-sm">
-                        <Clock className="w-4 h-4 text-gray-400" /> {offices[mobileOfficeIndex].timing}
+                      <div className="flex items-center gap-2 text-gray-700 text-xs lg:text-sm">
+                        <Clock className="w-3 h-3 lg:w-4 lg:h-4 text-gray-400" /> {offices[mobileOfficeIndex].timing}
                       </div>
                     </div>
                   </div>
                   
                   {/* Right Section - Patterned Strip */}
-                  <div className="w-24 relative overflow-hidden">
+                  <div className="w-16 lg:w-24 relative overflow-hidden">
                     <Image
                       src={offices[mobileOfficeIndex].image}
                       alt="Pattern"
@@ -833,7 +834,7 @@ export default function Profit() {
           </div>
 
           {/* Navigation Dots - Mobile */}
-          <div className="flex justify-center mt-8 space-x-3">
+          <div className="flex justify-center mt-6 lg:mt-8 space-x-3">
             {offices.map((_, index) => (
               <button
                 key={index}
@@ -859,12 +860,12 @@ export default function Profit() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               >
                 {visibleOffices.map((office, index) => (
                   <div
                     key={index}
-                    className="bg-gray-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex overflow-hidden"
+                    className="bg-gray-200 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex overflow-hidden"
                   >
                     {/* Left Section - Office Information */}
                     <div className="flex-1 p-6">

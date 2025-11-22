@@ -54,7 +54,7 @@ export default function Sale() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[50vh] md:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[50vh] lg:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
           src="/e2a4624c82afeb7461113d23daa704d9218a5bd9.png"
@@ -69,7 +69,7 @@ export default function Sale() {
 
         {/* 🔍 Search Bar (Half on BG, Half outside) */}
         {/* Mobile Version */}
-        <div className="absolute left-1/2 bottom-0 mb-8  transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] md:hidden">
+        <div className="absolute left-1/2 bottom-0 mb-8  transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:hidden">
           <div className="space-y-3">
             {/* Transaction Type Selector - Separate Box */}
             <div className="bg-[#8C8C8C66] backdrop-blur-md border rounded-md border-[#8C8C8C66]  p-3 shadow-md">
@@ -133,8 +133,8 @@ export default function Sale() {
         </div>
 
         {/* Desktop Version */}
-        <div className="absolute left-1/2 bottom-0 mb-4 transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden md:block">
-          <div className="bg-[#8C8C8C66] backdrop-blur-md border border-[#8C8C8C66] rounded-md p-4 md:p-6 shadow-lg">
+        <div className="absolute left-1/2 bottom-0 mb-4 transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
+          <div className="bg-[#8C8C8C66] backdrop-blur-md border border-[#8C8C8C66] rounded-md p-4 lg:p-6 shadow-lg">
             {/* Buttons Section */}
             <div className="flex justify-center gap-4 mb-4">
               <button className="px-20 py-2 rounded-md bg-[#10284C] text-white font-medium shadow  transition">
@@ -153,7 +153,7 @@ export default function Sale() {
               <input
                 type="text"
                 placeholder="Explore and discover everything about our trusted agents..."
-                className="flex-1 text-gray-800 text-sm md:text-base bg-transparent outline-none placeholder:text-gray-500"
+                className="flex-1 text-gray-800 text-sm lg:text-base bg-transparent outline-none placeholder:text-gray-500"
               />
               <Mic className="text-gray-500 h-5 w-5 ml-3" />
             </div>
@@ -163,7 +163,7 @@ export default function Sale() {
       
       {/* Mobile Properties Grid */}
       <div className="block lg:hidden mt-20 bg-[#F9F9F9] py-8 px-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-7xl mx-auto">
           {properties.map((property, index) => (
             <div
               key={index}
@@ -198,20 +198,23 @@ export default function Sale() {
                 </div>
 
                 {/* Bed/Bath/Area Info */}
-                <div className="flex items-center justify-between text-[#10284C] text-sm mb-4">
-                  <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
-                    <Image src="/Icon (1).png" alt="Beds" width={18} height={18} />
-                    <span>{property.bedrooms}</span>
-                  </div>
-                  <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
-                    <Image src="/Icon.png" alt="Baths" width={18} height={18} />
-                    <span>{property.bathrooms}</span>
-                  </div>
-                  <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
-                    <Image src="/Icon (2).png" alt="Area" width={18} height={18} />
-                    <span>{property.area}</span>
-                  </div>
-                </div>
+                <div className="grid grid-cols-3 gap-2 text-[#10284C] text-sm mb-4">
+  <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
+    <Image src="/Icon (1).png" alt="Beds" width={18} height={18} />
+    <span>{property.bedrooms}</span>
+  </div>
+
+  <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
+    <Image src="/Icon.png" alt="Baths" width={18} height={18} />
+    <span>{property.bathrooms}</span>
+  </div>
+
+  <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
+    <Image src="/Icon (2).png" alt="Area" width={18} height={18} />
+    <span>{property.area}</span>
+  </div>
+</div>
+
 
                 {/* Price and Button */}
                 <div className="flex items-center justify-between">
@@ -228,9 +231,9 @@ export default function Sale() {
         </div>
       </div>
 
-      <div className="hidden md:flex w-full justify-center lg:pt-20 ">
+      <div className="hidden lg:flex w-full justify-center lg:pt-20 ">
   <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 rounded-md shadow-md 
-                  gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+                  gap-4 grid-cols-1  lg:grid-cols-3 xl:grid-cols-6">
 
     {/* Filter Items */}
     {["Property Type", "Location", "Beds", "Baths", "Price"].map((label, index) => (
@@ -269,7 +272,7 @@ export default function Sale() {
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
       <div className="hidden lg:block bg-gray-50">
         {/* Header Bar */}
-        <div className="bg-white  border-gray-200 px-4 sm:px-6 lg:px-8 py-4">
+        <div className="bg-white  border-gray-200 px-4  lg:px-8 py-4">
           <div className="hidden lg:flex max-w-full mx-auto  items-center justify-between">
             {/* LIST/MAP Toggle Buttons */}
             <div className="flex items-center  bg-[#001730] rounded-lg p-1">
@@ -323,7 +326,7 @@ export default function Sale() {
 
       {/* Main Content: List and Map */}
       <div
-  className="grid gap-6 sm:grid-cols-2 px-20 bg-[#F9F9F9] lg:grid-cols-3 xl:grid-cols-4 p-4"
+  className="grid gap-6 px-20 bg-[#F9F9F9] lg:grid-cols-3 xl:grid-cols-4 p-4"
 >
   {properties.map((property, index) => (
     <div
@@ -359,20 +362,46 @@ export default function Sale() {
         </div>
 
         {/* Bed/Bath/Area Info */}
-        <div className="flex items-center justify-between text-[#10284C] text-sm mb-4">
-          <div className="flex items-center gap-1 bg-white shadow p-2 px-6 rounded-md">
-            <Image src="/Icon (1).png" alt="Beds" width={18} height={18} />
-            <span>{property.bedrooms}</span>
-          </div>
-          <div className="flex items-center gap-1 bg-white shadow p-2 px-6 rounded-md">
-            <Image src="/Icon.png" alt="Baths" width={18} height={18} />
-            <span>{property.bathrooms}</span>
-          </div>
-          <div className="flex items-center gap-1 bg-white shadow p-2 px-6 rounded-md">
-            <Image src="/Icon (2).png" alt="Area" width={18} height={18} />
-            <span>{property.area}</span>
-          </div>
-        </div>
+        <div className="grid grid-cols-3 gap-2 lg:gap-4 text-[#10284C] text-sm mb-4">
+
+{/* Beds */}
+<div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4  rounded-md justify-center">
+  <Image
+    src="/Icon (1).png"
+    alt="Beds"
+    width={16}
+    height={16}
+    className="w-[18px] h-[18px]"
+  />
+  <span className="text-xs lg:text-sm">{property.bedrooms}</span>
+</div>
+
+{/* Baths */}
+<div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4   rounded-md justify-center">
+  <Image
+    src="/Icon.png"
+    alt="Baths"
+    width={16}
+    height={16}
+    className="w-[18px] h-[18px]"
+  />
+  <span className="text-xs lg:text-sm">{property.bathrooms}</span>
+</div>
+
+{/* Area */}
+<div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4  rounded-md justify-center">
+  <Image
+    src="/Icon (2).png"
+    alt="Area"
+    width={16}
+    height={16}
+    className="w-[18px] h-[18px]"
+  />
+  <span className="text-xs lg:text-sm">{property.area}</span>
+</div>
+
+</div>
+
 
         {/* Price and Button */}
         <div className="flex items-center justify-between">
@@ -388,23 +417,23 @@ export default function Sale() {
   ))}
 </div>
       </div>
-      <section className="py-10 md:py-10 bg-gray-100">
-        <div className="mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-12">
+      <section className="py-10 lg:py-10 bg-gray-100">
+        <div className="mx-auto px-6 lg:px-12">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
             {/* Left Content */}
             <div className="flex-1">
-              <h2 className="text-[20px] md:text-[30px] lg:text-[30px] font-semibold text-[#001730] mb-2">
+              <h2 className="text-[20px] lg:text-[30px] font-semibold text-[#001730] mb-2">
                 Ready to Find Your Dream Property ?
               </h2>
-              <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[60%] h-[1.5px] bg-gray-300 my-2 md:my-2"></div>
-              <p className="text-base md:text-base text-[#333333] leading-relaxed">
+              <div className="w-[80%] lg:w-[60%] h-[1.5px] bg-gray-300 my-2 lg:my-2"></div>
+              <p className="text-base lg:text-base text-[#333333] leading-relaxed">
                 Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice. Al Asmakh is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
               </p>
             </div>
 
             {/* Right Button */}
             <div className="flex-shrink-0">
-              <button className="bg-[#001730] text-white px-8 py-4 rounded-lg font-medium text-base md:text-lg hover:bg-[#002d52] transition-all duration-300 flex items-center gap-3 shadow-lg">
+              <button className="bg-[#001730] text-white px-8 py-4 rounded-lg font-medium text-base lg:text-lg hover:bg-[#002d52] transition-all duration-300 flex items-center gap-3 shadow-lg">
                 Contact Team
                 <FaArrowRight size={18} />
               </button>

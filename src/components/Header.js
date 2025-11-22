@@ -89,7 +89,7 @@ export default function Header() {
         scrolled ? 'rounded-none' : 'rounded-[5px] mx-0 lg:mx-2 mt-1 lg:mt-4'
       }`}
     >
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-2 lg:py-0">
+      <div className="max-w-[1500px] px-4  py-2 lg:py-0">
         <div className="flex items-center justify-between relative">
           {/* Mobile Logo */}
           <div className="flex lg:hidden order-1 relative w-36 h-10">
@@ -117,9 +117,10 @@ export default function Header() {
           </div>
 
           {/* Desktop Logo */}
-          <div className="hidden lg:flex flex-shrink-0 mr-2 lg:mr-5 relative w-32 lg:w-[180px] h-10 lg:h-12 z-[100]">
+          <div className="hidden lg:flex relative w-32 lg:w-[80px] h-10 lg:h-12 items-center">
             <Image src="/images/Al-asmakh.png" alt="Al-Asmakh Logo" fill className="object-contain" priority />
           </div>
+
 
           {/* Desktop Menu with dropdowns */}
           <nav className="hidden lg:flex items-center gap-6 relative text-[#001730] text-sm font-medium">

@@ -98,7 +98,7 @@ export default function AlAsmakhTower() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="relative w-full"
-          style={{ height: "clamp(400px, 90vh, 800px)" }}
+          style={{ height: "clamp(350px, 85vh, 800px)" }}
         >
           <Image
             src={projects[activeSlide].img || "/407.png"}
@@ -118,7 +118,7 @@ export default function AlAsmakhTower() {
             style={{ padding: "16px" }}
           >
             <div
-              className="relative bg-white/20 w-full max-w-md mx-auto p-6 md:p-8 rounded-2xl"
+              className="relative bg-white/20 w-full max-w-md mx-auto p-4 md:p-8 rounded-2xl"
               style={{
                
                 backdropFilter: "blur(20px)",
@@ -131,26 +131,26 @@ export default function AlAsmakhTower() {
               <div className="relative text-center md:text-left md:pl-12">
                 {/* TITLE */}
                 <h2
-                  className="font-bold text-[#10284C] mb-3 md:mb-4 md:text-left text-center text-2xl md:text-3xl uppercase tracking-wide"
+                  className="font-bold text-[#10284C] mb-2 md:mb-4 md:text-left text-center text-xl md:text-3xl uppercase tracking-wide"
                 >
                   {projects[activeSlide].title}
                 </h2>
-                <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
+                <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2"></div>
                 {/* SEPARATOR LINE */}
                
 
                {/* LOCATION */}
-<div className="flex items-center gap-2 mb-4 md:mb-5 justify-center md:justify-start text-center md:text-left">
+<div className="flex items-center gap-1.5 md:gap-2 mb-3 md:mb-5 justify-center md:justify-start text-center md:text-left">
 
 <MapPin
-  size={18}
-  className="text-[#10284C]"
+  size={16}
+  className="text-[#10284C] md:w-[18px] md:h-[18px]"
 />
 
 <span
-  className="text-[#10284C]"
-  style={{ fontSize: "clamp(14px, 1vw, 16px)" }}
->
+  className="text-[#10284C] text-sm md:text-base"
+          style={{ fontSize: "clamp(13px, 1vw, 16px)" }}
+        >
   {projects[activeSlide].location}
 </span>
 
@@ -159,8 +159,8 @@ export default function AlAsmakhTower() {
 
                 {/* DESCRIPTION */}
                 <p
-                  className="text-gray-700 font-semibold mb-6 md:mb-8 leading-relaxed"
-                  style={{ fontSize: "clamp(14px, 1.1vw, 18px)" }}
+                  className="text-gray-700 font-semibold mb-4 md:mb-8 leading-relaxed text-sm md:text-base"
+                  style={{ fontSize: "clamp(13px, 1.1vw, 18px)" }}
                 >
                   {projects[activeSlide].description}
                 </p>
@@ -168,11 +168,11 @@ export default function AlAsmakhTower() {
                {/* DETAILS BUTTON */}
 <div className="flex justify-center md:justify-start">
   <button
-    className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-5 md:px-6 py-2.5 md:py-3 rounded-lg hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg"
-    style={{ fontSize: "clamp(14px, 1.1vw, 16px)" }}
+    className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg text-sm md:text-base"
+    style={{ fontSize: "clamp(13px, 1.1vw, 16px)" }}
   >
     <span>Details</span>
-    <FaArrowRight size={14} className="ml-16" />
+    <FaArrowRight size={12} className="md:w-[14px] md:h-[14px] ml-4 md:ml-16" />
   </button>
 </div>
 
@@ -181,7 +181,7 @@ export default function AlAsmakhTower() {
           </motion.div>
 
           {/* NAVIGATION DOTS - Below the card */}
-          <div className="absolute bottom-6 left-0 right-0 flex items-center justify-center gap-2">
+          <div className="absolute bottom-4 md:bottom-6 left-0 right-0 flex items-center justify-center gap-1.5 md:gap-2">
             {projects.map((_, index) => (
               <div key={index} className="flex items-center">
                 <button
@@ -189,8 +189,8 @@ export default function AlAsmakhTower() {
                   className={`
                     transition-all duration-300 flex items-center justify-center
                     ${index === activeSlide 
-                      ? "w-5 h-5 border-2 border-[#10284C] rounded-sm" 
-                      : "w-3 h-3"
+                      ? "w-4 h-4 md:w-5 md:h-5 border-2 border-[#10284C] rounded-sm" 
+                      : "w-2.5 h-2.5 md:w-3 md:h-3"
                     }
                   `}
                   aria-label={`Go to slide ${index + 1}`}
@@ -199,8 +199,8 @@ export default function AlAsmakhTower() {
                     className={`
                       block
                       ${index === activeSlide 
-                        ? "w-2.5 h-2.5 bg-[#10284C] rounded-sm" 
-                        : "w-3 h-3 bg-gray-400"
+                        ? "w-2 h-2 md:w-2.5 md:h-2.5 bg-[#10284C] rounded-sm" 
+                        : "w-2.5 h-2.5 md:w-3 md:h-3 bg-gray-400"
                       }
                     `}
                   ></span>
@@ -314,14 +314,14 @@ export default function AlAsmakhTower() {
 
 
       {/* === EXPLORE OUR AREA SECTION === */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-10 md:py-16 bg-gray-100">
         <div className="max-w-[1827px] mx-auto px-4">
           {/* Heading */}
-          <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C]  uppercase mb-2 text-center mx-10 3xl:mb-3 4xl:mb-4">
+          <h2 className="text-[22px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
             EXPLORE BY AREA
           </h2>
-          <div className="flex-1 h-px bg-gray-300 my-4 mx-auto w-[20%] mb-4"></div>
-          <p className="text-gray-500 max-w-2xl mx-auto mb-12 text-center">
+          <div className="flex-1 h-px bg-gray-300 my-3 md:my-4 mx-auto w-[40%] md:w-[20%] mb-3 md:mb-4"></div>
+          <p className="text-gray-500 max-w-2xl mx-auto mb-8 md:mb-12 text-center text-sm md:text-base px-2 md:px-0">
             Browse luxury homes and investments across Qatar's finest districts,
             each offering its own lifestyle, charm, and opportunity.
           </p>
@@ -342,7 +342,7 @@ export default function AlAsmakhTower() {
               onTouchEnd={handleAreaTouchEnd}
               style={{ 
                 height: "auto",
-                minHeight: "400px",
+                minHeight: "300px",
                 overflow: "hidden",
                 width: "100%",
                 maxWidth: "100%",
@@ -376,12 +376,12 @@ export default function AlAsmakhTower() {
                           borderRadius: "8px",
                           width: "100%",
                           maxWidth: "100%",
-                          height: "400px",
+                          height: "300px",
                           position: "relative",
                           overflow: "hidden",
                           margin: "0 auto",
                         }}
-                        className="shadow-lg"
+                        className="shadow-lg md:h-[400px]"
                       >
                         <Image
                           src={area.image}
@@ -391,14 +391,14 @@ export default function AlAsmakhTower() {
                         />
                         {/* City Name Overlay - Top Left Corner */}
                         <div
-                          className="absolute top-4 shadow-md bg-white/20 left-4 px-4 py-2 rounded"
+                          className="absolute top-3 md:top-4 shadow-md bg-white/20 left-3 md:left-4 px-3 md:px-4 py-1.5 md:py-2 rounded"
                           style={{
                           
                             backdropFilter: "blur(10px)",
                             WebkitBackdropFilter: "blur(10px)",
                           }}
                         >
-                          <span className="text-white font-semibold text-sm">
+                          <span className="text-white font-semibold text-xs md:text-sm">
                             {area.name}
                           </span>
                         </div>
@@ -410,35 +410,35 @@ export default function AlAsmakhTower() {
             </div>
 
             {/* Navigation - Below carousel */}
-            <div className="mt-6">
+            <div className="mt-4 md:mt-6">
               {/* Horizontal Line with Counter */}
               <div className="flex items-end justify-end mb-2">
                
-                <span className="text-gray-400 text-sm mx-4">
+                <span className="text-gray-400 text-xs md:text-sm mx-2 md:mx-4">
                   {String(currentAreaIndex + 1).padStart(2, '0')} of {String(areas.length).padStart(2, '0')}
                 </span>
               </div>
-              <div className="flex-1 h-px bg-[#10284C] mb-4"></div>
+              <div className="flex-1 h-px bg-[#10284C] mb-3 md:mb-4"></div>
               {/* Navigation Buttons */}
              {/* Navigation Buttons */}
-<div className="flex items-center justify-center gap-3">
+<div className="flex items-center justify-center gap-2 md:gap-3">
 
 {/* Previous Button */}
 <button
   onClick={goToPreviousArea}
-  className="w-10 h-10 rounded-sm bg-white border border-black flex items-center justify-center hover:bg-gray-50 transition-all duration-300"
+  className="w-9 h-9 md:w-10 md:h-10 rounded-sm bg-white border border-black flex items-center justify-center hover:bg-gray-50 transition-all duration-300"
   aria-label="Previous area"
 >
-  <FaArrowLeft size={16} className="text-black" />
+  <FaArrowLeft size={14} className="md:w-4 md:h-4 text-black" />
 </button>
 
 {/* Next Button */}
 <button
   onClick={goToNextArea}
-  className="w-10 h-10 rounded-sm bg-[#10284C] flex items-center justify-center hover:bg-[#022d5e] transition-all duration-300"
+  className="w-9 h-9 md:w-10 md:h-10 rounded-sm bg-[#10284C] flex items-center justify-center hover:bg-[#022d5e] transition-all duration-300"
   aria-label="Next area"
 >
-  <FaArrowRight size={16} className="text-white" />
+  <FaArrowRight size={14} className="md:w-4 md:h-4 text-white" />
 </button>
 
 </div>
