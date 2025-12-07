@@ -118,7 +118,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Logo */}
-          <div className="hidden lg:flex relative w-[80px] h-12 items-center flex-shrink-0">
+          <div className="hidden lg:flex relative w-[80px] h-16 items-center flex-shrink-0">
             <Image src="/images/Al-asmakh.png" alt="Al-Asmakh Logo" fill className="object-contain" priority />
           </div>
 
@@ -136,7 +136,7 @@ export default function Header() {
                   onClick={() =>
                     !dropdowns[item] && handleNavigation(`/${item.toLowerCase().replace(/\s+/g, '-') === 'home' ? '' : item.toLowerCase().replace(/\s+/g, '-')}`)
                   }
-                  className="flex items-center gap-1 transition-all duration-200 hover:text-gray-700 whitespace-nowrap flex-shrink-0"
+                  className="flex items-center gap-3 transition-all duration-200 hover:text-gray-700 whitespace-nowrap flex-shrink-0"
                   style={{ fontSize: '14px' }}
                 >
                   {item}
@@ -190,7 +190,7 @@ export default function Header() {
               : 'max-h-0 opacity-0 pointer-events-none'
               }`}
           >
-            <nav className="flex flex-col p-4 space-y-2 overflow-y-auto max-h-[calc(100vh-62px)]">
+            <nav className="flex flex-col p-4 space-y-4 overflow-y-auto max-h-[calc(100vh-62px)]">
               {['HOME', 'LISTINGS', 'SERVICES', 'DEVELOPMENT', 'ABOUT US', 'CONTACT'].map((item) => (
                 <div key={item}>
                   <button
@@ -272,11 +272,11 @@ export default function Header() {
           </div>
 
           {/* Right side - Language + Profile */}
-          <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+          <div className="hidden lg:flex items-center gap-6 flex-shrink-0">
             <div
               className={`flex items-center gap-1 whitespace-nowrap font-semibold rounded-lg px-2 py-1 flex-shrink-0 ${isTranslating ? 'opacity-50 pointer-events-none' : ''
                 }`}
-              style={{ fontSize: '14px', color: '#001730', letterSpacing: '0.1px' }}
+              style={{ fontSize: '12px', color: '#001730', letterSpacing: '0.1px' }}
             >
               <button onClick={() => switchLanguage('en')} disabled={isTranslating}>
                 EN

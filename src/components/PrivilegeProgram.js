@@ -33,10 +33,10 @@ export default function PrivilegeProgram() {
   // Image Icon Components
   const LeasingIcon = () => (
     <Image
-      src="/1_Icons Used_Leasing 1.png"
+      src="/1_Icons Used_Leasing.png"
       alt="Leasing"
-      width={48}
-      height={48}
+      width={35}
+      height={35}
       className="object-contain"
     />
   );
@@ -218,14 +218,17 @@ export default function PrivilegeProgram() {
     <section
       ref={sectionRef}
       style={{
-        backgroundSize: "60px 60px",
+        backgroundImage: "url('/images/BG_Form.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         overflowX: "hidden",
       }}
       className="relative bg-gray-100 py-16 lg:py-20 3xl:py-24 4xl:py-28 px-4  lg:px-8 3xl:px-12 4xl:px-16"
     >
       <div className="container-custom text-center">
         <h2
-          className={`text-[27px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+          className={`text-[18px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
             }`}
         >
           How Can We Help

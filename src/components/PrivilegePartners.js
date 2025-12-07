@@ -285,6 +285,7 @@ export default function Profit() {
       flex items-center justify-center lg:justify-end 
       h-full px-4 lg:px-20 py-6 lg:py-0
     "
+          style={{ paddingRight: '184px' }}
         >
           <div
             className="
@@ -346,7 +347,7 @@ export default function Profit() {
 
       {/* Section Title + Cards */}
       <div className="relative w-full py-6 lg:py-12 px-4 lg:px-16 overflow-hidden">
-        <h2 className="text-[22px] lg:text-[36px] font-semibold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+        <h2 className="text-[18px] lg:text-[26px] font-semibold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
           FEATURED PROPERTIES
         </h2>
         <div className="flex-1 h-px bg-gray-300 my-3 lg:my-4 mx-auto lg:w-[20%] w-[60%] mb-3 lg:mb-4"></div>
@@ -484,7 +485,7 @@ export default function Profit() {
         <div className="relative z-10">
           {/* Section Heading */}
           <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-[22px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+            <h2 className="text-[18px] lg:text-[26px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
               STORY FROM OUR CLIENTS
             </h2>
             <div className="w-[40%] lg:w-[30%] h-[2px] bg-gray-300 mx-auto"></div>
@@ -568,7 +569,7 @@ export default function Profit() {
           <div className="w-32 lg:w-50 mx-auto h-[2px] bg-gray-300"></div>
         </div>
         <div className="hidden lg:block text-center mb-12">
-          <h2 className="text-[27px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+          <h2 className="text-[18px] lg:text-[26px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
             LATEST REAL ESTATE BLOGS
           </h2>
           <div className="w-40 h-[2px] bg-gray-300 mx-auto"></div>

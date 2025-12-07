@@ -38,7 +38,7 @@ export default function Hero() {
         max-w-[360px] sm:max-w-[550px] md:max-w-[770px] lg:max-w-[900px]
   
         max-h-[750px] sm:max-h-[550px] md:max-h-[430px] lg:max-h-[500px]
-        rounded-md
+        rounded-[3px]
       "
         >
 
@@ -62,7 +62,7 @@ export default function Hero() {
           <div className="hidden lg:flex flex-wrap gap-2 md:gap-2 lg:gap-2 mt-4  lg:mt-6">
 
             <button
-              style={{ backgroundColor: "#001730", borderRadius: "5px", height: "35px" }}
+              style={{ backgroundColor: "#001730", borderRadius: "3px", height: "35px" }}
               className="w-[120px] sm:w-[130px] md:w-[140px] lg:w-[160px]
                      px-2 py-2 text-white text-[11px] md:text-[12px] lg:text-[13px]
                      shadow-lg hover:bg-[#022d5e] transition-all duration-300"
@@ -71,7 +71,7 @@ export default function Hero() {
             </button>
 
             <button
-              style={{ backgroundColor: "#001730", borderRadius: "5px", height: "35px" }}
+              style={{ backgroundColor: "#001730", borderRadius: "3px", height: "35px" }}
               className="w-[120px] sm:w-[130px] md:w-[140px] lg:w-[160px]
                      px-2 py-2 text-white text-[11px] md:text-[12px] lg:text-[13px]
                      shadow-lg hover:bg-[#022d5e] transition-all duration-300"
@@ -80,12 +80,12 @@ export default function Hero() {
             </button>
 
             <button
-              style={{ borderRadius: "5px", height: "35px" }}
+              style={{ borderRadius: "3px", height: "35px" }}
               className="flex items-center justify-center gap-2
                      w-[150px] sm:w-[160px] md:w-[170px] lg:w-[190px]
                     text-[#001730]
-                     text-[11px] md:text-[12px] lg:text-[13px]
-                     shadow-md  backdrop-blur-md bg-white/10 border border-white/20 transition-all duration-300"
+                     text-[11px] md:text-[8px] lg:text-[13px]
+                     shadow-md  backdrop-blur-md bg-white/10 border border-white/40 transition-all duration-300"
             >
               <ArrowDown size={14} className="opacity-80" />
               View More Filters
@@ -93,10 +93,10 @@ export default function Hero() {
 
           </div>
           <div className="w-[90%] h-[0.2px]  bg-[#FFFFFF] my-2 "></div>
-          {/* <div className="p-4 bg-gray-400 rounded-md shadow-md gap-4 flex flex-wrap lg:hidden">
+          {/* <div className="p-4 bg-gray-400 rounded-[3px] shadow-md gap-4 flex flex-wrap lg:hidden">
 
 <button
-  style={{ backgroundColor: "#001730", borderRadius: "5px", height: "35px" }}
+  style={{ backgroundColor: "#001730", borderRadius: "3px", height: "35px" }}
   className="w-[120px] sm:w-[130px] md:w-[140px] lg:w-[160px]
              px-2 py-2 text-white text-[11px] md:text-[12px] lg:text-[13px]
              shadow-lg hover:bg-[#022d5e] transition-all duration-300"
@@ -105,7 +105,7 @@ export default function Hero() {
 </button>
 
 <button
-  style={{ backgroundColor: "#001730", borderRadius: "5px", height: "35px" }}
+  style={{ backgroundColor: "#001730", borderRadius: "3px", height: "35px" }}
   className="w-[120px] sm:w-[130px] md:w-[140px] lg:w-[160px]
              px-2 py-2 text-white text-[11px] md:text-[12px] lg:text-[13px]
              shadow-lg hover:bg-[#022d5e] transition-all duration-300"
@@ -120,19 +120,19 @@ export default function Hero() {
           <div className="mt-5 lg:mt-2 flex flex-col sm:flex-row gap-2 md:gap-3">
 
             {/* Input */}
-            <div className="flex items-center bg-white/90 backdrop-blur-md rounded-md
+            <div className="flex items-center bg-white/90 backdrop-blur-md rounded-[3px]
                         border border-white/30 px-2
                         w-full  lg:w-[63%]
                         shadow-md h-[45px] md:h-[45px]">
 
-              <div className="p-2 bg-[#10284C] rounded-md mr-2 flex items-center justify-center h-[28px] w-[28px]">
+              <div className="p-2 bg-[#10284C] rounded-[3px] mr-2 flex items-center justify-center h-[28px] w-[28px]">
                 <Search className="text-white h-6 w-6" />
               </div>
 
               <input
                 type="text"
                 placeholder="Describe your dream Property by searching all our properties . . ."
-                className="flex-1 bg-transparent outline-none text-[11px] md:text-[10px] lg:text-[13px] text-[#001730] placeholder:text-gray-500"
+                className="flex-1 bg-transparent outline-none text-[8px] md:text-[10px] lg:text-[13px] text-[#001730] placeholder:text-gray-500 placeholder:text-[7px] md:placeholder:text-[7px] lg:placeholder:text-[11px]"
               />
 
               <Mic className="text-[#001730] h-6 w-6 ml-2" />
@@ -143,7 +143,7 @@ export default function Hero() {
               className="w-full  lg:w-[210px]
                      text-white text-[11px] md:text-[12px] lg:text-[13px]
                      shadow-lg hover:bg-[#022d5e] transition-all duration-300
-                     bg-[#001730] rounded-md
+                     bg-[#001730] rounded-[3px]
                      h-[40px] md:h-[45px]"
             >
               Search
@@ -173,7 +173,7 @@ export default function Hero() {
         <div className="absolute bottom-[-90px] text-center justify-center flex flex-col items-center  w-full h-full px-8">
 
           {/* GLASS CARD */}
-          <div className="backdrop-blur-sm  bg-white/20 rounded-md p-6 w-full  text-center shadow-lg border border-white/10">
+          <div className="backdrop-blur-sm  bg-white/20 rounded-[3px] p-6 w-full  text-center shadow-lg border border-white/10">
 
             <h2 className="text-2xl font-semibold tracking-wider text-gray-800 px-8">
               REDEFINING  REAL ESTATE
@@ -193,21 +193,21 @@ export default function Hero() {
           </div>
 
           {/* BUTTONS */}
-          <div className="bg-white/20 rounded-md mt-2  p-4 shadow-lg border border-white/10  backdrop-blur-sm ">
+          <div className="bg-white/20 rounded-[3px] mt-2  p-4 shadow-lg border border-white/10  backdrop-blur-sm ">
             <div className="flex gap-5  ">
-              <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-md font-semibold shadow-md">
+              <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-[3px] font-semibold shadow-md">
                 RENT
               </button>
-              <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-md font-semibold shadow-md">
+              <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-[3px] font-semibold shadow-md">
                 BUY
               </button>
             </div>
           </div>
 
           {/* SEARCH BAR */}
-          <div className="bg-white/20 rounded-md mt-2  p-2  shadow-lg border border-white/10  backdrop-blur-sm ">
-            <div className="flex items-center mx-4 px-4 bg-white rounded-md shadow-md   py-3">
-              <div className="p-2 bg-[#10284C] rounded-md flex items-center justify-center h-[32px] w-[32px]">
+          <div className="bg-white/20 rounded-[3px] mt-2  p-2  shadow-lg border border-white/10  backdrop-blur-sm ">
+            <div className="flex items-center mx-4 px-4 bg-white rounded-[3px] shadow-md   py-3">
+              <div className="p-2 bg-[#10284C] rounded-[3px] flex items-center justify-center h-[32px] w-[32px]">
                 <Search className="text-white h-4 w-4" />
               </div>
               <input
@@ -222,8 +222,8 @@ export default function Hero() {
         </div>
 
         {/* FILTER BUTTON */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white/20 rounded-md p-4 px-14 shadow-lg border border-white/10 backdrop-blur-sm z-50">
-          <div className="flex w-full bg-[#0A2A4C] text-white px-4 py-3 rounded-md shadow-md items-center">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 bg-white/20 rounded-[3px] p-4 px-14 shadow-lg border border-white/10 backdrop-blur-sm z-50">
+          <div className="flex w-full bg-[#0A2A4C] text-white px-4 py-3 rounded-[3px] shadow-md items-center">
 
             {/* LEFT SIDE: Icon + Divider + Text */}
             <div className="flex items-center gap-3">

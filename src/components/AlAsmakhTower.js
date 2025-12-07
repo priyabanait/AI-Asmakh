@@ -214,7 +214,7 @@ export default function AlAsmakhTower() {
       </div>
 
       {/* DESKTOP - Grid Layout */}
-      <div className="hidden lg:grid grid-cols-2 gap-6 md:gap-20 3xl:gap-10 4xl:gap-12 relative min-h-screen items-center ">
+      <div className="hidden lg:grid grid-cols-[60%_40%] gap-6 md:gap-10 3xl:gap-10 4xl:gap-12 relative min-h-screen items-center ">
 
         {/* LEFT IMAGE */}
         <motion.div
@@ -223,7 +223,7 @@ export default function AlAsmakhTower() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="relative w-full h-full min-h-[500px]"
-          style={{ marginLeft: 0, paddingLeft: 0 }}
+          style={{ marginLeft: 0, paddingLeft: 0, width: "100%" }}
         >
           <Image
             src={projects[activeSlide].img || "/407.png"}
@@ -315,10 +315,18 @@ export default function AlAsmakhTower() {
 
 
       {/* === EXPLORE OUR AREA SECTION === */}
-      <section className="py-10 md:py-16 bg-gray-100">
+      <section
+        className="py-10 md:py-16 bg-gray-100 min-h-screen"
+        style={{
+          backgroundImage: "url('/images/BG_Form.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="max-w-[1827px] mx-auto px-4">
           {/* Heading */}
-          <h2 className="text-[22px] md:text-[36px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+          <h2 className="text-[15px] md:text-[20px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
             EXPLORE BY AREA
           </h2>
           <div className="flex-1 h-px bg-gray-300 my-3 md:my-4 mx-auto w-[40%] md:w-[20%] mb-3 md:mb-4"></div>
@@ -454,7 +462,7 @@ export default function AlAsmakhTower() {
               {[0, 1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className={`relative rounded-lg ${i === 1 ? "w-[860px] h-[420px]" : "w-[420px] h-[420px]"
+                  className={`relative rounded-lg ${i === 1 ? "w-[850px] h-[300px]" : "w-[400px] h-[300px]"
                     }`}
                 >
                   <Image
@@ -472,7 +480,7 @@ export default function AlAsmakhTower() {
               {[4, 5, 6, 7].map((i) => (
                 <div
                   key={i}
-                  className={`relative rounded-lg ${i === 7 ? "w-[860px] h-[420px]" : "w-[420px] h-[420px]"
+                  className={`relative rounded-lg ${i === 7 ? "w-[860px] h-[300px]" : "w-[420px] h-[300px]"
                     }`}
                 >
                   <Image
