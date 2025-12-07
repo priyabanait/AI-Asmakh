@@ -85,7 +85,9 @@ export default function Header() {
   return (
     <header
       style={{ height: '62px', minHeight: '62px' }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border border-white/50 shadow-lg backdrop-blur-lg bg-white/50 flex items-center ${scrolled ? 'rounded-none' : 'rounded-[5px] mx-0 lg:mx-2 mt-1 lg:mt-4'
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 border border-white/10 shadow-lg backdrop-blur-md bg-white/10 flex items-center ${scrolled
+        ? 'rounded-none mt-0 mx-0'
+        : 'rounded-[5px] mx-0 md:mx-2 mt-4'
         }`}
     >
       <div className="max-w-[1500px] w-full px-4 mx-auto 2xl:max-w-[1500px]">

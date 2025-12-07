@@ -43,11 +43,12 @@ export default function PrivilegeProgram() {
 
   const SalesIcon = () => (
     <Image
-      src="/Group.png"
+      src="/2_Icons Used_Sales.png"
       alt="Sales"
       width={48}
       height={48}
-      className="object-contain"
+      className="object-contain text-[#10284C]"
+      style={{ color: '#10284C' }}
     />
   );
 

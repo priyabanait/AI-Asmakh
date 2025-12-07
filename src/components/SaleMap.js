@@ -27,7 +27,7 @@ export default function Sale() {
       bathrooms: 2,
       area: "450",
       price: "280,000",
-     image: "/div.property-thumbnail-wrapper.png",
+      image: "/div.property-thumbnail-wrapper.png",
     },
     {
       id: 3,
@@ -110,13 +110,13 @@ export default function Sale() {
                   <ArrowDown className="h-4 w-4" />
                 </button>
                 <button className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-3 py-2.5 rounded-md font-medium shadow-lg text-sm">
-                <Image
-      src= "/Icon (4).png"
-      alt="List Icon"
-      width={16}
-      height={16}
-      className="text-white"
-    />
+                  <Image
+                    src="/Icon (4).png"
+                    alt="List Icon"
+                    width={16}
+                    height={16}
+                    className="text-white"
+                  />
                   <span>Map View</span>
                 </button>
               </div>
@@ -145,9 +145,9 @@ export default function Sale() {
 
             {/* Search Bar */}
             <div className="bg-white rounded-md shadow-lg flex items-center px-4 mx-20 py-3">
-            <div className="p-2 bg-[#10284C] rounded-md mr-2 flex items-center justify-center h-[28px] w-[28px]">
-            <Search className="text-white h-4 w-4" />
-          </div>
+              <div className="p-2 bg-[#10284C] rounded-md mr-2 flex items-center justify-center h-[28px] w-[28px]">
+                <Search className="text-white h-4 w-4" />
+              </div>
               <input
                 type="text"
                 placeholder="Explore and discover everything about our trusted agents..."
@@ -173,8 +173,8 @@ export default function Sale() {
           className="absolute inset-0"
         ></iframe>
 
-       
-       
+
+
 
         {/* Zoom Controls - Bottom Right */}
         <div className="absolute bottom-4 right-4 bg-white rounded-md shadow-lg flex flex-col z-10">
@@ -188,42 +188,42 @@ export default function Sale() {
       </div>
 
       <div className="hidden lg:flex w-full justify-center lg:pt-20 pt-6 ">
-  <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 rounded-md shadow-md 
+        <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 rounded-md shadow-md 
                   gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
 
-    {/* Filter Items */}
-    {["Property Type", "Location", "Beds", "Baths", "Price"].map((label, index) => (
-      <div
-        key={index}
-        className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
+          {/* Filter Items */}
+          {["Property Type", "Location", "Beds", "Baths", "Price"].map((label, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
                    rounded-md shadow-lg hover:bg-[#10284C] transition"
-      >
-        <div className="flex items-center gap-3">
-          {/* Icon + Divider */}
-          <div className="flex items-center gap-2">
-            <MapPin size={16} />
-            <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
-          </div>
+            >
+              <div className="flex items-center gap-3">
+                {/* Icon + Divider */}
+                <div className="flex items-center gap-2">
+                  <MapPin size={16} />
+                  <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+                </div>
 
-          {/* Label */}
-          <span className="text-sm font-medium">{label}</span>
+                {/* Label */}
+                <span className="text-sm font-medium">{label}</span>
+              </div>
+
+              {/* Down Arrow */}
+              <ArrowDown size={16} className="opacity-80" />
+            </div>
+          ))}
+          {/* More Filters Button */}
+          <button className="flex items-center justify-center  bg-[#0B1F3A]/40 text-white px-6 py-3 rounded-md  font-medium shadow-lg hover:bg-[#5c1eff] transition">
+            <span>+ More Filters</span>
+          </button>
         </div>
-
-        {/* Down Arrow */}
-        <ArrowDown size={16} className="opacity-80" />
       </div>
-    ))}
-     {/* More Filters Button */}
-  <button className="flex items-center justify-center  bg-[#0B1F3A]/40 text-white px-6 py-3 rounded-md  font-medium shadow-lg hover:bg-[#5c1eff] transition">
-    <span>+ More Filters</span>
-  </button>
-  </div>
-</div>
 
       <div className="hidden lg:block w-[100%] h-[1px] bg-gray-300 my-4  px-10"></div>
 
       {/* ---------- READY TO FIND SECTION ---------- */}
-    
+
 
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
       <div className="hidden lg:block min-h-screen bg-gray-50">
@@ -232,44 +232,42 @@ export default function Sale() {
           <div className="hidden lg:flex max-w-full mx-auto  items-center justify-between">
             {/* LIST/MAP Toggle Buttons */}
             <div className="flex items-center  bg-[#001730] rounded-md p-1">
-  {/* LIST Button */}
-  <button
-    onClick={() => setViewMode("LIST")}
-    className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all ${
-      viewMode === "LIST"
-        ? "bg-white text-[#001730]"
-        : "text-white"
-    }`}
-  >
-    <Image
-      src={viewMode === "LIST" ? "/Icon (3).png" : "/Icon (4).png"}
-      alt="List Icon"
-      width={18}
-      height={18}
-      className="text-white"
-    />
-    <span>LIST</span>
-  </button>
+              {/* LIST Button */}
+              <button
+                onClick={() => setViewMode("LIST")}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all ${viewMode === "LIST"
+                    ? "bg-white text-[#001730]"
+                    : "text-white"
+                  }`}
+              >
+                <Image
+                  src={viewMode === "LIST" ? "/Icon (3).png" : "/Icon (4).png"}
+                  alt="List Icon"
+                  width={18}
+                  height={18}
+                  className="text-white"
+                />
+                <span>LIST</span>
+              </button>
 
-  {/* MAP Button */}
-  <button
-    onClick={() => setViewMode("MAP")}
-    className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all ${
-      viewMode === "MAP"
-        ? "bg-white text-[#001730]"
-        : "text-white"
-    }`}
-  >
-    <Image
-      src={viewMode === "MAP" ? "/Icon (3).png" : "/Icon (4).png"}
-      alt="Map Icon"
-      width={18}
-      height={18}
-      className="text-white"
-    />
-    <span>MAP</span>
-  </button>
-</div>
+              {/* MAP Button */}
+              <button
+                onClick={() => setViewMode("MAP")}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all ${viewMode === "MAP"
+                    ? "bg-white text-[#001730]"
+                    : "text-white"
+                  }`}
+              >
+                <Image
+                  src={viewMode === "MAP" ? "/Icon (3).png" : "/Icon (4).png"}
+                  alt="Map Icon"
+                  width={18}
+                  height={18}
+                  className="text-white"
+                />
+                <span>MAP</span>
+              </button>
+            </div>
 
 
 
@@ -280,146 +278,139 @@ export default function Sale() {
           </div>
         </div>
 
-      {/* Main Content: List and Map */}
-      <div className="hidden lg:flex h-[calc(100vh-120px)]">
-        {/* Left Section: Property List (50%) */}
-        <div className="w-full lg:w-1/2 overflow-y-auto bg-white p-4">
-          <div className="space-y-4">
-            {properties.map((property) => (
-              <div
-                key={property.id}
-                className="bg-gray-200 rounded-md shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-              >
-                <div className="flex p-4 rounded-md">
-                  {/* Image Section - Left */}
-                 
-  {/* Image Section - Left */}
-  <div className="relative w-[320px] h-[192px] lg:w-[220px] lg:h-[192px] xl:w-[320px] xl:h-[192px]  flex-shrink-0">
-    <Image
-      src={property.image}
-      alt={property.title}
-      fill
-      className="object-cover rounded-md"
-    />
- 
-</div>
+        {/* Main Content: List and Map */}
+        <div className="hidden lg:flex h-[calc(100vh-120px)]">
+          {/* Left Section: Property List (50%) */}
+          <div className="w-full lg:w-1/2 overflow-y-auto bg-white p-4">
+            <div className="space-y-4">
+              {properties.map((property) => (
+                <div
+                  key={property.id}
+                  className="bg-gray-200 rounded-md shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  <div className="flex p-4 rounded-md">
+                    {/* Image Section - Left */}
+
+                    {/* Image Section - Left */}
+                    <div className="relative w-[320px] h-[192px] lg:w-[220px] lg:h-[192px] xl:w-[320px] xl:h-[192px]  flex-shrink-0">
+                      <Image
+                        src={property.image}
+                        alt={property.title}
+                        fill
+                        className="object-cover rounded-md"
+                      />
+
+                    </div>
 
 
-                  {/* Details Section - Right */}
-                  <div className="flex-1 p-4 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-lg font-bold text-[#001730] mb-1">
-                        {property.title}
-                      </h3>
-                      <div className="flex items-center text-[#10284C] text-sm mb-3">
-                  <Image
-                    src="/Vector.png"
-                    alt="Location"
-                    width={12}
-                    height={12}
-                    className="mr-2"
-                  />
-                  <span>{property.location}</span>
-                </div>
-                <div className="grid grid-cols-3 gap-2 lg:gap-4 text-[#10284C] text-sm mb-4">
-
-{/* Beds */}
-<div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4  rounded-md justify-center">
-  <Image
-    src="/Icon (1).png"
-    alt="Beds"
-    width={16}
-    height={16}
-    className="w-[18px] h-[18px]"
-  />
-  <span className="text-xs lg:text-sm">{property.bedrooms}</span>
-</div>
-
-{/* Baths */}
-<div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4   rounded-md justify-center">
-  <Image
-    src="/Icon.png"
-    alt="Baths"
-    width={16}
-    height={16}
-    className="w-[18px] h-[18px]"
-  />
-  <span className="text-xs lg:text-sm">{property.bathrooms}</span>
-</div>
-
-{/* Area */}
-<div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4  rounded-md justify-center">
-  <Image
-    src="/Icon (2).png"
-    alt="Area"
-    width={16}
-    height={16}
-    className="w-[18px] h-[18px]"
-  />
-  <span className="text-xs lg:text-sm">{property.area}</span>
-</div>
-
-</div>
-                <div className="w-[100%]  h-[1px] bg-gray-200 my-3 "></div>
+                    {/* Details Section - Right */}
+                    <div className="flex-1 p-4 flex flex-col justify-between">
+                      <div>
+                        <h3 className="text-lg font-bold text-[#001730] mb-1">
+                          {property.title}
+                        </h3>
+                        <div className="flex items-center text-[#10284C] text-sm mb-3">
+                          <Image
+                            src="/Vector.png"
+                            alt="Location"
+                            width={12}
+                            height={12}
+                            className="mr-2"
+                          />
+                          <span>{property.location}</span>
+                        </div>
+                        <div className="flex items-center justify-between text-[#10284C] text-xs lg:text-sm mb-3 lg:mb-4 gap-1">
+                          <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
+                            <Image
+                              src="/Icon (1).png"
+                              alt="Beds"
+                              width={14}
+                              height={14}
+                              className="lg:w-[18px] lg:h-[18px]"
+                            />
+                            <span>{property.bedrooms}</span>
+                          </div>
+                          <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
+                            <Image
+                              src="/Icon.png"
+                              alt="Baths"
+                              width={14}
+                              height={14}
+                              className="lg:w-[18px] lg:h-[18px]"
+                            />
+                            <span>{property.bathrooms}</span>
+                          </div>
+                          <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
+                            <Image
+                              src="/Icon (2).png"
+                              alt="Area"
+                              width={14}
+                              height={14}
+                              className="lg:w-[18px] lg:h-[18px]"
+                            />
+                            <span>{property.area}</span>
+                          </div>
+                        </div>
+                        <div className="w-[100%]  h-[0.2px] bg-[#A6A6A6]  my-3 " style={{ backgroundColor: '#A6A6A6' }}></div>
                       </div>
-                      <div className="flex items-center justify-between mb-3">
-  <p className="text-lg font-bold text-[#001730] m-0">
-    {property.price} QAR
-  </p>
+                      <div className="flex items-center justify-between gap-2 mb-3">
+                        <p className="text-[24px] lg:text-base font-bold text-[#10284C] m-0">
+                          {property.price} QAR
+                        </p>
 
-  <button className="flex items-center gap-2 bg-[#001730] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#002d52] transition-colors">
-    <span>Details</span>
-    <ArrowRight size={16} className="ml-10" />
-  </button>
-</div>
+                        <button className="flex items-center gap-2 bg-[#001730] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#002d52] transition-colors">
+                          <span>Details</span>
+                          <ArrowRight size={16} className="ml-10" />
+                        </button>
+                      </div>
 
 
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Load More Properties Button */}
+            <div className="mt-6 mb-4">
+              <button className="w-full bg-[#001730] text-white py-3 rounded-md font-medium hover:bg-[#002d52] transition-colors flex items-center justify-between px-8">
+                <span>Load More Properties</span>
+                <ArrowRight size={18} />
+              </button>
+            </div>
+
           </div>
 
-          {/* Load More Properties Button */}
-          <div className="mt-6 mb-4">
-  <button className="w-full bg-[#001730] text-white py-3 rounded-md font-medium hover:bg-[#002d52] transition-colors flex items-center justify-between px-8">
-    <span>Load More Properties</span>
-    <ArrowRight size={18} />
-  </button>
-</div>
+          {/* Right Section: Map (50%) */}
+          <div className="hidden lg:block w-1/2 relative bg-gray-200">
+            {/* Map Container */}
+            <div className="w-full h-full relative">
+              {/* Los Angeles Map */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.4355503344!2d-118.69192047499999!3d34.02016129999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
+              ></iframe>
 
-        </div>
 
-        {/* Right Section: Map (50%) */}
-        <div className="hidden lg:block w-1/2 relative bg-gray-200">
-          {/* Map Container */}
-          <div className="w-full h-full relative">
-            {/* Los Angeles Map */}
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.4355503344!2d-118.69192047499999!3d34.02016129999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0"
-            ></iframe>
 
-           
-
-            {/* Zoom Controls */}
-            <div className="absolute top-4 right-4 bg-white rounded-md shadow-lg flex flex-col z-10">
-              <button className="px-3 py-2 border-b border-gray-200 hover:bg-gray-50">
-                <span className="text-lg font-semibold">+</span>
-              </button>
-              <button className="px-3 py-2 hover:bg-gray-50">
-                <span className="text-lg font-semibold">-</span>
-              </button>
+              {/* Zoom Controls */}
+              <div className="absolute top-4 right-4 bg-white rounded-md shadow-lg flex flex-col z-10">
+                <button className="px-3 py-2 border-b border-gray-200 hover:bg-gray-50">
+                  <span className="text-lg font-semibold">+</span>
+                </button>
+                <button className="px-3 py-2 hover:bg-gray-50">
+                  <span className="text-lg font-semibold">-</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
       <section className="py-10 lg:py-10 bg-gray-100">
         <div className="mx-auto px-6 lg:px-12">

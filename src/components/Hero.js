@@ -83,9 +83,9 @@ export default function Hero() {
               style={{ borderRadius: "5px", height: "35px" }}
               className="flex items-center justify-center gap-2
                      w-[150px] sm:w-[160px] md:w-[170px] lg:w-[190px]
-                     border border-white/20 bg-white/70 text-[#001730]
+                    text-[#001730]
                      text-[11px] md:text-[12px] lg:text-[13px]
-                     shadow-md  transition-all duration-300"
+                     shadow-md  backdrop-blur-md bg-white/10 border border-white/20 transition-all duration-300"
             >
               <ArrowDown size={14} className="opacity-80" />
               View More Filters
@@ -123,19 +123,19 @@ export default function Hero() {
             <div className="flex items-center bg-white/90 backdrop-blur-md rounded-md
                         border border-white/30 px-2
                         w-full  lg:w-[63%]
-                        shadow-md h-[40px] md:h-[45px]">
+                        shadow-md h-[45px] md:h-[45px]">
 
               <div className="p-2 bg-[#10284C] rounded-md mr-2 flex items-center justify-center h-[28px] w-[28px]">
-                <Search className="text-white h-4 w-4" />
+                <Search className="text-white h-6 w-6" />
               </div>
 
               <input
                 type="text"
                 placeholder="Describe your dream Property by searching all our properties . . ."
-                className="flex-1 bg-transparent outline-none text-[11px] md:text-[12px] lg:text-[13px] text-[#001730] placeholder:text-gray-500"
+                className="flex-1 bg-transparent outline-none text-[11px] md:text-[10px] lg:text-[13px] text-[#001730] placeholder:text-gray-500"
               />
 
-              <Mic className="text-gray-500 h-4 w-4 ml-2" />
+              <Mic className="text-[#001730] h-6 w-6 ml-2" />
             </div>
 
             {/* Search Button */}

@@ -40,14 +40,14 @@ export default function AlAsmakhTower() {
       location: "Dubai Marina",
       description:
         "Premium waterfront living with world-class amenities and exceptional marina views.",
-      img: "/407.png",
+      img: "https://media.istockphoto.com/id/175767618/photo/modern-townhouse-complex.jpg?s=612x612&w=0&k=20&c=ltPDM5QTC1a4cdr7Fjvct-KNlNCUPC_IyNC2f93eJ84=",
     },
     {
       title: "THE ROYAL HEIGHTS",
       location: "Business Bay",
       description:
         "Contemporary design combined with smart living for the modern urban lifestyle.",
-      img: "/407.png",
+      img: "https://images.pexels.com/photos/358636/pexels-photo-358636.jpeg?cs=srgb&dl=pexels-pixabay-358636.jpg&fm=jpg",
     },
   ];
 
@@ -127,7 +127,7 @@ export default function AlAsmakhTower() {
               }}
             >
               {/* CONTENT */}
-              <div className="relative text-center md:text-left md:pl-12">
+              <div className="relative text-center md:text-left ">
                 {/* TITLE */}
                 <h2
                   className="font-bold text-[#10284C] mb-2 md:mb-4 md:text-left text-center text-xl md:text-3xl uppercase tracking-wide"
@@ -214,7 +214,7 @@ export default function AlAsmakhTower() {
       </div>
 
       {/* DESKTOP - Grid Layout */}
-      <div className="hidden lg:grid grid-cols-2 gap-6 md:gap-20 3xl:gap-10 4xl:gap-12 relative min-h-screen items-center py-8 px-4">
+      <div className="hidden lg:grid grid-cols-2 gap-6 md:gap-20 3xl:gap-10 4xl:gap-12 relative min-h-screen items-center ">
 
         {/* LEFT IMAGE */}
         <motion.div
@@ -223,6 +223,7 @@ export default function AlAsmakhTower() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="relative w-full h-full min-h-[500px]"
+          style={{ marginLeft: 0, paddingLeft: 0 }}
         >
           <Image
             src={projects[activeSlide].img || "/407.png"}
@@ -239,7 +240,7 @@ export default function AlAsmakhTower() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="hidden lg:flex flex-col justify-center px-4 md:px-0"
+          className="hidden lg:flex flex-col justify-center pl-6"
         >
           <h2
             className="font-bold text-[#00254D] text-4xl  uppercase tracking-wide"
@@ -280,9 +281,11 @@ export default function AlAsmakhTower() {
             {projects.map((_, index) => (
               <div key={index} className="flex items-center">
                 <button
-                  onClick={() => setActiveSlide(index)}
+                  onClick={() => {
+                    setActiveSlide(index)
+                  }}
                   className={`
-          transition-all duration-300 flex items-center justify-center
+          transition-all duration-300 flex items-center justify-center cursor-pointer
           ${index === activeSlide
                       ? "w-5 h-5 border-2 border-[#10284C] rounded-sm"
                       : "w-3 h-3"
