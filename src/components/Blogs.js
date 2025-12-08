@@ -33,12 +33,12 @@ export default function Buy() {
     {
       title: "Discover the Art of Living in Qatar",
       description: "Explore lifestyle stories, community highlights, and home inspirations that define modern living across Qatar.",
-     image: "/Image.png",
+      image: "/Image.png",
     },
     {
       title: "Discover the Art of Living in Qatar",
       description: "Explore lifestyle stories, community highlights, and home inspirations that define modern living across Qatar.",
-     image: "/Image.png",
+      image: "/Image.png",
     },
     {
       title: "Discover the Art of Living in Qatar",
@@ -63,7 +63,7 @@ export default function Buy() {
       <section className="relative w-full min-h-[70vh] sm:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
-          src="/6bb7053353da600ce70375b5767156032c98bac4.jpg"
+          src="/images_pages/blogs.png"
           alt="City Skyline"
           fill
           className="object-cover"
@@ -134,82 +134,82 @@ export default function Buy() {
 
         {/* Desktop Filter Items - Half on BG, Half outside */}
         <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-20 w-full hidden md:flex justify-center px-4 lg:px-10">
-  <div
-    className="
+          <div
+            className="
       grid w-full bg-[#8C8C8C66] p-4 lg:mx-24 px-20 rounded-md shadow-md gap-4
       grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
     "
-  >
-    {/* Filter Items */}
-    {["Type", "Topic", "Categories", "Date"].map((label, index) => (
-      <div
-        key={index}
-        className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md shadow-lg hover:bg-[#10284C] transition"
-      >
-        <div className="flex items-center gap-3">
-          {/* Icon + Divider */}
-          <div className="flex items-center gap-2">
-            <MapPin size={16} />
-            <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
-          </div>
+          >
+            {/* Filter Items */}
+            {["Type", "Topic", "Categories", "Date"].map((label, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md shadow-lg hover:bg-[#10284C] transition"
+              >
+                <div className="flex items-center gap-3">
+                  {/* Icon + Divider */}
+                  <div className="flex items-center gap-2">
+                    <MapPin size={16} />
+                    <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+                  </div>
 
-          {/* Label */}
-          <span className="text-sm font-medium">{label}</span>
+                  {/* Label */}
+                  <span className="text-sm font-medium">{label}</span>
+                </div>
+
+                {/* Down Arrow */}
+                <ArrowDown size={16} className="opacity-80" />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Down Arrow */}
-        <ArrowDown size={16} className="opacity-80" />
-      </div>
-    ))}
-  </div>
-</div>
-
       </section>
-       
+
       <div className="w-[100%] h-[1px] bg-gray-300 my-4 mt-14 sm:my-6 lg:mt-20 px-4 sm:px-6 md:px-10"></div>
       <div className="text-gray-600 text-center px-4 sm:px-6 md:px-10 text-xs lg:text-right sm:text-sm font-medium">
         Showing 5 of 50
       </div>
       {/* ---------- READY TO FIND SECTION ---------- */}
-    
+
 
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4 sm:px-8 md:px-10 lg:px-10 p-4 sm:p-6">
-  {blogs.map((blog, i) => (
-    <div
-      key={i}
-      className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-    >
-      {/* Image Section with Overlapping Button and Text Overlay */}
-      <div className="relative w-full h-80">
-  <Link href={`/BlogsDetails`}>
-    <Image
-      src={blog.image}
-      alt={blog.title}
-      fill
-      className="object-fill cursor-pointer"
-    />
-  </Link>
+        {blogs.map((blog, i) => (
+          <div
+            key={i}
+            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          >
+            {/* Image Section with Overlapping Button and Text Overlay */}
+            <div className="relative w-full h-80">
+              <Link href={`/BlogsDetails`}>
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-fill cursor-pointer"
+                />
+              </Link>
 
-        {/* EXPLORE Button */}
-        <button className="absolute top-4 sm:top-8 left-3 sm:left-4 bg-[#10284C] text-white text-[10px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded flex items-center gap-2 hover:bg-[#1b3a70] transition z-10 shadow-md">
-          <span>EXPLORE</span>
-          <FaArrowRight size={10} className="sm:w-[12px] sm:h-[12px] sm:ml-6" />
-        </button>
+              {/* EXPLORE Button */}
+              <button className="absolute top-4 sm:top-8 left-3 sm:left-4 bg-[#10284C] text-white text-[10px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded flex items-center gap-2 hover:bg-[#1b3a70] transition z-10 shadow-md">
+                <span>EXPLORE</span>
+                <FaArrowRight size={10} className="sm:w-[12px] sm:h-[12px] sm:ml-6" />
+              </button>
 
-        {/* Text Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 bg-[#10284C]/50 backdrop-blur-sm p-4 sm:p-6 z-10">
-          <h3 className="text-white font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3">
-            {blog.title}
-          </h3>
-          <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed opacity-90">
-            {blog.description}
-          </p>
-        </div>
+              {/* Text Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-[#10284C]/50 backdrop-blur-sm p-4 sm:p-6 z-10">
+                <h3 className="text-white font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3">
+                  {blog.title}
+                </h3>
+                <p className="text-white text-xs sm:text-sm md:text-base leading-relaxed opacity-90">
+                  {blog.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-</div>
 
       <section className="py-6 sm:py-8 md:py-10 bg-gray-100">
         <div className="mx-auto px-4 sm:px-6 md:px-12">

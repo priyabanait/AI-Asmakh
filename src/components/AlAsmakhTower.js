@@ -16,16 +16,16 @@ export default function AlAsmakhTower() {
   const minSwipeDistance = 50;
 
   const areas = [
-    { name: "Lusail City", image: "/c2.jpg.png" },
-    { name: "Pearl Island", image: "/14.png" },
-    { name: "Lusail City", image: "/c2.jpg.png" },
-    { name: "Doha", image: "/c3.jpg.png" },
-    { name: "Al Sadd", image: "/17.png" },
-    { name: "Lusail City", image: "/16.png" },
-    { name: "Al Dafna", image: "/c2.jpg.png" },
-    { name: "West Bay", image: "/c1.jpg.png" },
-
+    { name: "Lusail City", image: "/images_prop/1.png" },
+    { name: "Pearl Island", image: "/images_prop/2.png" },
+    { name: "Lusail City", image: "/images_prop/3.png" },
+    { name: "Doha", image: "/images_prop/4.png" },
+    { name: "Al Sadd", image: "/images_prop/5.png" },
+    { name: "Lusail City", image: "/images_prop/6.png" },
+    { name: "Al Dafna", image: "/images_prop/7.png" },
+    { name: "West Bay", image: "/images_prop/8.png" },
   ];
+
 
   const projects = [
     {

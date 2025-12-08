@@ -469,7 +469,9 @@ export default function Profit() {
           </button>
         )}
       </div>
-      <section className="bg-gray-100 py-8 lg:py-16 px-4 lg:px-24 relative overflow-visible">
+
+
+      <section className="bg-gray-100 py-8 lg:py-16 px-4 lg:px-24 relative overflow-visible flex justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -481,18 +483,19 @@ export default function Profit() {
           />
         </div>
 
-        {/* Content with relative positioning */}
-        <div className="relative z-10">
-          {/* Section Heading */}
-          <div className="text-center mb-8 lg:mb-12">
-            <h2 className="text-[18px] lg:text-[26px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+        {/* Content */}
+        <div className="relative z-10 min-h-[400px] flex flex-col w-full">
+
+          {/* Heading (Top) */}
+          <div className="mt-0 text-center mb-[80px]">
+            <h2 className="text-[18px] lg:text-[26px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-4">
               STORY FROM OUR CLIENTS
             </h2>
             <div className="w-[40%] lg:w-[30%] h-[2px] bg-gray-300 mx-auto"></div>
           </div>
 
-          {/* Testimonial Cards Row */}
-          <div className="flex justify-center overflow-visible">
+          {/* Testimonial Cards */}
+          <div className="flex justify-center items-center overflow-visible mt-[10px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={startIndex}
@@ -509,27 +512,16 @@ export default function Profit() {
                         key={i}
                         className="relative bg-gray-200 shadow-md rounded-md p-4 lg:p-6 pl-14 lg:pl-20 hover:shadow-xl transition overflow-visible"
                       >
-                        {/* Image - positioned to overlap left edge, starting from half */}
-                        <div className="absolute left-[10px] lg:-left-[60px] top-1/2 -translate-y-1/2 w-[70px] h-[70px] lg:w-[120px] lg:h-[120px] rounded-md overflow-hidden flex-shrink-0 z-10">
-                          <Image
-                            src={t.image}
-                            alt={t.name}
-                            fill
-                            className="object-cover"
-                          />
+                        {/* Testimonial Image */}
+                        <div className="absolute left-[10px] lg:-left-[60px] top-1/2 -translate-y-1/2 w-[70px] h-[70px] lg:w-[120px] lg:h-[120px] rounded-md overflow-hidden z-10">
+                          <Image src={t.image} alt={t.name} fill className="object-cover" />
                         </div>
 
                         {/* Text */}
-                        <div className="text-left relative z-0">
+                        <div className="text-left relative">
                           <h3 className="text-[#10284C] ml-10 lg:ml-0 font-semibold text-sm lg:text-lg mb-2 flex items-center justify-between">
                             {t.name}
-                            <Image
-                              src="/SVG.png"
-                              alt="quote"
-                              width={16}
-                              height={16}
-                              className="lg:w-5 lg:h-5 object-contain"
-                            />
+                            <Image src="/SVG.png" alt="quote" width={16} height={16} className="lg:w-5 lg:h-5 object-contain" />
                           </h3>
                           <p className="text-gray-600 ml-10 lg:ml-0 text-xs lg:text-sm leading-relaxed">
                             {t.text}
@@ -548,16 +540,18 @@ export default function Profit() {
               <button
                 key={index}
                 onClick={() => setStartIndex(index * 3)}
-                className={`w-2 h-2 transition-all duration-300  ${currentSlide === index
+                className={`w-2 h-2 transition-all duration-300 ${currentSlide === index
                   ? "bg-[#10284C] ring-1 rounded-[1px] ring-[#10284C] ring-offset-2 scale-110"
                   : "bg-gray-300 hover:bg-gray-400 rounded-[1px]"
                   }`}
               ></button>
             ))}
           </div>
-        </div>
 
+        </div>
       </section>
+
+
 
       {/* Latest Real Estate Blogs Section */}
       <section className="bg-white py-4 lg:py-16 px-4">
@@ -905,7 +899,7 @@ export default function Profit() {
                         backgroundPosition: 'left center',
                         backgroundRepeat: 'no-repeat',
                       }}
-                      className="bg-gray-200 rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex overflow-hidden relative"
+                      className="bg-[#E6E6E6] rounded-md shadow-md hover:shadow-lg transition-all duration-300 flex overflow-hidden relative"
                     >
                       {/* Left Section - Office Information */}
                       <div className="flex-1 p-6 relative z-10">

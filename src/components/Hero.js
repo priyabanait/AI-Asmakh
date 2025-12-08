@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Search, Mic, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -9,12 +8,13 @@ export default function Hero() {
 
       <section className="hidden lg:flex relative w-full min-h-screen  items-center justify-center overflow-hidden">
 
-        <Image
-          src="/images/Banner.jpg"
-          alt="Luxury Apartment"
-          fill
-          className="object-cover object-center"
-          priority
+        <video
+          src="/images/hero_section_video.mov"
+          autoPlay
+          loop
+
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
         {/* overlay only for mobile */}
@@ -43,8 +43,8 @@ export default function Hero() {
         >
 
           {/* HEADING */}
-          <h1 className="text-xl sm:text-2xl mx-20 lg:mx-0  md:text-[27px] lg:text-[36px] mb-2 md:mb-3 lg:mb-4 leading-tight">
-            Your Property Journey Begins Here
+          <h1 className="text-xl sm:text-2xl mx-20 lg:mx-0 text-uppercase   md:text-[27px] lg:text-[36px] mb-2 md:mb-3 lg:mb-4 leading-tight">
+            YOUR PROPERTY JOURNEY BEGINS HERE
           </h1>
 
           {/* Line */}
@@ -84,7 +84,7 @@ export default function Hero() {
               className="flex items-center justify-center gap-2
                      w-[150px] sm:w-[160px] md:w-[170px] lg:w-[190px]
                     text-[#001730]
-                     text-[11px] md:text-[8px] lg:text-[13px]
+                     text-[8px] md:text-[7px] lg:text-[8px]
                      shadow-md  backdrop-blur-md bg-white/10 border border-white/40 transition-all duration-300"
             >
               <ArrowDown size={14} className="opacity-80" />
@@ -157,12 +157,13 @@ export default function Hero() {
       <section className="lg:hidden relative w-full min-h-screen  items-center justify-center" style={{ overflow: 'visible' }}>
 
         {/* BACKGROUND VIDEO OR IMAGE */}
-        <Image
-          src="/images/Banner.jpg"
-          alt="Luxury Apartment"
-          fill
-          className="object-cover object-center"
-          priority
+        <video
+          src="/images/hero_section_video.mov"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
 
 

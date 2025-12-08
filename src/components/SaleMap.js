@@ -4,6 +4,12 @@ import { useState } from "react";
 import Image from "next/image";
 import { Search, Mic, MapPin, ArrowDown, Bed, Bath, Square, ArrowRight, Leaf, Home, Map as MapIcon, SlidersHorizontal } from "lucide-react";
 import { FaArrowRight } from "react-icons/fa6";
+import { FaMapLocationDot } from "react-icons/fa6";
+import { FaList } from "react-icons/fa";
+import { FaBath } from "react-icons/fa6";
+
+import { FaDollarSign } from "react-icons/fa";
+import { TbHomeCog } from "react-icons/tb";
 
 export default function Sale() {
   const [viewMode, setViewMode] = useState("LIST"); // "LIST" or "MAP"
@@ -54,10 +60,10 @@ export default function Sale() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[50vh] lg:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[90vh] lg:min-h-[90vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
-          src="/902cae874699fd9c9c5d9434e4c89be550197da7 (1).jpg"
+          src="/images_pages/listings.png"
           alt="City Skyline"
           fill
           className="object-cover"
@@ -69,7 +75,7 @@ export default function Sale() {
 
         {/* 🔍 Search Bar (Half on BG, Half outside) */}
         {/* Mobile Version */}
-        <div className="absolute left-1/2 bottom-0 mb-8 transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:hidden">
+        <div className="absolute left-1/2 bottom-0 mb-5 transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:hidden">
           <div className="space-y-3">
             {/* Transaction Type Selector - Separate Box */}
             <div className="bg-[#8C8C8C66] backdrop-blur-md border rounded-md border-[#8C8C8C66]  p-3 shadow-md">
@@ -131,7 +137,7 @@ export default function Sale() {
         </div>
 
         {/* Desktop Version */}
-        <div className="absolute left-1/2 bottom-0 mb-4 transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
+        <div className="absolute left-1/2 bottom-20 mb-16  transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
           <div className="bg-[#8C8C8C66] backdrop-blur-md border border-[#8C8C8C66] rounded-md p-4 lg:p-6 shadow-lg">
             {/* Buttons Section */}
             <div className="flex justify-center gap-4 mb-4">
@@ -187,32 +193,52 @@ export default function Sale() {
         </div>
       </div>
 
-      <div className="hidden lg:flex w-full justify-center lg:pt-20 pt-6 ">
-        <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 rounded-md shadow-md 
+      <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-14 relative z-30">
+        <div className="grid w-full bg-[#8C8C8C66] backdrop-blur-lg p-4 lg:mx-20 rounded-md shadow-md 
                   gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
 
           {/* Filter Items */}
-          {["Property Type", "Location", "Beds", "Baths", "Price"].map((label, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
-                   rounded-md shadow-lg hover:bg-[#10284C] transition"
-            >
-              <div className="flex items-center gap-3">
-                {/* Icon + Divider */}
-                <div className="flex items-center gap-2">
-                  <MapPin size={16} />
-                  <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+          {["Property Type", "Location", "Beds", "Baths", "Price"].map((label, index) => {
+            // Get appropriate icon for each label
+            const getIcon = () => {
+              switch (label) {
+                case "Property Type":
+                  return <Home size={16} />;
+                case "Location":
+                  return <MapPin size={16} />;
+                case "Beds":
+                  return <Bed size={16} />;
+                case "Baths":
+                  return <Bath size={16} />;
+                case "Price":
+                  return <FaDollarSign size={16} />;
+                default:
+                  return null;
+              }
+            };
+
+            return (
+              <div
+                key={index}
+                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
+                     rounded-md shadow-lg hover:bg-[#10284C] transition"
+              >
+                <div className="flex items-center gap-3">
+                  {/* Icon + Divider */}
+                  <div className="flex items-center gap-2">
+                    {getIcon()}
+                    <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+                  </div>
+
+                  {/* Label */}
+                  <span className="text-sm font-medium">{label}</span>
                 </div>
 
-                {/* Label */}
-                <span className="text-sm font-medium">{label}</span>
+                {/* Down Arrow */}
+                <ArrowDown size={16} className="opacity-80" />
               </div>
-
-              {/* Down Arrow */}
-              <ArrowDown size={16} className="opacity-80" />
-            </div>
-          ))}
+            );
+          })}
           {/* More Filters Button */}
           <button className="flex items-center justify-center  bg-[#0B1F3A]/40 text-white px-6 py-3 rounded-md  font-medium shadow-lg hover:bg-[#5c1eff] transition">
             <span>+ More Filters</span>
@@ -231,40 +257,32 @@ export default function Sale() {
         <div className="bg-white  border-gray-200 px-4 lg:px-8 ">
           <div className="hidden lg:flex max-w-full mx-auto  items-center justify-between">
             {/* LIST/MAP Toggle Buttons */}
-            <div className="flex items-center  bg-[#001730] rounded-md p-1">
+            <div className="flex items-center  bg-[#001730] rounded-md p-0.5">
               {/* LIST Button */}
               <button
                 onClick={() => setViewMode("LIST")}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all ${viewMode === "LIST"
-                    ? "bg-white text-[#001730]"
-                    : "text-white"
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "LIST"
+                  ? "bg-white text-[#001730]"
+                  : "text-white"
                   }`}
               >
-                <Image
-                  src={viewMode === "LIST" ? "/Icon (3).png" : "/Icon (4).png"}
-                  alt="List Icon"
-                  width={18}
-                  height={18}
-                  className="text-white"
-                />
+
+
+                <FaList size={14} />
                 <span>LIST</span>
               </button>
 
               {/* MAP Button */}
               <button
                 onClick={() => setViewMode("MAP")}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md font-medium transition-all ${viewMode === "MAP"
-                    ? "bg-white text-[#001730]"
-                    : "text-white"
+                className={`flex items-center gap-1.5 px-4 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "MAP"
+                  ? "bg-white text-[#001730]"
+                  : "text-white"
                   }`}
               >
-                <Image
-                  src={viewMode === "MAP" ? "/Icon (3).png" : "/Icon (4).png"}
-                  alt="Map Icon"
-                  width={18}
-                  height={18}
-                  className="text-white"
-                />
+
+                <FaMapLocationDot size={14} />
+
                 <span>MAP</span>
               </button>
             </div>
@@ -321,13 +339,7 @@ export default function Sale() {
                         </div>
                         <div className="flex items-center justify-between text-[#10284C] text-xs lg:text-sm mb-3 lg:mb-4 gap-1">
                           <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
-                            <Image
-                              src="/Icon (1).png"
-                              alt="Beds"
-                              width={14}
-                              height={14}
-                              className="lg:w-[18px] lg:h-[18px]"
-                            />
+                            <Bed size={14} className="lg:w-[18px] lg:h-[18px]" />
                             <span>{property.bedrooms}</span>
                           </div>
                           <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
@@ -412,25 +424,30 @@ export default function Sale() {
           </div>
         </div>
       </div>
-      <section className="py-10 lg:py-10 bg-gray-100">
-        <div className="mx-auto px-6 lg:px-12">
+      <section
+        className="py-16 lg:py-20 relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/images/BG_Form.png)',
+        }}
+      >
+        <div className="mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
             {/* Left Content */}
             <div className="flex-1">
-              <h2 className="text-[20px] lg:text-[30px] font-semibold text-[#001730] mb-2">
+              <h2 className="text-[18px] lg:text-[24px] font-semibold text-[#001730] mb-2">
                 Ready to Find Your Dream Property ?
               </h2>
-              <div className="w-[80%] lg:w-[60%] h-[1.5px] bg-gray-300 my-2 lg:my-2"></div>
-              <p className="text-base lg:text-base text-[#333333] leading-relaxed">
+              <div className="w-[50%] lg:w-[50%] h-[1.5px] bg-gray-300 my-2 lg:my-2"></div>
+              <p className="text-sm lg:text-sm text-[#333333] leading-relaxed">
                 Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice. Al Asmakh is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
               </p>
             </div>
 
             {/* Right Button */}
             <div className="flex-shrink-0">
-              <button className="bg-[#001730] text-white px-8 py-4 rounded-md font-medium text-base lg:text-lg hover:bg-[#002d52] transition-all duration-300 flex items-center gap-3 shadow-lg">
+              <button className="bg-[#001730] text-white px-8 py-4 rounded-md font-medium text-sm lg:text-base hover:bg-[#002d52] transition-all duration-300 flex items-center gap-3 shadow-lg">
                 Contact Team
-                <FaArrowRight size={18} />
+                <FaArrowRight size={16} />
               </button>
             </div>
           </div>
