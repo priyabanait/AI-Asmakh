@@ -488,7 +488,7 @@ export default function Profit() {
 
           {/* Heading (Top) */}
           <div className="mt-0 text-center mb-[80px]">
-            <h2 className="text-[18px] lg:text-[26px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-4">
+            <h2 className="text-[18px] lg:text-[22px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-4">
               STORY FROM OUR CLIENTS
             </h2>
             <div className="w-[40%] lg:w-[30%] h-[2px] bg-gray-300 mx-auto"></div>
@@ -563,7 +563,7 @@ export default function Profit() {
           <div className="w-32 lg:w-50 mx-auto h-[2px] bg-gray-300"></div>
         </div>
         <div className="hidden lg:block text-center mb-12">
-          <h2 className="text-[18px] lg:text-[26px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+          <h2 className="text-[18px] lg:text-[22px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
             LATEST REAL ESTATE BLOGS
           </h2>
           <div className="w-40 h-[2px] bg-gray-300 mx-auto"></div>

@@ -228,7 +228,7 @@ export default function PrivilegeProgram() {
     >
       <div className="container-custom text-center">
         <h2
-          className={`text-[18px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+          className={`text-[18px] lg:text-[28px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
             }`}
         >
           How Can We Help

@@ -43,7 +43,7 @@ export default function Hero() {
         >
 
           {/* HEADING */}
-          <h1 className="text-xl sm:text-2xl mx-20 lg:mx-0 text-uppercase   md:text-[27px] lg:text-[36px] mb-2 md:mb-3 lg:mb-4 leading-tight">
+          <h1 className="text-xl sm:text-2xl mx-20 lg:mx-0 text-uppercase   md:text-[27px] lg:text-[28px] mb-2 md:mb-3 lg:mb-4 leading-tight">
             YOUR PROPERTY JOURNEY BEGINS HERE
           </h1>
 

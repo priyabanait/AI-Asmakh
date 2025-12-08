@@ -243,7 +243,7 @@ export default function AlAsmakhTower() {
           className="hidden lg:flex flex-col justify-center pl-6"
         >
           <h2
-            className="font-bold text-[#00254D] text-4xl  uppercase tracking-wide"
+            className="font-bold text-[#00254D] text-[28px]  uppercase tracking-wide"
           >
             {projects[activeSlide].title}
           </h2>
@@ -326,7 +326,7 @@ export default function AlAsmakhTower() {
       >
         <div className="max-w-[1827px] mx-auto px-4">
           {/* Heading */}
-          <h2 className="text-[15px] md:text-[20px] lg:text-[36px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+          <h2 className="text-[15px] md:text-[20px] lg:text-[28px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
             EXPLORE BY AREA
           </h2>
           <div className="flex-1 h-px bg-gray-300 my-3 md:my-4 mx-auto w-[40%] md:w-[20%] mb-3 md:mb-4"></div>
