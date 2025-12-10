@@ -14,7 +14,7 @@ module.exports = {
         light: "#F8FAFC",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Mulish', 'sans-serif'],
       },
       screens: {
         'xs': '475px',

@@ -130,7 +130,8 @@ export default function AlAsmakhTower() {
               <div className="relative text-center md:text-left ">
                 {/* TITLE */}
                 <h2
-                  className="font-bold text-[#10284C] mb-2 md:mb-4 md:text-left text-center text-xl md:text-3xl uppercase tracking-wide"
+                  id="my-heading"
+                  className=" text-[#10284C] mb-2 md:mb-4 uppercase tracking-wide"
                 >
                   {projects[activeSlide].title}
                 </h2>
@@ -243,7 +244,7 @@ export default function AlAsmakhTower() {
           className="hidden lg:flex flex-col justify-center pl-6"
         >
           <h2
-            className="font-bold text-[#00254D] text-[28px]  uppercase tracking-wide"
+            className="font-semibold text-[#00254D] text-[18px] md:text-[22px] uppercase tracking-wide"
           >
             {projects[activeSlide].title}
           </h2>
@@ -255,7 +256,7 @@ export default function AlAsmakhTower() {
               style={{ width: "clamp(16px, 1.2vw, 20px)" }}
             />
             <span
-              className="text-gray-600"
+              className="text-gray-600 text-[18px] md:text-[22px]"
               style={{ fontSize: "clamp(12px, 1vw, 16px)" }}
             >
               {projects[activeSlide].location}
@@ -263,15 +264,16 @@ export default function AlAsmakhTower() {
           </div>
 
           <p
-            className="text-gray-700 mb-6 mr-60 lg:mb-16 leading-relaxed"
-            style={{ fontSize: "clamp(14px, 1.1vw, 18px)" }}
+
+            className="text-gray-700 mb-6 mr-60 lg:mb-16 leading-relaxed text-[18px] md:text-[22px]"
+            style={{ fontSize: "clamp(14px, 1.1vw, 13px)" }}
           >
             {projects[activeSlide].description}
           </p>
 
           <button
-            className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-6 md:px-8 py-3 md:py-3.5 rounded-md hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg w-fit"
-            style={{ fontSize: "clamp(14px, 1.1vw, 16px)" }}
+            className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-6 md:px-8 py-3 md:py-3.5 rounded-md hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg w-fit text-[18px] md:text-[22px]"
+            style={{ fontSize: "clamp(12px, 1.1vw, 16px)" }}
           >
             <span>Details</span>
             <FaArrowRight size={16} className="ml-16" />
@@ -326,11 +328,11 @@ export default function AlAsmakhTower() {
       >
         <div className="max-w-[1827px] mx-auto px-4">
           {/* Heading */}
-          <h2 className="text-[15px] md:text-[20px] lg:text-[28px] font-bold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+          <h2 className="text-[15px] md:text-[22px] lg:text-[22px] font-semibold text-[#10284C] uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
             EXPLORE BY AREA
           </h2>
           <div className="flex-1 h-px bg-gray-300 my-3 md:my-4 mx-auto w-[40%] md:w-[20%] mb-3 md:mb-4"></div>
-          <p className="text-gray-500 max-w-2xl mx-auto mb-8 md:mb-12 text-center text-sm md:text-base px-2 md:px-0">
+          <p className="text-gray-500 max-w-2xl mx-auto mb-8 md:mb-12 text-center  md:text-base px-2 md:px-0">
             Browse luxury homes and investments across Qatar's finest districts,
             each offering its own lifestyle, charm, and opportunity.
           </p>
@@ -462,7 +464,7 @@ export default function AlAsmakhTower() {
               {[0, 1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className={`relative rounded-lg ${i === 1 ? "w-[850px] h-[300px]" : "w-[400px] h-[300px]"
+                  className={`relative rounded-lg ${i === 1 ? "w-[850px] h-[300px]" : "w-[430px] h-[300px]"
                     }`}
                 >
                   <Image
@@ -480,7 +482,7 @@ export default function AlAsmakhTower() {
               {[4, 5, 6, 7].map((i) => (
                 <div
                   key={i}
-                  className={`relative rounded-lg ${i === 7 ? "w-[860px] h-[300px]" : "w-[420px] h-[300px]"
+                  className={`relative rounded-lg ${i === 7 ? "w-[826px] h-[300px]" : "w-[420px] h-[300px]"
                     }`}
                 >
                   <Image

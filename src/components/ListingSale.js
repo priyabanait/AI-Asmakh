@@ -7,6 +7,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaList } from "react-icons/fa";
 import { FaDollarSign } from "react-icons/fa";
+import DreamPropertySection from "./DreamPropertySection";
 
 export default function Sale() {
   const [viewMode, setViewMode] = useState("LIST"); // "LIST" or "MAP"
@@ -137,10 +138,12 @@ export default function Sale() {
 
         {/* Desktop Version */}
         <div className="absolute left-1/2 bottom-20 mb-16  transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
-          <div className="bg-[#8C8C8C66] backdrop-blur-md border border-[#8C8C8C66] rounded-md p-4 lg:p-6 shadow-lg">
+          <div className="border border-white/10 backdrop-blur-[10px] bg-white/30 rounded-md p-4 lg:p-6 shadow-lg">
             {/* Buttons Section */}
             <div className="flex justify-center gap-4 mb-4">
-              <button className="px-20 py-2 rounded-md bg-[#10284C]/20 text-white font-medium shadow  transition">
+
+              <button className="px-20 py-2 rounded-md  backdrop-blur-[20px] bg-white/10 border border-white/40
+ font-medium shadow  transition text-[#10284C]">
                 RENT
               </button>
               <button className="px-20 py-2 rounded-md bg-[#10284C] text-white font-medium shadow  transition">
@@ -218,6 +221,7 @@ export default function Sale() {
                   </div>
                 </div>
 
+                <div className="w-[100%]  h-[0.2px] bg-[#A6A6A6]  my-3 " style={{ backgroundColor: '#A6A6A6' }}></div>
 
                 {/* Price and Button */}
                 <div className="flex items-center justify-between">
@@ -235,7 +239,7 @@ export default function Sale() {
       </div>
 
       <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-14 relative z-30">
-        <div className="grid w-full bg-[#8C8C8C66] backdrop-blur-lg p-4 lg:mx-20 rounded-md shadow-md 
+        <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md 
                   gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
 
           {/* Filter Items */}
@@ -293,38 +297,38 @@ export default function Sale() {
 
 
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
-      <div className="hidden lg:block min-h-screen bg-gray-50">
+      <div className="hidden lg:block min-h-screen ">
         {/* Header Bar */}
-        <div className="bg-white  border-gray-200 px-4 lg:px-8 ">
-          <div className="hidden lg:flex max-w-full mx-auto  items-center justify-between">
+        <div className="bg-white  border-gray-200 px-2 lg:px-4">
+          <div className="hidden lg:flex max-w-full mb-7 bg-gray-50  mx-auto  items-center justify-between">
             {/* LIST/MAP Toggle Buttons */}
             <div className="flex items-center  bg-[#001730] rounded-md p-0.5">
               {/* LIST Button */}
               <button
                 onClick={() => setViewMode("LIST")}
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "LIST"
+                className={`flex items-center gap-1.5 px-2 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "LIST"
                   ? "bg-white text-[#001730]"
                   : "text-white"
                   }`}
               >
 
 
-                <FaList size={14} />
-                <span>LIST</span>
+                <FaList size={12} />
+                <span className="text-[10px]">List</span>
               </button>
 
               {/* MAP Button */}
               <button
                 onClick={() => setViewMode("MAP")}
-                className={`flex items-center gap-1.5 px-4 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "MAP"
+                className={`flex items-center gap-1.5 px-2 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "MAP"
                   ? "bg-white text-[#001730]"
                   : "text-white"
                   }`}
               >
 
-                <FaMapLocationDot size={14} />
+                <FaMapLocationDot size={12} />
 
-                <span>MAP</span>
+                <span className="text-[10px]">Map</span>
               </button>
             </div>
 
@@ -340,7 +344,7 @@ export default function Sale() {
         {/* Main Content: List and Map */}
         {viewMode === "LIST" ? (
           <div
-            className="grid gap-6 px-20 bg-[#F9F9F9] lg:grid-cols-3 xl:grid-cols-4 p-4"
+            className="grid gap-6 px-20 bg-[#F9F9F9] lg:grid-cols-3 xl:grid-cols-4 p-"
           >
             {properties.map((property, index) => (
               <div
@@ -416,6 +420,7 @@ export default function Sale() {
 
                   </div>
 
+                  <div className="w-[100%]  h-[0.2px] bg-[#A6A6A6]  my-3 " style={{ backgroundColor: '#A6A6A6' }}></div>
 
                   {/* Price and Button */}
                   <div className="flex items-center justify-between">
@@ -550,35 +555,7 @@ export default function Sale() {
           </div>
         )}
       </div>
-      <section
-        className="py-16 lg:py-20 relative bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/images/BG_Form.png)',
-        }}
-      >
-        <div className="mx-auto px-6 lg:px-12 relative z-10">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12">
-            {/* Left Content */}
-            <div className="flex-1">
-              <h2 className="text-[18px] lg:text-[24px] font-semibold text-[#001730] mb-2">
-                Ready to Find Your Dream Property ?
-              </h2>
-              <div className="w-[50%] lg:w-[50%] h-[1.5px] bg-gray-300 my-2 lg:my-2"></div>
-              <p className="text-sm lg:text-sm text-[#333333] leading-relaxed">
-                Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice. Al Asmakh is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
-              </p>
-            </div>
-
-            {/* Right Button */}
-            <div className="flex-shrink-0">
-              <button className="bg-[#001730] text-white px-8 py-4 rounded-md font-medium text-sm lg:text-base hover:bg-[#002d52] transition-all duration-300 flex items-center gap-3 shadow-lg">
-                Contact Team
-                <FaArrowRight size={16} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DreamPropertySection />
     </div>
   );
 }

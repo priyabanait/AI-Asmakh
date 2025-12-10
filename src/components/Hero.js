@@ -26,7 +26,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           className="
-        relative z-10 lg:text-left text-center font-bold text-[#001730]
+        relative z-10 lg:text-left text-center  fone-semibold text-[#001730]
         px-4 md:px-4 lg:px-8
         border border-white/10 backdrop-blur-sm bg-white/20 
         p-5 sm:p-6 md:p-5 lg:p-8 
@@ -43,16 +43,18 @@ export default function Hero() {
         >
 
           {/* HEADING */}
-          <h1 className="text-xl sm:text-2xl mx-20 lg:mx-0 text-uppercase   md:text-[27px] lg:text-[28px] mb-2 md:mb-3 lg:mb-4 leading-tight">
+          <h1 className="text-sm sm:text-2xl mx-20 lg:mx-0 text-uppercase   md:text-[28px] lg:text-[28px] mb-2 md:mb-3 lg:mb-4 ">
             YOUR PROPERTY JOURNEY BEGINS HERE
           </h1>
+
+
 
           {/* Line */}
           <div className="w-[90%] h-[0.2px] mt-2 lg:mt-3 bg-[#FFFFFF] mx-auto  lg:mx-0 mb-3  lg:mb-2"></div>
 
           {/* DESCRIPTION */}
           <p
-            className="mb-3 text-[10px] font-semibold sm:text-[11px] text-left mx-2 lg:mx-0 md:text-[12px] lg:text-xs"
+            className="mb-3 text-[10px]  sm:text-[11px] text-left mx-2 lg:mx-0 md:text-[12px] lg:text-xs"
 
           >
             Start your search online and continue it with real people who understand Qatar’s communities, real estate market and your unique needs.
@@ -65,16 +67,16 @@ export default function Hero() {
               style={{ backgroundColor: "#001730", borderRadius: "3px", height: "35px" }}
               className="w-[120px] sm:w-[130px] md:w-[140px] lg:w-[160px]
                      px-2 py-2 text-white text-[11px] md:text-[12px] lg:text-[13px]
-                     shadow-lg hover:bg-[#022d5e] transition-all duration-300"
+                     shadow-lg hover:bg-[#022d5e] transition-all duration-300 text-center"
             >
               RENT
             </button>
 
             <button
               style={{ backgroundColor: "#001730", borderRadius: "3px", height: "35px" }}
-              className="w-[120px] sm:w-[130px] md:w-[140px] lg:w-[160px]
+              className="w-[120px] sm:w-[130px] md:w-[140px] lg:w-[160px] flex items-center justify-center 
                      px-2 py-2 text-white text-[11px] md:text-[12px] lg:text-[13px]
-                     shadow-lg hover:bg-[#022d5e] transition-all duration-300"
+                     shadow-lg hover:bg-[#022d5e] transition-all duration-300 text-center flex items-center justify-center "
             >
               BUY
             </button>
@@ -84,7 +86,7 @@ export default function Hero() {
               className="flex items-center justify-center gap-2
                      w-[150px] sm:w-[160px] md:w-[170px] lg:w-[190px]
                     text-[#001730]
-                     text-[8px] md:text-[7px] lg:text-[8px]
+                     text-[11px] md:text-[12px] lg:text-[13px]
                      shadow-md  backdrop-blur-md bg-white/10 border border-white/40 transition-all duration-300"
             >
               <ArrowDown size={14} className="opacity-80" />
@@ -176,7 +178,7 @@ export default function Hero() {
           {/* GLASS CARD */}
           <div className="backdrop-blur-sm  bg-white/20 rounded-[3px] p-6 w-full  text-center shadow-lg border border-white/10">
 
-            <h2 className="text-2xl font-semibold tracking-wider text-gray-800 px-8">
+            <h2 className="text-2xl md:text-[27px] font-semibold tracking-wider text-gray-800 px-8">
               REDEFINING  REAL ESTATE
             </h2>
 
@@ -185,7 +187,7 @@ export default function Hero() {
             {/* Underline */}
             <div className="w-[80%] h-[2px] bg-[#FFFFFF] mx-auto mt-10 my-2"></div>
 
-            <p className="text-xs font-semibold mt-4 leading-relaxed">
+            <p className="text-xs md:text-[12px] font-semibold mt-4 leading-relaxed">
               Our commitment goes beyond buildings. We craft experiences,
               transform spaces into iconic destinations, and leave a legacy of
               sophistication and innovation across Qatar.
@@ -196,10 +198,10 @@ export default function Hero() {
           {/* BUTTONS */}
           <div className="bg-white/20 rounded-[3px] mt-2  p-4 shadow-lg border border-white/10  backdrop-blur-sm ">
             <div className="flex gap-5  ">
-              <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-[3px] font-semibold shadow-md">
+              <button className="px-10 py-3 bg-[#0A2A4C] text-white text-[11px] md:text-[12px] rounded-[3px] font-semibold shadow-md">
                 RENT
               </button>
-              <button className="px-10 py-3 bg-[#0A2A4C] text-white rounded-[3px] font-semibold shadow-md">
+              <button className="px-10 py-3 bg-[#0A2A4C] text-white text-[11px] md:text-[12px] rounded-[3px] font-semibold shadow-md">
                 BUY
               </button>
             </div>
@@ -214,7 +216,7 @@ export default function Hero() {
               <input
                 type="text"
                 placeholder="Type here..."
-                className="flex-1 ml-3 outline-none text-sm"
+                className="flex-1 ml-3 outline-none text-sm md:text-[10px]"
               />
               <Mic className="text-gray-500" size={20} />
             </div>
@@ -240,7 +242,7 @@ export default function Hero() {
               <div className="h-5 w-[1px] bg-white"></div>
 
               {/* TEXT */}
-              <span className="font-medium text-sm">Filters</span>
+              <span className="font-medium text-sm md:text-[12px]">Filters</span>
             </div>
 
             {/* ARROW ICON */}

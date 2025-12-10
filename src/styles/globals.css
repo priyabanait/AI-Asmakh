@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
@@ -29,7 +29,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
-  font-family: 'Mulish', 'Inter', sans-serif;
+  font-family: 'Mulish', sans-serif;
   line-height: 1.6;
   letter-spacing: 0.02em; /* Universal letter spacing for better text readability */
 }
@@ -283,11 +283,11 @@ html {
 
 /* Arabic font support */
 .arabic-font {
-  font-family: 'Tajawal', 'Inter', sans-serif;
+  font-family: 'Tajawal', 'Mulish', sans-serif;
 }
 
 .arabic-font * {
-  font-family: 'Tajawal', 'Inter', sans-serif;
+  font-family: 'Tajawal', 'Mulish', sans-serif;
 }
 
 /* RTL support */
@@ -321,7 +321,7 @@ html {
 
 /* Mulish utility class */
 .mulish {
-  font-family: 'Mulish', 'Inter', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-optical-sizing: auto;
 }
 
@@ -481,9 +481,7 @@ html {
 
 /* Large screen adjustments - ensure proper centering and scaling */
 @media screen and (min-width: 1920px) {
-  body {
-    font-size: clamp(14px, 1vw, 18px); /* Fluid typography for large screens */
-  }
+ 
   
   /* Ensure images scale properly on large screens */
   img {
@@ -500,9 +498,7 @@ html {
 
 /* Ultra-wide screen adjustments */
 @media screen and (min-width: 2560px) {
-  body {
-    font-size: clamp(16px, 1.2vw, 20px);
-  }
+  
 }
 
 /* JavaScript detection for screen size adjustments */
@@ -547,7 +543,7 @@ html.js .js-scale-fix {
 /* Universal responsive utilities */
 @media screen and (min-width: 1920px) {
   /* Fluid typography for large screens */
-  h1, .text-4xl, .text-3xl {
+  /* h1, .text-4xl, .text-3xl {
     font-size: clamp(2rem, 2.5vw, 3rem);
   }
   
@@ -557,7 +553,7 @@ html.js .js-scale-fix {
   
   h3, .text-2xl, .text-xl {
     font-size: clamp(1.25rem, 1.5vw, 2rem);
-  }
+  } */
   
   /* Better spacing on large screens */
   .space-y-6 > * + * {
@@ -729,4 +725,26 @@ html {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+
+
+
+/* my own css */
+
+#desc {
+  margin-bottom: 3rem;      /* mb-8 → 32px (but mb-3 also exists, see media queries) */
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  /* font-size: 10px;          text-[10px] */
+}
+
+
+#my-heading {
+  font-size: 23px;        /* text-sm */
+  text-transform: uppercase;
+  margin-left: 5rem;      /* mx-20 (80px) */
+  margin-right: 5rem;
+  margin-bottom: 0.5rem;  /* mb-2 */
 }

@@ -227,24 +227,29 @@ export default function PrivilegeProgram() {
       className="relative bg-gray-100 py-16 lg:py-20 3xl:py-24 4xl:py-28 px-4  lg:px-8 3xl:px-12 4xl:px-16"
     >
       <div className="container-custom text-center">
-        <h2
-          className={`text-[18px] lg:text-[28px] font-bold text-[#10284C] uppercase mb-2 3xl:mb-3 4xl:mb-2 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
-            }`}
-        >
-          How Can We Help
-        </h2>
+
+        <h1 className="text-sm sm:text-2xl mx-20 text-uppercase lg:mx-0 text-uppercase   md:text-[23px] lg:text-[23px] mb-2 md:mb-3 lg:mb-4 ">
+          HOW CAN WE HELP ?
+
+        </h1>
+
 
         <div
-          className={`w-32 3xl:w-40 4xl:w-48 h-[1px] mt-2 3xl:mt-5 4xl:mt-6 bg-gray-300 mx-auto mb-6 3xl:mb-8 4xl:mb-10 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+          className={`w-32 3xl:w-40 4xl:w-48 h-[0.5px] mt-2 3xl:mt-5 4xl:mt-6 bg-gray-300 mx-auto mb-4 3xl:mb-8 4xl:mb-10 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
             }`}
         ></div>
 
+
+
         <p
-          style={{ fontSize: "clamp(14px, 1vw, 18px)", color: "#919191" }}
-          className={`max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl mx-auto mb-8 3xl:mb-10 4xl:mb-12 font-normal transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
+          id="desc "
+          style={{ color: "#919191" }}
+          className="mb-8"
+
         >
+
           Real Estate Services for Residents, Owners, and Partners
+
         </p>
 
         {/* Mobile Carousel - Only visible on mobile */}
@@ -328,17 +333,17 @@ export default function PrivilegeProgram() {
                             fontSize: "clamp(16px, 4vw, 20px)",
                             color: "#2D3748",
                           }}
-                          className="font-bold "
+                          className="font-bold text-[18px] md:text-[22px]"
                         >
                           {item.title}
                         </h3>
                         <div className="w-[90%] h-[1px]  bg-gray-300 mx-auto my-2 "></div>
                         <p
                           style={{
-                            fontSize: "clamp(12px, 3.5vw, 15px)",
                             color: "#4A5568",
                           }}
-                          className="p-0 leading-relaxed mb-0"
+                          id="desc"
+                          className="p-0 leading-relaxed mb-0 "
                         >
                           {item.description}
                         </p>
@@ -403,14 +408,14 @@ export default function PrivilegeProgram() {
 
                 <h3
                   style={{ fontSize: "clamp(18px, 1.2vw, 22px)", color: "#2D3748" }}
-                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C]"
+                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C] text-[18px] md:text-[22px]"
                 >
                   {item.title}
                 </h3>
                 <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
                   style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
-                  className="p-0 leading-relaxed mb-0"
+                  className="p-0 leading-relaxed mb-0 text-[14px] md:text-[16px]"
                 >
                   {item.description}
                 </p>
@@ -449,14 +454,14 @@ export default function PrivilegeProgram() {
 
                 <h3
                   style={{ fontSize: "clamp(18px, 1.2vw, 22px)", color: "#2D3748" }}
-                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C]"
+                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C] text-[18px] md:text-[22px]"
                 >
                   {item.title}
                 </h3>
                 <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
                   style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
-                  className="p-0 leading-relaxed mb-0"
+                  className="p-0 leading-relaxed mb-0 text-[14px] md:text-[16px]"
                 >
                   {item.description}
                 </p>

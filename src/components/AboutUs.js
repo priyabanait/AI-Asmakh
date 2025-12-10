@@ -39,615 +39,591 @@ function AboutUs() {
   return (
     <div>
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-visible">
-      {/* Background Image */}
-      <Image
-        src="/64f1105774e6cfad5b7a1de490c1415c3d850ec4.jpg"
-        alt="City Skyline"
-        fill
-        className="object-cover"
-        priority
-      />
-
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 " />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-4 md:px-8 mt-8 md:mt-36">
-        {/* Transparent Box for Heading */}
-        <div 
-          ref={(el) => (sectionRefs.current['hero'] = el)}
-          className={`bg-black/10 backdrop-blur-md border border-white/20 rounded-md px-4 md:px-10 py-6 md:py-10 shadow-lg max-w-[900px] mx-auto transition-all duration-1000 ${
-            isVisible['hero'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-          }`}
-        >
-          <h1 className="text-[#10284C] text-[20px] md:text-[30px] lg:text-[30px] font-semibold mb-2">
-          BUILDING LEGACY THAT LASTS
-          </h1>
-          <div className={`w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] mt-8 bg-gray-400 mb-3 md:mb-4 mx-auto transition-all duration-1000 delay-200 ${
-            isVisible['hero'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-          }`}></div>
-          <p className="text-[#10284C] text-sm md:text-sm lg:text-sm font-medium">
-          Our enduring commitment to quality and service ensures that every property we offer stands as a testament to trust, innovation, and excellence.
-
-          </p>
-        </div>
-
-        {/* Stats Cards */}
-        <div 
-          ref={(el) => (sectionRefs.current['stats'] = el)}
-          className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4 md:mt-10 mb-6 md:mb-10 px-2 md:px-0"
-        >
-          {[
-            { value: "90+", label: "Years of Excellence" },
-            { value: "$12B+", label: "In Rental Volume" },
-            { value: "98%", label: "Client Satisfaction" },
-            { value: "5000+", label: "Homes Sold" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              style={{ transitionDelay: `${400 + index * 100}ms` }}
-              className={`bg-black/10 backdrop backdrop-blur-md border border-white/20 rounded-md p-3 md:p-6 md:px-14 text-[#10284C] transition-all duration-700 hover:scale-105 hover:shadow-lg ${
-                isVisible['stats'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
-            >
-              <h2 className="text-base md:text-2xl font-semibold mb-1">
-                {item.value}
-              </h2>
-              <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[90%] h-[1px] bg-gray-400 my-2 md:my-3 md:mb-4 mx-auto"></div>
-              <p className="text-[#10284C] text-[10px] md:text-sm">
-                {item.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div>
-        
-      </div>
-
-     
-    </section>
-
-    {/* OUR VALUE Section */}
-    <section className="relative w-full py-8 md:py-10">
-      {/* Top Section - White Background */}
-      <div className="bg-white py-8 md:py-12 px-4 sm:px-6 lg:px-8">
-        <div 
-          ref={(el) => (sectionRefs.current['valueHeader'] = el)}
-          className=" mx-auto text-center relative"
-        >
-         
-          
-          {/* Title */}
-          <h2 className={`text-[#10284C] text-[20px] md:text-[30px] lg:text-[30px] font-semibold mb-4 relative transition-all duration-1000 ${
-            isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
-          }`}>
-            OUR VALUE
-          
-          </h2>
-          
-          {/* Subtitle */}
-          <p className={`text-gray-600 text-base md:text-base max-w-4xl mx-auto transition-all duration-1000 delay-200 ${
-            isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
-            Our core values are the foundation of everything we do, from client interactions to property curation.
-          </p>
-        </div>
-      </div>
-
-      {/* Bottom Section - City Skyline Background with Value Boxes */}
-      <div className="relative w-full min-h-[400px] md:min-h-[500px] py-8 md:py-16 px-4 sm:px-6 lg:px-8">
-        {/* City Skyline Background Image */}
+        {/* Background Image */}
         <Image
-          src="/Image (1).png"
+          src="/64f1105774e6cfad5b7a1de490c1415c3d850ec4.jpg"
           alt="City Skyline"
           fill
-          className="object-cover opacity-30"
+          className="object-cover"
           priority
         />
-        
-        {/* Light overlay to make text readable */}
-        <div className="absolute inset-0 "></div>
 
-        {/* Value Proposition Boxes */}
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div 
-            ref={(el) => (sectionRefs.current['valueBoxes'] = el)}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-16"
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 " />
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full px-4 md:px-8 mt-8 md:mt-36">
+          {/* Transparent Box for Heading */}
+          <div
+            ref={(el) => (sectionRefs.current['hero'] = el)}
+            className={`bg-black/10 backdrop-blur-md border border-white/20 rounded-md px-4 md:px-10 py-6 md:py-10 shadow-lg max-w-[900px] mx-auto transition-all duration-1000 ${isVisible['hero'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+              }`}
           >
-            {/* Left Box */}
-            <div 
-              style={{ transitionDelay: '300ms' }}
-              className={`bg-black/10 backdrop-blur-md border-white/20 rounded-md p-4 md:p-8 shadow-lg border transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-                isVisible['valueBoxes'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
-            >
-              <p className="text-gray-800 text-xs md:text-base leading-relaxed">
-                We hold ourselves to the highest standards in every aspect of our business, from property selection to client services.
-              </p>
-            </div>
+            <h1 className="text-[#10284C] text-[20px] md:text-[30px] lg:text-[30px] font-semibold mb-2">
+              BUILDING LEGACY THAT LASTS
+            </h1>
+            <div className={`w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] mt-8 bg-gray-400 mb-3 md:mb-4 mx-auto transition-all duration-1000 delay-200 ${isVisible['hero'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+              }`}></div>
+            <p className="text-[#10284C] text-sm md:text-sm lg:text-sm font-medium">
+              Our enduring commitment to quality and service ensures that every property we offer stands as a testament to trust, innovation, and excellence.
 
-            {/* Middle Box */}
-            <div 
-              style={{ transitionDelay: '400ms' }}
-              className={`bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-8 shadow-lg border border-gray-200 transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-                isVisible['valueBoxes'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
-            >
-              <p className="text-gray-800 text-xs md:text-base leading-relaxed">
-                We build lasting relationships based on trust, discretion and a deep understanding of our clients' unique needs and aspirations.
-              </p>
-            </div>
-
-            {/* Right Box */}
-            <div 
-              style={{ transitionDelay: '500ms' }}
-              className={`bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-8 shadow-lg border border-gray-200 transition-all duration-700 hover:scale-105 hover:shadow-xl ${
-                isVisible['valueBoxes'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
-            >
-              <p className="text-gray-800 text-xs md:text-base leading-relaxed">
-                Our international network and cultural fluency allow us to serve clients from diverse backgrounds and connect properties with the right buyers.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* A LEGACY OF EXCELLENCE Section */}
-    <section className="w-full flex flex-col items-center py-12 md:py-20 bg-white text-[#001730] px-4 md:px-0">
-      {/* Header */}
-      <div 
-        ref={(el) => (sectionRefs.current['legacyHeader'] = el)}
-        className="text-center max-w-3xl mb-8 md:mb-16 px-4 md:px-0"
-      >
-        <h2 className={`text-xl md:text-2xl font-semibold tracking-wide transition-all duration-1000 ${
-          isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
-        }`}>
-          A LEGACY OF EXCELLENCE SINCE 1930
-        </h2>
-        <div className={`w-[30%] sm:w-[30%] md:w-[30%] lg:w-[30%] h-[1px] bg-gray-400 my-3 mx-auto transition-all duration-1000 delay-200 ${
-          isVisible['legacyHeader'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-        }`}></div>
-        <p className={`text-gray-500 mt-3 text-sm md:text-base leading-relaxed transition-all duration-1000 delay-300 ${
-          isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-          With decades of expertise and a passion for innovation, Al Asmakh Real
-          Estate is shaping timeless real estate dreams into reality, crafting
-          distinctive spaces that inspire and endure.
-        </p>
-      </div>
-
-      {/* Timeline Container */}
-      <div className="relative flex flex-col items-center w-full ">
-        {/* Vertical Line */}
-        {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-red-500" /> */}
-
-        {/* Timeline Item 1 */}
-        <div className="relative flex flex-col  mb-2">
-          <div className="bg-white z-10 flex flex-col ">
-           
-                <div className="flex flex-col items-center">
-                  <div className="flex items-center justify-center w-8 h-8 border-2 border-red-500 rounded-md bg-white mb-2">
-                    {/* <CircleDot className="text-red-500 w-4 h-4" /> */}
-                    <div className="w-3 h-3  rounded-full bg-red-500"></div>
-                  </div>
-                  <div className="flex flex-col items-center ">
-            <div className="w-[2px] h-16 bg-red-500"></div>
-            <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
-          
-          </div>
-               
-            </div>
-            <p className="text-sm font-semibold mt-3">
-              January 1, 1930
             </p>
-            <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[90%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
+          </div>
+
+          {/* Stats Cards */}
+          <div
+            ref={(el) => (sectionRefs.current['stats'] = el)}
+            className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-6 mt-4 md:mt-10 mb-6 md:mb-10 px-2 md:px-0"
+          >
+            {[
+              { value: "90+", label: "Years of Excellence" },
+              { value: "$12B+", label: "In Rental Volume" },
+              { value: "98%", label: "Client Satisfaction" },
+              { value: "5000+", label: "Homes Sold" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                style={{ transitionDelay: `${400 + index * 100}ms` }}
+                className={`bg-black/10 backdrop backdrop-blur-md border border-white/20 rounded-md p-3 md:p-6 md:px-14 text-[#10284C] transition-all duration-700 hover:scale-105 hover:shadow-lg ${isVisible['stats'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
+              >
+                <h2 className="text-base md:text-2xl font-semibold mb-1">
+                  {item.value}
+                </h2>
+                <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[90%] h-[1px] bg-gray-400 my-2 md:my-3 md:mb-4 mx-auto"></div>
+                <p className="text-[#10284C] text-[10px] md:text-sm">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+
+        </div>
+
+
+      </section>
+
+      {/* OUR VALUE Section */}
+      <section className="relative w-full py-8 md:py-10">
+        {/* Top Section - White Background */}
+        <div className="bg-white py-8 md:py-12 px-4 sm:px-6 lg:px-8">
+          <div
+            ref={(el) => (sectionRefs.current['valueHeader'] = el)}
+            className=" mx-auto text-center relative"
+          >
+
+
+            {/* Title */}
+            <h2 className={`text-[#10284C] text-[20px] md:text-[30px] lg:text-[30px] font-semibold mb-4 relative transition-all duration-1000 ${isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+              }`}>
+              OUR VALUE
+
+            </h2>
+
+            {/* Subtitle */}
+            <p className={`text-gray-600 text-base md:text-base max-w-4xl mx-auto transition-all duration-1000 delay-200 ${isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+              Our core values are the foundation of everything we do, from client interactions to property curation.
+            </p>
           </div>
         </div>
 
-        {/* Timeline Item 2 */}
-        <div 
-          ref={(el) => (sectionRefs.current['timeline2'] = el)}
-          className="relative flex flex-col"
+        {/* Bottom Section - City Skyline Background with Value Boxes */}
+        <div className="relative w-full min-h-[400px] md:min-h-[500px] py-8 md:py-16 px-4 sm:px-6 lg:px-8">
+          {/* City Skyline Background Image */}
+          <Image
+            src="/Image (1).png"
+            alt="City Skyline"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+
+          {/* Light overlay to make text readable */}
+          <div className="absolute inset-0 "></div>
+
+          {/* Value Proposition Boxes */}
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <div
+              ref={(el) => (sectionRefs.current['valueBoxes'] = el)}
+              className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-16"
+            >
+              {/* Left Box */}
+              <div
+                style={{ transitionDelay: '300ms' }}
+                className={`bg-black/10 backdrop-blur-md border-white/20 rounded-md p-4 md:p-8 shadow-lg border transition-all duration-700 hover:scale-105 hover:shadow-xl ${isVisible['valueBoxes'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
+              >
+                <p className="text-gray-800 text-xs md:text-base leading-relaxed">
+                  We hold ourselves to the highest standards in every aspect of our business, from property selection to client services.
+                </p>
+              </div>
+
+              {/* Middle Box */}
+              <div
+                style={{ transitionDelay: '400ms' }}
+                className={`bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-8 shadow-lg border border-gray-200 transition-all duration-700 hover:scale-105 hover:shadow-xl ${isVisible['valueBoxes'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
+              >
+                <p className="text-gray-800 text-xs md:text-base leading-relaxed">
+                  We build lasting relationships based on trust, discretion and a deep understanding of our clients' unique needs and aspirations.
+                </p>
+              </div>
+
+              {/* Right Box */}
+              <div
+                style={{ transitionDelay: '500ms' }}
+                className={`bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-8 shadow-lg border border-gray-200 transition-all duration-700 hover:scale-105 hover:shadow-xl ${isVisible['valueBoxes'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                  }`}
+              >
+                <p className="text-gray-800 text-xs md:text-base leading-relaxed">
+                  Our international network and cultural fluency allow us to serve clients from diverse backgrounds and connect properties with the right buyers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* A LEGACY OF EXCELLENCE Section */}
+      <section className="w-full flex flex-col items-center py-12 md:py-20 bg-white text-[#001730] px-4 md:px-0">
+        {/* Header */}
+        <div
+          ref={(el) => (sectionRefs.current['legacyHeader'] = el)}
+          className="text-center max-w-3xl mb-8 md:mb-16 px-4 md:px-0"
         >
-          <div className="flex flex-col mx-auto md:ml-80 md:flex-row gap-6 md:gap-16 px-4 md:px-0">
-            {/* Image */}
-            <div className={`w-full max-w-[400px] md:w-[400px] h-[200px] md:h-[250px] relative overflow-hidden mx-auto md:mx-0 shadow-md transition-all duration-700 hover:scale-105 ${
-              isVisible['timeline2'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+          <h2 className={`text-xl md:text-2xl font-semibold tracking-wide transition-all duration-1000 ${isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
             }`}>
-              <Image
-                src="/Image (2).png"
-                alt="Legacy 1970"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Text */}
-            <div className={`text-center md:text-left max-w-md mx-auto md:mx-0 transition-all duration-700 delay-200 ${
-              isVisible['timeline2'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+            A LEGACY OF EXCELLENCE SINCE 1930
+          </h2>
+          <div className={`w-[30%] sm:w-[30%] md:w-[30%] lg:w-[30%] h-[1px] bg-gray-400 my-3 mx-auto transition-all duration-1000 delay-200 ${isVisible['legacyHeader'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+            }`}></div>
+          <p className={`text-gray-500 mt-3 text-sm md:text-base leading-relaxed transition-all duration-1000 delay-300 ${isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
-              <h3 className="text-[#001B5E] font-semibold text-lg mb-2">
-                Foundations of a Vision
-              </h3>
-              <div className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] bg-gray-200 my-3 mx-auto md:mx-0"></div>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Founded during Qatar's early development phase, laying the
-                cornerstone for what would become one of the country's most
-                trusted and pioneering real estate companies.
-              </p>
-            </div>
-          </div>
-
-          {/* Dot + Date */}
-          <div className="flex flex-col items-center mt-8">
-            <div className="w-[2px] h-16 bg-red-500"></div>
-            <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
-            <p className="text-sm font-semibold mt-3">June 5, 1970</p>
-            <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
-          </div>
+            With decades of expertise and a passion for innovation, Al Asmakh Real
+            Estate is shaping timeless real estate dreams into reality, crafting
+            distinctive spaces that inspire and endure.
+          </p>
         </div>
 
-        {/* Timeline Item 3: July 1, 1993 */}
-        <div className="relative flex flex-col mt-8">
-         
-          {/* <div className="flex flex-col items-center">
+        {/* Timeline Container */}
+        <div className="relative flex flex-col items-center w-full ">
+          {/* Vertical Line */}
+          {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 h-full w-[2px] bg-red-500" /> */}
+
+          {/* Timeline Item 1 */}
+          <div className="relative flex flex-col  mb-2">
+            <div className="bg-white z-10 flex flex-col ">
+
+              <div className="flex flex-col items-center">
+                <div className="flex items-center justify-center w-8 h-8 border-2 border-red-500 rounded-md bg-white mb-2">
+                  {/* <CircleDot className="text-red-500 w-4 h-4" /> */}
+                  <div className="w-3 h-3  rounded-full bg-red-500"></div>
+                </div>
+                <div className="flex flex-col items-center ">
+                  <div className="w-[2px] h-16 bg-red-500"></div>
+                  <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
+
+                </div>
+
+              </div>
+              <p className="text-sm font-semibold mt-3">
+                January 1, 1930
+              </p>
+              <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[90%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
+            </div>
+          </div>
+
+          {/* Timeline Item 2 */}
+          <div
+            ref={(el) => (sectionRefs.current['timeline2'] = el)}
+            className="relative flex flex-col"
+          >
+            <div className="flex flex-col mx-auto md:ml-80 md:flex-row gap-6 md:gap-16 px-4 md:px-0">
+              {/* Image */}
+              <div className={`w-full max-w-[400px] md:w-[400px] h-[200px] md:h-[250px] relative overflow-hidden mx-auto md:mx-0 shadow-md transition-all duration-700 hover:scale-105 ${isVisible['timeline2'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+                }`}>
+                <Image
+                  src="/Image (2).png"
+                  alt="Legacy 1970"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Text */}
+              <div className={`text-center md:text-left max-w-md mx-auto md:mx-0 transition-all duration-700 delay-200 ${isVisible['timeline2'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+                }`}>
+                <h3 className="text-[#001B5E] font-semibold text-lg mb-2">
+                  Foundations of a Vision
+                </h3>
+                <div className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] bg-gray-200 my-3 mx-auto md:mx-0"></div>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  Founded during Qatar's early development phase, laying the
+                  cornerstone for what would become one of the country's most
+                  trusted and pioneering real estate companies.
+                </p>
+              </div>
+            </div>
+
+            {/* Dot + Date */}
+            <div className="flex flex-col items-center mt-8">
+              <div className="w-[2px] h-16 bg-red-500"></div>
+              <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
+              <p className="text-sm font-semibold mt-3">June 5, 1970</p>
+              <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
+            </div>
+          </div>
+
+          {/* Timeline Item 3: July 1, 1993 */}
+          <div className="relative flex flex-col mt-8">
+
+            {/* <div className="flex flex-col items-center">
             <div className="w-[2px] h-16 bg-red-500"></div>
             <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
             <p className="text-sm font-semibold mt-3">July 1, 1993</p>
             <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
           </div> */}
 
-          {/* Content */}
-          <div 
-            ref={(el) => (sectionRefs.current['timeline3'] = el)}
-            className={`max-w-md mx-auto md:mr-80 text-center md:text-right transition-all duration-700 px-4 md:px-0 ${
-              isVisible['timeline3'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}
-          >
-  {/* Heading */}
-  <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
-    A New Era of Living
-    {/* Line directly below the heading */}
-    <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
-  </h2>
+            {/* Content */}
+            <div
+              ref={(el) => (sectionRefs.current['timeline3'] = el)}
+              className={`max-w-md mx-auto md:mr-80 text-center md:text-right transition-all duration-700 px-4 md:px-0 ${isVisible['timeline3'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+                }`}
+            >
+              {/* Heading */}
+              <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
+                A New Era of Living
+                {/* Line directly below the heading */}
+                <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
+              </h2>
 
-  {/* Paragraph */}
-  <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
-    Amid Qatar's booming oil economy, Al Asmakh Real Estate played a vital role
-    in pioneering modern residential developments that set the tone for the
-    nation's urban evolution.
-  </p>
-</div>
-
-        </div>
-
-        {/* Timeline Item 4: A New Chapter of Growth */}
-        <div 
-          ref={(el) => (sectionRefs.current['timeline4'] = el)}
-          className="relative flex flex-col mt-8"
-        >
-          {/* Dot + Date */}
-          <div className="flex flex-col items-center">
-            <div className="w-[2px] h-16 bg-red-500"></div>
-            <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
-            <p className="text-sm font-semibold mt-3">2001 - 2003</p>
-            <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
-          </div>
-
-          {/* Content */}
-          <div className="flex flex-col mx-auto md:ml-80 md:flex-row gap-6 md:gap-16 items-start mt-6 md:mt-8 px-4 md:px-0">
-            {/* Image */}
-            <div className={`w-full max-w-[300px] md:w-[300px] h-[120px] md:h-[150px] relative overflow-hidden mx-auto md:mx-0 shadow-md transition-all duration-700 hover:scale-105 ${
-              isVisible['timeline4'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}>
-              <Image
-                src="/Image (3).png"
-                alt="Legacy 1970"
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Text */}
-            <div className={`text-center md:text-left max-w-md mx-auto md:mx-0 transition-all duration-700 delay-200 ${
-              isVisible['timeline4'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}>
-              <h3 className="text-[#001B5E] font-semibold text-lg mb-2">
-                A New Chapter of Growth
-              </h3>
-              <div className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] bg-gray-200 my-3 mx-auto md:mx-0"></div>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                Under the leadership of Ibrahim Hassan Al Asmakh, the company underwent a strategic transformation, strengthening its foundation and expanding its influence across Qatar's real estate sector.
+              {/* Paragraph */}
+              <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
+                Amid Qatar's booming oil economy, Al Asmakh Real Estate played a vital role
+                in pioneering modern residential developments that set the tone for the
+                nation's urban evolution.
               </p>
             </div>
-          </div>
-        </div>
 
-        {/* Timeline Item 5: Expanding Leadership Horizons - 2001 - 2003 */}
-        <div 
-          ref={(el) => (sectionRefs.current['timeline5'] = el)}
-          className="relative flex flex-col mt-8"
-        >
-          {/* Dot + Date */}
-          <div className="flex flex-col items-center">
-            <div className="w-[2px] h-16 bg-red-500"></div>
-            <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
-            <p className="text-sm font-semibold mt-3">2001 - 2003</p>
-            <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
           </div>
 
-          {/* Content */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-start mt-6 md:mt-8 px-4 md:px-0">
+          {/* Timeline Item 4: A New Chapter of Growth */}
+          <div
+            ref={(el) => (sectionRefs.current['timeline4'] = el)}
+            className="relative flex flex-col mt-8"
+          >
+            {/* Dot + Date */}
+            <div className="flex flex-col items-center">
+              <div className="w-[2px] h-16 bg-red-500"></div>
+              <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
+              <p className="text-sm font-semibold mt-3">2001 - 2003</p>
+              <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
+            </div>
+
+            {/* Content */}
+            <div className="flex flex-col mx-auto md:ml-80 md:flex-row gap-6 md:gap-16 items-start mt-6 md:mt-8 px-4 md:px-0">
+              {/* Image */}
+              <div className={`w-full max-w-[300px] md:w-[300px] h-[120px] md:h-[150px] relative overflow-hidden mx-auto md:mx-0 shadow-md transition-all duration-700 hover:scale-105 ${isVisible['timeline4'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+                }`}>
+                <Image
+                  src="/Image (3).png"
+                  alt="Legacy 1970"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Text */}
+              <div className={`text-center md:text-left max-w-md mx-auto md:mx-0 transition-all duration-700 delay-200 ${isVisible['timeline4'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+                }`}>
+                <h3 className="text-[#001B5E] font-semibold text-lg mb-2">
+                  A New Chapter of Growth
+                </h3>
+                <div className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] bg-gray-200 my-3 mx-auto md:mx-0"></div>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  Under the leadership of Ibrahim Hassan Al Asmakh, the company underwent a strategic transformation, strengthening its foundation and expanding its influence across Qatar's real estate sector.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline Item 5: Expanding Leadership Horizons - 2001 - 2003 */}
+          <div
+            ref={(el) => (sectionRefs.current['timeline5'] = el)}
+            className="relative flex flex-col mt-8"
+          >
+            {/* Dot + Date */}
+            <div className="flex flex-col items-center">
+              <div className="w-[2px] h-16 bg-red-500"></div>
+              <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
+              <p className="text-sm font-semibold mt-3">2001 - 2003</p>
+              <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
+            </div>
+
+            {/* Content */}
+            <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-start mt-6 md:mt-8 px-4 md:px-0">
+              {/* Text Block - Left */}
+              <div className={`max-w-md mx-auto md:mx-0 text-center md:text-right transition-all duration-700 ${isVisible['timeline5'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+                }`}>
+                {/* Heading */}
+                <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
+                  Expanding Leadership Horizons
+                  {/* Line directly below the heading */}
+                  <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
+                </h2>
+
+                {/* Paragraph */}
+                <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
+                  During this period, Ibrahim Hassan Al Asmakh extended his leadership influence beyond real estate, serving as Vice Chairman of the Qatar Tourism Agency, contributing to the nation's growth in both tourism and property development
+                </p>
+              </div>
+
+
+              {/* Images - Right (Overlapping) */}
+              <div className={`relative flex-shrink-0 mx-auto md:mx-0 transition-all duration-700 delay-200 ${isVisible['timeline5'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+                }`}>
+
+                {/* Mobile Layout — stack images */}
+                <div className="flex flex-col md:hidden gap-4 w-full items-center">
+                  {/* Top Image first */}
+                  <div className="relative w-[250px] h-[160px] shadow-lg rounded transition-transform duration-300 hover:scale-105">
+                    <Image
+                      src="/Image (2).png"
+                      alt="Aerial View Complex"
+                      fill
+                      className="object-cover rounded"
+                    />
+                  </div>
+
+                  {/* Bottom Image second */}
+                  <div className="relative w-[200px] h-[130px] shadow-lg rounded transition-transform duration-300 hover:scale-105">
+                    <Image
+                      src="/Image (10).png"
+                      alt="Modern Building"
+                      fill
+                      className="object-cover rounded"
+                    />
+                  </div>
+                </div>
+
+                {/* Laptop / Desktop (md and above) — keep original overlapping */}
+                <div className="hidden md:block relative">
+                  {/* Bottom Image */}
+                  <div className="relative w-[250px] h-[150px] mb-4 shadow-lg rounded z-0 transition-transform duration-300 hover:scale-105">
+                    <Image
+                      src="/Image (10).png"
+                      alt="Modern Building"
+                      fill
+                      className="object-cover rounded"
+                    />
+                  </div>
+
+                  {/* Top Overlapping Image */}
+                  <div className="absolute w-[400px] h-[250px] mt-[-50px] ml-40 shadow-lg rounded z-10 transition-transform duration-300 hover:scale-105">
+                    <Image
+                      src="/Image (11).png"
+                      alt="Aerial View Complex"
+                      fill
+                      className="object-cover rounded"
+                    />
+                  </div>
+                </div>
+
+              </div>
+
+
+            </div>
+
+            {/* Dot + Date for 2003 - 2010 */}
+            <div className="flex flex-col items-center mt-8">
+              <div className="w-[2px] h-16 bg-red-500"></div>
+              <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
+              <p className="text-sm font-semibold mt-3">2003 - 2010</p>
+              <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-start mt-6 md:mt-8 px-4 md:pl-0 md:pr-0 md:-ml-4">
             {/* Text Block - Left */}
-            <div className={`max-w-md mx-auto md:mx-0 text-center md:text-right transition-all duration-700 ${
-              isVisible['timeline5'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}>
-  {/* Heading */}
-  <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
-  Expanding Leadership Horizons
-    {/* Line directly below the heading */}
-    <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
-  </h2>
+            <div className="max-w-md mx-auto md:mx-0 md:mr-auto text-center md:text-right">
+              {/* Heading */}
+              <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
+                Regency Group Holding
+                {/* Line directly below the heading */}
+                <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
+              </h2>
 
-  {/* Paragraph */}
-  <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
-   During this period, Ibrahim Hassan Al Asmakh extended his leadership influence beyond real estate, serving as Vice Chairman of the Qatar Tourism Agency, contributing to the nation's growth in both tourism and property development
-  </p>
-</div>
+              {/* Paragraph */}
+              <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
+                Al Asmakh Real Estate became part of Regency Group Holding, enhancing its financial strength, operational efficiency, and capacity to deliver large-scale developments across Qatar.
+              </p>
+            </div>
 
 
             {/* Images - Right (Overlapping) */}
-            <div className={`relative flex-shrink-0 mx-auto md:mx-0 transition-all duration-700 delay-200 ${
-              isVisible['timeline5'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}>
-
-{/* Mobile Layout — stack images */}
-<div className="flex flex-col md:hidden gap-4 w-full items-center">
-  {/* Top Image first */}
-  <div className="relative w-[250px] h-[160px] shadow-lg rounded transition-transform duration-300 hover:scale-105">
-    <Image
-      src="/Image (2).png"
-      alt="Aerial View Complex"
-      fill
-      className="object-cover rounded"
-    />
-  </div>
-
-  {/* Bottom Image second */}
-  <div className="relative w-[200px] h-[130px] shadow-lg rounded transition-transform duration-300 hover:scale-105">
-    <Image
-      src="/Image (10).png"
-      alt="Modern Building"
-      fill
-      className="object-cover rounded"
-    />
-  </div>
-</div>
-
-{/* Laptop / Desktop (md and above) — keep original overlapping */}
-<div className="hidden md:block relative">
-  {/* Bottom Image */}
-  <div className="relative w-[250px] h-[150px] mb-4 shadow-lg rounded z-0 transition-transform duration-300 hover:scale-105">
-    <Image
-      src="/Image (10).png"
-      alt="Modern Building"
-      fill
-      className="object-cover rounded"
-    />
-  </div>
-
-  {/* Top Overlapping Image */}
-  <div className="absolute w-[400px] h-[250px] mt-[-50px] ml-40 shadow-lg rounded z-10 transition-transform duration-300 hover:scale-105">
-    <Image
-      src="/Image (11).png"
-      alt="Aerial View Complex"
-      fill
-      className="object-cover rounded"
-    />
-  </div>
-</div>
-
-</div>
+            <div className="relative flex-shrink-0 mx-auto md:mx-0 md:ml-auto">
+              {/* Bottom Image - Smaller (goes behind) */}
+              <div className="relative w-[150px] h-[100px] md:w-[200px] md:h-[150px] mb-4  rounded z-0">
+                <Image
+                  src="/Image (9).png"
+                  alt="Modern Building"
+                  fill
+                  className="object-cover rounded"
+                />
+              </div>
 
 
-          </div>
 
-          {/* Dot + Date for 2003 - 2010 */}
-          <div className="flex flex-col items-center mt-8">
-            <div className="w-[2px] h-16 bg-red-500"></div>
-            <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
-            <p className="text-sm font-semibold mt-3">2003 - 2010</p>
-            <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row gap-6 md:gap-16 items-start mt-6 md:mt-8 px-4 md:px-0">
-            {/* Text Block - Left */}
-            <div className="max-w-md mx-auto md:mx-0 text-center md:text-right">
-  {/* Heading */}
-  <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
-  Regency Group Holding
-    {/* Line directly below the heading */}
-    <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
-  </h2>
-
-  {/* Paragraph */}
-  <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
-  Al Asmakh Real Estate became part of Regency Group Holding, enhancing its financial strength, operational efficiency, and capacity to deliver large-scale developments across Qatar.
-  </p>
-</div>
-
-
-            {/* Images - Right (Overlapping) */}
-            <div className="relative flex-shrink-0 mx-auto md:mx-0">
-  {/* Bottom Image - Smaller (goes behind) */}
-  <div className="relative w-[150px] h-[100px] md:w-[250px] md:h-[150px] mb-4 shadow-lg rounded z-0">
-    <Image
-      src="/Image (9).png"
-      alt="Modern Building"
-      fill
-      className="object-cover rounded"
-    />
-  </div>
-
- 
-  
-</div>
+            </div>
 
           </div>
           <div className="flex flex-col items-center">
             <div className="w-[2px] h-16 bg-red-500"></div>
             <div className="w-3 h-3 mt-2 rounded-full bg-red-500"></div>
             <p className="text-sm font-semibold mt-3">2010  - Present
-</p>
+            </p>
             <div className="w-[9%] sm:w-[9%] md:w-[9%] lg:w-[9%] h-[1px] bg-gray-200 my-3 mx-auto"></div>
           </div>
-          <div className="relative w-[150px] h-[100px] md:w-[250px] md:h-[150px] mb-4 mx-auto rounded z-0">
-    <Image
-      src="/Frame 74.png"
-      alt="Modern Building"
-      fill
-      className="object-fill"
-    />
-  </div>
-          <div 
+          <div className="relative w-[110px] h-[110px] md:w-[150px] md:h-[150px] mb-4 mx-auto rounded z-0">
+            <Image
+              src="/Frame 74.png"
+              alt="Modern Building"
+              fill
+              className="object-fill"
+            />
+          </div>
+          <div
             ref={(el) => (sectionRefs.current['future'] = el)}
             className="text-center max-w-3xl mb-8 md:mb-16 px-4 md:px-0"
           >
-        <h2 className={`text-xl md:text-2xl font-semibold tracking-wide transition-all duration-1000 ${
-          isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
-        }`}>
-        Defining the Future of Luxury Living
-        </h2>
-        <div className={`w-[30%] sm:w-[30%] md:w-[30%] lg:w-[30%] h-[1px] bg-gray-200 my-3 mx-auto transition-all duration-1000 delay-200 ${
-          isVisible['future'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-        }`}></div>
-        <p className={`text-gray-500 mt-3 text-sm md:text-base leading-relaxed transition-all duration-1000 delay-300 ${
-          isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
-        Guided by the Qatar National Vision 2030, the company continues to expand its portfolio of premium developments, shaping modern lifestyles through architectural innovation and world-class quality.
-        </p>
-      </div>
-      </div>
-    </section>
-    <section 
-      ref={(el) => (sectionRefs.current['formSection'] = el)}
-      className="relative w-full h-auto min-h-screen lg:h-screen flex items-center py-8 lg:py-0"
-    >
-      {/* Background Image */}
-      <Image
-        src="/WhatsApp Image 2025-11-07 at 10.45.55 PM.jpeg"
-        alt="Background"
-        fill
-        className="object-cover"
-      />
-
-      {/* Content Container */}
-      <div className="relative z-10 flex flex-col md:flex-row w-full h-full px-4 md:px-12 lg:px-14 items-center justify-between py-8 lg:py-0">
-        {/* Left Side Title - Overlaid on background */}
-        <div className={`text-white md:w-1/2 flex flex-col lg:mt-40 mt-8 md:mt-20 mb-6 md:mb-0 h-full transition-all duration-1000 ${
-          isVisible['formSection'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-        }`}>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-center lg:text-left font-semibold mb-3">
-            How Can We Help You Today?
-          </h2>
-          <div className={`h-[0.5px] w-[70%] bg-white mx-auto lg:mx-0 mb-4 transition-all duration-1000 delay-200 ${
-            isVisible['formSection'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-          }`}></div>
-        </div>
-
-        {/* Right Side - Form Panel and Map */}
-        <div className={`md:w-1/2 max-w-2xl w-full flex flex-col transition-all duration-1000 delay-300 ${
-          isVisible['formSection'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-        }`}>
-          {/* Form Panel - Translucent */}
-          <div className="bg-blue-50/10 backdrop-blur-sm p-4 md:p-6 lg:px-16 rounded-lg shadow-xl relative overflow-visible">
-            {/* Form Header */}
-            <h3 className="text-[#10284C] md:px-10 text-xs md:text-sm lg:text-base text-center font-medium mb-3">
-              Fill out the form below and our experts will get back to you within 24 hour
-            </h3>
-            <div className="h-[1px] w-40 md:w-60 bg-white 300 mb-4 mx-auto"></div>
-
-
-            <form className="space-y-4">
-              {/* First Row: Name and Email */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    placeholder="John Carter"
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    placeholder="example@email.com"
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
-                  />
-                </div>
-              </div>
-
-              {/* Second Row: Phone and Property Type */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Phone</label>
-                  <input
-                    type="text"
-                    placeholder="(123) 456 - 789"
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Property Type</label>
-                  <select
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-500 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
-                  >
-                    <option>Choose a Type</option>
-                    <option>Apartment</option>
-                    <option>Villa</option>
-                    <option>Commercial</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Message Textarea */}
-              <div>
-                <label className="block text-[#10284C] text-sm font-medium mb-2">Message</label>
-                <textarea
-                  placeholder="Tell us more about your requirement like budget ,area & others .."
-                  rows={4}
-                  className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] resize-none transition-all duration-300 hover:border-[#10284C]/50"
-                ></textarea>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="bg-[#10284C] text-white px-6 md:px-8 py-2 md:py-2.5 rounded-md flex items-center justify-center md:justify-end gap-2 hover:bg-[#0d2142] hover:scale-105 transition-all duration-300 w-full md:w-auto"
-              >
-                <span>Submit</span>
-                <FaArrowRight size={14} className="ml-4 md:ml-10" />
-              </button>
-            </form>
-          </div>
-
-          {/* Map Section - Below the blur card */}
-          <div className="mt-4 mb-4 lg:mb-0 lg:mt-6 w-full h-[15vh] md:h-[20vh] rounded-md overflow-hidden bg-gray-200 border border-gray-300 relative transition-transform duration-300 hover:scale-105">
-            <Image
-              src="/675.png"
-              alt="Map"
-              fill
-              className="object-cover rounded-md"
-            />
+            <h2 className={`text-xl md:text-2xl font-semibold tracking-wide transition-all duration-1000 ${isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+              }`}>
+              Defining the Future of Luxury Living
+            </h2>
+            <div className={`w-[30%] sm:w-[30%] md:w-[30%] lg:w-[30%] h-[1px] bg-gray-200 my-3 mx-auto transition-all duration-1000 delay-200 ${isVisible['future'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+              }`}></div>
+            <p className={`text-gray-500 mt-3 text-sm md:text-base leading-relaxed transition-all duration-1000 delay-300 ${isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}>
+              Guided by the Qatar National Vision 2030, the company continues to expand its portfolio of premium developments, shaping modern lifestyles through architectural innovation and world-class quality.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section
+        ref={(el) => (sectionRefs.current['formSection'] = el)}
+        className="relative w-full h-auto min-h-screen lg:h-screen flex items-center py-8 lg:py-0"
+      >
+        {/* Background Image */}
+        <Image
+          src="/WhatsApp Image 2025-11-07 at 10.45.55 PM.jpeg"
+          alt="Background"
+          fill
+          className="object-cover"
+        />
+
+        {/* Content Container */}
+        <div className="relative z-10 flex flex-col md:flex-row w-full h-full px-4 md:px-12 lg:px-14 items-center justify-between py-8 lg:py-0">
+          {/* Left Side Title - Overlaid on background */}
+          <div className={`text-white md:w-1/2 flex flex-col lg:mt-40 mt-8 md:mt-20 mb-6 md:mb-0 h-full transition-all duration-1000 ${isVisible['formSection'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
+            }`}>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl text-center lg:text-left font-semibold mb-3">
+              How Can We Help You Today?
+            </h2>
+            <div className={`h-[0.5px] w-[70%] bg-white mx-auto lg:mx-0 mb-4 transition-all duration-1000 delay-200 ${isVisible['formSection'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
+              }`}></div>
+          </div>
+
+          {/* Right Side - Form Panel and Map */}
+          <div className={`md:w-1/2 max-w-2xl w-full flex flex-col transition-all duration-1000 delay-300 ${isVisible['formSection'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
+            }`}>
+            {/* Form Panel - Translucent */}
+            <div className="bg-blue-50/10 backdrop-blur-sm p-4 md:p-6 lg:px-16 rounded-lg shadow-xl relative overflow-visible">
+              {/* Form Header */}
+              <h3 className="text-[#10284C] md:px-10 text-xs md:text-sm lg:text-base text-center font-medium mb-3">
+                Fill out the form below and our experts will get back to you within 24 hour
+              </h3>
+              <div className="h-[1px] w-40 md:w-60 bg-white 300 mb-4 mx-auto"></div>
+
+
+              <form className="space-y-4">
+                {/* First Row: Name and Email */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[#10284C] text-sm font-medium mb-2">Name</label>
+                    <input
+                      type="text"
+                      placeholder="John Carter"
+                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[#10284C] text-sm font-medium mb-2">Email</label>
+                    <input
+                      type="email"
+                      placeholder="example@email.com"
+                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                    />
+                  </div>
+                </div>
+
+                {/* Second Row: Phone and Property Type */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[#10284C] text-sm font-medium mb-2">Phone</label>
+                    <input
+                      type="text"
+                      placeholder="(123) 456 - 789"
+                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[#10284C] text-sm font-medium mb-2">Property Type</label>
+                    <select
+                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-500 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                    >
+                      <option>Choose a Type</option>
+                      <option>Apartment</option>
+                      <option>Villa</option>
+                      <option>Commercial</option>
+                    </select>
+                  </div>
+                </div>
+
+                {/* Message Textarea */}
+                <div>
+                  <label className="block text-[#10284C] text-sm font-medium mb-2">Message</label>
+                  <textarea
+                    placeholder="Tell us more about your requirement like budget ,area & others .."
+                    rows={4}
+                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] resize-none transition-all duration-300 hover:border-[#10284C]/50"
+                  ></textarea>
+                </div>
+
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  className="bg-[#10284C] text-white px-6 md:px-8 py-2 md:py-2.5 rounded-md flex items-center justify-center md:justify-end gap-2 hover:bg-[#0d2142] hover:scale-105 transition-all duration-300 w-full md:w-auto"
+                >
+                  <span>Submit</span>
+                  <FaArrowRight size={14} className="ml-4 md:ml-10" />
+                </button>
+              </form>
+            </div>
+
+            {/* Map Section - Below the blur card */}
+            <div className="mt-4 mb-4 lg:mb-0 lg:mt-6 w-full h-[15vh] md:h-[20vh] rounded-md overflow-hidden bg-gray-200 border border-gray-300 relative transition-transform duration-300 hover:scale-105">
+              <Image
+                src="/675.png"
+                alt="Map"
+                fill
+                className="object-cover rounded-md"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
