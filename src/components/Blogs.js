@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Search, Mic, MapPin, ArrowDown, Bed, Bath, Square, ArrowRight, Leaf, Home, Map as MapIcon, SlidersHorizontal } from "lucide-react";
 import { FaArrowRight } from "react-icons/fa6";
+import { FaTag, FaBook, FaFolder, FaCalendar } from "react-icons/fa";
 import Link from "next/link";
 
 export default function Buy() {
@@ -60,10 +61,10 @@ export default function Buy() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[90vh] lg:min-h-[90vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[90vh] lg:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
-          src="/images_pages/blogs.png"
+          src="/rep_img/About.png"
           alt="City Skyline"
           fill
           className="object-cover"
@@ -73,10 +74,10 @@ export default function Buy() {
         {/* Dark Overlay */}
         <div className="absolute inset-0" />
 
-        {/* 🔍 Search Bar (Half on BG, Half outside) */}
-        <div className="absolute left-1/2 bottom-20 mb-16 transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
+        {/* 🔍 Search Bar (Half on BG, Half outside) - First - Centered */}
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[50%] z-30 w-[70%] lg:w-[60%] hidden lg:block">
           <div className="border border-white/10 backdrop-blur-[10px] bg-white/30 rounded-md p-4 lg:p-6 shadow-lg">
-            <p className="text-center font-semibold text-lg sm:text-base md:text-lg lg:text-xl text-[#10284C]">Find Knowledge that did not know !</p>
+            <p className="text-center font-semibold text-lg sm:text-base md:text-lg lg:text-xl text-[#10284C]">Lets Learn More !</p>
           </div>
         </div>
 
@@ -107,67 +108,82 @@ export default function Buy() {
             {/* Filter Items - Shown when button is clicked */}
             {showFilters && (
               <div className="flex flex-col gap-3">
-                {["Type", "Topic", "Categories", "Date"].map((label, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md w-full shadow-lg hover:bg-[#10284C] transition"
-                  >
-                    <div className="flex items-center gap-3">
-                      {/* Icon + Divider */}
-                      <div className="flex items-center gap-2">
-                        <MapPin size={16} />
-                        <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+                {[
+                  { label: "Type", icon: FaTag },
+                  { label: "Topic", icon: FaBook },
+                  { label: "Categories", icon: FaFolder },
+                  { label: "Date", icon: FaCalendar },
+                ].map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <div
+                      key={index}
+                      className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md w-full shadow-lg hover:bg-[#10284C] transition"
+                    >
+                      <div className="flex items-center gap-3">
+                        {/* Icon + Divider */}
+                        <div className="flex items-center gap-2">
+                          <IconComponent className="w-4 h-4 sm:w-4 sm:h-4" />
+                          <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+                        </div>
+
+                        {/* Label */}
+                        <span className="text-xs sm:text-sm font-medium">{item.label}</span>
                       </div>
 
-                      {/* Label */}
-                      <span className="text-sm font-medium">{label}</span>
+                      {/* Down Arrow */}
+                      <ArrowDown size={16} className="text-white opacity-80 w-3 h-3 sm:w-4 sm:h-4" />
                     </div>
-
-                    {/* Down Arrow */}
-                    <ArrowDown size={16} className="text-white opacity-80" />
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             )}
           </div>
         </div>
 
-        {/* Desktop Filter Items - Half on BG, Half outside */}
-        <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-14 relative z-30">
+        {/* Desktop Filter Items - Second - Centered on image */}
+        <div className="hidden lg:flex absolute left-1/2  mt-20 top-1/2 transform -translate-x-1/2 translate-y-[50%] z-20 w-[90%] lg:w-[60%] px-4 lg:px-0">
           <div
             className="
-      grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md gap-4
+      grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 rounded-md shadow-md gap-4
       grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
     "
           >
             {/* Filter Items */}
-            {["Type", "Topic", "Categories", "Date"].map((label, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md shadow-lg hover:bg-[#10284C] transition"
-              >
-                <div className="flex items-center gap-3">
-                  {/* Icon + Divider */}
-                  <div className="flex items-center gap-2">
-                    <MapPin size={16} />
-                    <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+            {[
+              { label: "Type", icon: FaTag },
+              { label: "Topic", icon: FaBook },
+              { label: "Categories", icon: FaFolder },
+              { label: "Date", icon: FaCalendar },
+            ].map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <div
+                  key={index}
+                  className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 rounded-md shadow-lg hover:bg-[#10284C] transition"
+                >
+                  <div className="flex items-center gap-3">
+                    {/* Icon + Divider */}
+                    <div className="flex items-center gap-2">
+                      <IconComponent className="w-4 h-4 sm:w-4 sm:h-4 lg:w-4 lg:h-4" />
+                      <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+                    </div>
+
+                    {/* Label */}
+                    <span className="text-xs sm:text-sm font-medium">{item.label}</span>
                   </div>
 
-                  {/* Label */}
-                  <span className="text-sm font-medium">{label}</span>
+                  {/* Down Arrow */}
+                  <ArrowDown size={16} className="opacity-80 w-3 h-3 sm:w-4 sm:h-4" />
                 </div>
-
-                {/* Down Arrow */}
-                <ArrowDown size={16} className="opacity-80" />
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
       </section>
 
-      <div className="w-[100%] h-[1px] bg-gray-300 my-4 mt-14 sm:my-6 lg:mt-20 px-4 sm:px-6 md:px-10"></div>
-      <div className="text-gray-600 text-center px-4 sm:px-6 md:px-10 text-xs lg:text-right sm:text-sm font-medium">
+      <div className="text-gray-600 text-center mt-4 px-4 sm:px-6 md:px-10 text-xs lg:text-right sm:text-sm font-medium">
         Showing 5 of 50
       </div>
       {/* ---------- READY TO FIND SECTION ---------- */}

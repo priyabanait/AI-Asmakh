@@ -356,10 +356,30 @@ export default function Profit() {
         <div className="flex-1 h-px bg-gray-300 my-3 lg:my-4 2xl:my-5 3xl:my-6 4xl:my-7 5xl:my-8 mx-auto lg:w-[20%] w-[60%] mb-3 lg:mb-4"></div>
         <p
           id="desc"
-          className="text-gray-500 max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl 4xl:max-w-5xl 5xl:max-w-6xl mx-auto mb-8 lg:mb-12 2xl:mb-14 3xl:mb-16 4xl:mb-20 5xl:mb-24 text-center text-sm lg:text-base 2xl:text-lg 3xl:text-xl 4xl:text-2xl 5xl:text-3xl px-2 lg:px-0"
+          className="
+    text-gray-500 
+    mx-auto text-center px-2 lg:px-0
+
+    max-w-2xl 
+    2xl:max-w-4xl 
+    3xl:max-w-5xl 
+    4xl:max-w-6xl 
+    5xl:max-w-7xl  /* FIX FOR 5K MONITORS */
+
+    mb-8 lg:mb-12 2xl:mb-14 3xl:mb-16 4xl:mb-20 5xl:mb-24
+    
+    text-[16px] 
+    lg:text-base 
+    2xl:text-[16px] 
+    3xl:text-xl 
+    4xl:text-2xl 
+    5xl:text-3xl
+  "
         >
           From luxury residences to commercial developments, we deliver trusted
-          services that turn your real estate goals into reality.
+          services that turn your
+          <br />
+          real estate goals into reality.
         </p>
 
         <div
@@ -370,7 +390,7 @@ export default function Profit() {
             <div
               key={index}
               className={`
-          w-[250px] lg:w-[330px] 2xl:w-[380px] 3xl:w-[420px] 4xl:w-[480px] 5xl:w-[550px]
+          w-[250px] lg:w-[280px] 2xl:w-[350px] 3xl:w-[420px] 4xl:w-[480px] 5xl:w-[550px]
           p-3 lg:p-4 2xl:p-5 3xl:p-6 4xl:p-7 5xl:p-8
           bg-gray-200 border border-gray-200 
           rounded-md overflow-hidden shadow-md 

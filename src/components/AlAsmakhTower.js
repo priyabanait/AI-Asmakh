@@ -159,8 +159,8 @@ export default function AlAsmakhTower() {
 
                 {/* DESCRIPTION */}
                 <p
-                  className="text-gray-700 font-semibold mb-4 md:mb-8 leading-relaxed text-sm md:text-base"
-                  style={{ fontSize: "clamp(13px, 1.1vw, 18px)" }}
+                  className="text-gray-400  mb-4 md:mb-8 leading-relaxed text-sm md:text-base"
+                  style={{ fontSize: "13px" }}
                 >
                   {projects[activeSlide].description}
                 </p>
@@ -264,20 +264,29 @@ export default function AlAsmakhTower() {
           </div>
 
           <p
-
-            className="text-gray-700 mb-6 mr-60 lg:mb-16 leading-relaxed text-[18px] md:text-[22px]"
-            style={{ fontSize: "clamp(14px, 1.1vw, 13px)" }}
+            style={{ color: "#919191", fontSize: "15px" }}
+            className="mb-6 mr-60 lg:mb-16 leading-relaxed text-[15px] md:text-[15px]"
           >
             {projects[activeSlide].description}
           </p>
 
-          <button
+
+          <button className="bg-[#10284C] text-white text-xs lg:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl 5xl:text-2xl font-semibold px-4 lg:px-5 2xl:px-6 3xl:px-7 4xl:px-8 5xl:px-10 py-1.5 lg:py-2 2xl:py-3 3xl:py-3 4xl:py-4 5xl:py-5 rounded flex items-center justify-center gap-2  w-fit transition hover:bg-[#1b3a70]">
+            <span>Details</span>
+            <FaArrowRight
+              size={12}
+              className="lg:w-[14px] lg:h-[14px] 2xl:w-[18px] 2xl:h-[18px] 3xl:w-[22px] 3xl:h-[22px] 4xl:w-[26px] 4xl:h-[26px] 5xl:w-[32px] 5xl:h-[32px] ml-4 lg:ml-20 2xl:ml-24 3xl:ml-28 4xl:ml-32 5xl:ml-40"
+            />
+          </button>
+
+
+          {/* <button
             className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-6 md:px-8 py-3 md:py-3.5 rounded-md hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg w-fit text-[18px] md:text-[22px]"
             style={{ fontSize: "clamp(12px, 1.1vw, 16px)" }}
           >
             <span>Details</span>
             <FaArrowRight size={16} className="ml-16" />
-          </button>
+          </button> */}
 
           <div className="flex items-center ml-10 gap-2 mt-6 md:mt-16">
             {projects.map((_, index) => (
@@ -332,7 +341,7 @@ export default function AlAsmakhTower() {
             EXPLORE BY AREA
           </h2>
           <div className="flex-1 h-px bg-gray-300 my-3 md:my-4 mx-auto w-[40%] md:w-[20%] mb-3 md:mb-4"></div>
-          <p className="text-gray-500 max-w-2xl mx-auto mb-8 md:mb-12 text-center  md:text-base px-2 md:px-0">
+          <p className="text-gray-500  text-[16px ] md:text-[16px]  max-w-2xl mx-auto mb-8 md:mb-12 text-center   px-2 md:px-0">
             Browse luxury homes and investments across Qatar's finest districts,
             each offering its own lifestyle, charm, and opportunity.
           </p>
@@ -464,7 +473,7 @@ export default function AlAsmakhTower() {
               {[0, 1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className={`relative rounded-lg ${i === 1 ? "w-[850px] h-[300px]" : "w-[430px] h-[300px]"
+                  className={`relative rounded-lg ${i === 1 ? "w-[865px] h-[300px]" : "w-[430px] h-[300px]"
                     }`}
                 >
                   <Image
@@ -482,7 +491,7 @@ export default function AlAsmakhTower() {
               {[4, 5, 6, 7].map((i) => (
                 <div
                   key={i}
-                  className={`relative rounded-lg ${i === 7 ? "w-[826px] h-[300px]" : "w-[420px] h-[300px]"
+                  className={`relative rounded-lg ${i === 7 ? "w-[826px] h-[300px]" : "w-[404px] h-[300px]"
                     }`}
                 >
                   <Image

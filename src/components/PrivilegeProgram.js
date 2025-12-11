@@ -243,7 +243,7 @@ export default function PrivilegeProgram() {
 
         <p
           id="desc "
-          style={{ color: "#919191" }}
+          style={{ color: "#919191", fontSize: "16px" }}
           className="mb-8"
 
         >
@@ -330,10 +330,10 @@ export default function PrivilegeProgram() {
                       <div>
                         <h3
                           style={{
-                            fontSize: "clamp(16px, 4vw, 20px)",
+                            // fontSize: "clamp(16px, 4vw, 20px)",
                             color: "#2D3748",
                           }}
-                          className="font-bold text-[18px] md:text-[22px]"
+                          className=" text-[16px] md:text-[16px]"
                         >
                           {item.title}
                         </h3>
@@ -341,9 +341,10 @@ export default function PrivilegeProgram() {
                         <p
                           style={{
                             color: "#4A5568",
+                            fontSize: "13px"
                           }}
-                          id="desc"
-                          className="p-0 leading-relaxed mb-0 "
+                          // id="desc"
+                          className="p-0 leading-relaxed mb-0 text-[13px]"
                         >
                           {item.description}
                         </p>
@@ -407,15 +408,15 @@ export default function PrivilegeProgram() {
                 </div>
 
                 <h3
-                  style={{ fontSize: "clamp(18px, 1.2vw, 22px)", color: "#2D3748" }}
-                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C] text-[18px] md:text-[22px]"
+                  style={{ fontSize: "16px", color: "#2D3748" }}
+                  className=" mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C] text-[16px] md:text-[16px]"
                 >
                   {item.title}
                 </h3>
                 <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
-                  style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
-                  className="p-0 leading-relaxed mb-0 text-[14px] md:text-[16px]"
+                  style={{ fontSize: "13px", color: "#4A5568" }}
+                  className="p-0 leading-relaxed mb-0 text-[13px] md:text-[13px]"
                 >
                   {item.description}
                 </p>
@@ -453,15 +454,15 @@ export default function PrivilegeProgram() {
                 </div>
 
                 <h3
-                  style={{ fontSize: "clamp(18px, 1.2vw, 22px)", color: "#2D3748" }}
-                  className="font-bold mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C] text-[18px] md:text-[22px]"
+                  style={{ fontSize: "16px", color: "#2D3748" }}
+                  className=" mb-3 3xl:mb-4 4xl:mb-5 transition-colors duration-300 hover:text-[#10284C] text-[16px] md:text-[16px]"
                 >
                   {item.title}
                 </h3>
                 <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
-                  style={{ fontSize: "clamp(14px, 0.9vw, 16px)", color: "#4A5568" }}
-                  className="p-0 leading-relaxed mb-0 text-[14px] md:text-[16px]"
+                  style={{ fontSize: "13px", color: "#4A5568" }}
+                  className="p-0 leading-relaxed mb-0 text-[13px] md:text-[13px]"
                 >
                   {item.description}
                 </p>
@@ -487,7 +488,7 @@ export default function PrivilegeProgram() {
                 fontSize: "clamp(16px, 4vw, 20px)",
                 color: "#2D3748",
               }}
-              className="font-bold mb-3"
+              className="font-semibold mb-3"
             >
               {transactionAdvisory.title}
             </h3>

@@ -5,6 +5,8 @@ import Image from "next/image";
 import { Search, Mic, MapPin, ArrowDown, Bed, Bath, Square, ArrowRight, Leaf, Home, Map as MapIcon } from "lucide-react";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+
+import DreamPropertySection from "./DreamPropertySection";
 export default function Rent() {
   const [viewMode, setViewMode] = useState("LIST"); // "LIST" or "MAP"
 
@@ -74,12 +76,12 @@ export default function Rent() {
     <div>
       {/* ---------- HERO SECTION ---------- */}
       <section className="relative w-full bg-gray-200 min-h-screen flex items-center justify-center overflow-visible">
-        {/* Background Image */}
+        {/* Background Image - Full Background */}
         <Image
-          src="/Image (14).png"
+          src="/rep_img/sales.png"
           alt="City Skyline"
           fill
-          className="object-fill block lg:hidden"
+          className="object-cover"
           priority
         />
         {/* Dark Overlay (optional if you want to dim background) */}
@@ -87,44 +89,44 @@ export default function Rent() {
 
         {/* Left Aligned Box */}
         <div className="absolute left-4 md:left-8 lg:left-12 top-1/2 transform -translate-y-1/2 z-20 w-[90%] md:w-[60%] lg:w-[60%]">
-          <div className="bg-[#8C8C8C66] text-center backdrop-blur-sm rounded-lg shadow-lg p-4 sm:p-6 md:p-10 lg:text-left w-full max-w-5xl mx-auto">
+          <div className="glass-effect text-center rounded-lg shadow-lg p-4 sm:p-6 md:p-10 lg:text-left w-full max-w-5xl mx-auto">
 
             {/* Title */}
-            <h2 className="text-2xl lg:text-3xl px-10 lg:px-0 font-semibold text-[#10284C] mb-2 sm:mb-3 md:mb-4 lg:mr-40">
+            <h2 className="heading px-10 lg:px-0 font-semibold text-[#10284C] mb-2 sm:mb-3 md:mb-4 lg:mr-40">
               EXPERT REAL ESTATE SALES
             </h2>
             {/* Divider */}
             <div className="w-full h-[1px] bg-gray-400 my-3 sm:my-4 lg:mr-40"></div>
             {/* Subtitle */}
-            <p className="text-xs mb-10  font-semibold lg:text-xs text-[#10284C] lg:mr-40">
+            <p className="subheading mb-10 font-semibold text-[#10284C] lg:mr-40">
               Whether buying or selling, our experienced team provides personalized
               service and market expertise to achieve your real estate goals.
             </p>
 
             {/* Stats Section */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:mr-40 text-center">
-              <div className="bg-white rounded-lg shadow p-3 sm:p-4">
+              <div className="glass-effect rounded-lg shadow p-3 sm:p-4">
                 <p className="text-xl sm:text-2xl font-bold text-[#10284C]">500+</p>
                 <div className="w-[70%] h-[1.5px] bg-gray-300 my-1 sm:my-2 mx-auto"></div>
-                <p className="text-[10px] sm:text-xs text-[#10284C]">Properties Sold</p>
+                <p className="subheading text-[#10284C]">Properties Sold</p>
               </div>
 
-              <div className="bg-white rounded-lg shadow p-3 sm:p-4">
+              <div className="glass-effect rounded-lg shadow p-3 sm:p-4">
                 <p className="text-xl sm:text-2xl font-bold text-[#10284C]">30</p>
                 <div className="w-[70%] h-[1.5px] bg-gray-300 my-1 sm:my-2 mx-auto"></div>
-                <p className="text-[10px] sm:text-xs text-[#10284C]">Days Average Sale</p>
+                <p className="subheading text-[#10284C]">Days Average Sale</p>
               </div>
 
-              <div className="bg-white rounded-lg shadow p-3 sm:p-4">
+              <div className="glass-effect rounded-lg shadow p-3 sm:p-4">
                 <p className="text-xl sm:text-2xl font-bold text-[#10284C]">98%</p>
                 <div className="w-[70%] h-[1.5px] bg-gray-300 my-1 sm:my-2 mx-auto"></div>
-                <p className="text-[10px] sm:text-xs text-[#10284C]">Client Satisfaction</p>
+                <p className="subheading text-[#10284C]">Client Satisfaction</p>
               </div>
 
-              <div className="bg-white rounded-lg shadow p-3 sm:p-4">
+              <div className="glass-effect rounded-lg shadow p-3 sm:p-4">
                 <p className="text-xl sm:text-2xl font-bold text-[#10284C]">$2.5M</p>
                 <div className="w-[70%] h-[1.5px] bg-gray-300 my-1 sm:my-2 mx-auto"></div>
-                <p className="text-[10px] sm:text-xs text-[#10284C]">Average Sale Price</p>
+                <p className="subheading text-[#10284C]">Average Sale Price</p>
               </div>
             </div>
           </div>
@@ -132,34 +134,23 @@ export default function Rent() {
           {/* Contact Team Button - Below the box */}
           <div className="w-full max-w-5xl mx-auto mt-4 lg:mt-6">
             <div className="flex-shrink-0 lg:mr-40">
-              <button className="bg-[#001730] text-white px-8 py-2 rounded-lg font-medium text-base md:text-lg hover:bg-[#002d52] transition-all duration-300 flex items-center gap-3 shadow-lg">
-                Contact Team
-                <FaArrowRight size={18} className="ml-10" />
+              <button className="btn-details">
+                <span>Contact Team</span>
+                <FaArrowRight size={12} className="md:w-[14px] md:h-[14px] ml-4 md:ml-16" />
               </button>
             </div>
           </div>
         </div>
 
-        <div className="absolute right-0 bottom-0 h-full w-[40%] hidden md:block">
-          <Image
-            src="/Image (14).png"  // ← replace with image exported from Figma
-            alt="Building"
-            fill
-            className="object-contain object-bottom"
-            style={{ objectPosition: 'bottom' }}
-          />
-        </div>
-        {/* 🔍 Search Bar (Half on BG, Half outside if needed) */}
-
       </section>
 
 
       <div className="relative w-full py-12 px-4 lg:px-16 overflow-hidden">
-        <h2 className="text-[27px] md:text-[36px] lg:text-[36px] font-semibold text-[#10284C]  uppercase mb-2 text-center 3xl:mb-3 4xl:mb-4">
+        <h2 className="heading font-semibold text-[#10284C] mb-2 text-center 3xl:mb-3 4xl:mb-4">
           FEATURED PROPERTIES
         </h2>
         <div className="flex-1 h-px bg-gray-300 my-4 mx-auto lg:w-[20%] w-[60%] mb-4"></div>
-        <p className="text-gray-500 max-w-2xl mx-auto mb-12 text-center">
+        <p className="subheading text-gray-500 max-w-2xl mx-auto mb-12 text-center">
           From luxury residences to commercial developments, we deliver trusted
           services that turn your real estate goals into reality.
         </p>
@@ -203,7 +194,7 @@ export default function Rent() {
 
                 {/* Bed/Bath/Area Info */}
                 <div className="flex items-center justify-between text-[#10284C] text-xs lg:text-sm mb-3 lg:mb-4 gap-1">
-                  <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
+                  <div className="glass-effect flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md">
                     <Image
                       src="/Icon (1).png"
                       alt="Beds"
@@ -213,7 +204,7 @@ export default function Rent() {
                     />
                     <span>{property.beds}</span>
                   </div>
-                  <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
+                  <div className="glass-effect flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md">
                     <Image
                       src="/Icon.png"
                       alt="Baths"
@@ -223,7 +214,7 @@ export default function Rent() {
                     />
                     <span>{property.baths}</span>
                   </div>
-                  <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
+                  <div className="glass-effect flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md">
                     <Image
                       src="/Icon (2).png"
                       alt="Area"
@@ -286,11 +277,11 @@ export default function Rent() {
       <section className="w-full bg-gray-200 py-16 px-6 md:px-20">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-[27px] md:text-[36px] lg:text-[36px]l font-semibold text-[#10284C] mb-2">
+          <h2 className="heading font-semibold text-[#10284C] mb-2">
             COMPREHENSIVE SALES SERVICES
           </h2>
           <div className="w-[30%] h-[1.5px] bg-gray-300 my-2  mx-auto md:my-3"></div>
-          <p className="text-gray-500 text-sm md:text-sm">
+          <p className="subheading text-gray-500">
             From initial consultation to closing, we provide full-service real estate sales support.
           </p>
         </div>
@@ -298,49 +289,49 @@ export default function Rent() {
         {/* Service Boxes */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {/* Card 1 */}
-          <div className="rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Market Analysis</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="subheading text-gray-600">
               Comprehensive market research and competitive analysis to price your property optimally.
             </p>
           </div>
 
           {/* Card 2 */}
-          <div className="rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Property Valuation</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="subheading text-gray-600">
               Professional property appraisal and valuation services using latest market data.
             </p>
           </div>
 
           {/* Card 3 */}
-          <div className="rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Expert Negotiation</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="subheading text-gray-600">
               Skilled negotiation to secure the best possible terms for buyers and sellers.
             </p>
           </div>
 
           {/* Card 4 */}
-          <div className="rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Transaction Management</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="subheading text-gray-600">
               Complete transaction coordination from contract to closing with legal support.
             </p>
           </div>
 
           {/* Card 5 */}
-          <div className="rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Buyer Matching</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="subheading text-gray-600">
               Extensive network and marketing to connect sellers with qualified buyers.
             </p>
           </div>
 
           {/* Card 6 */}
-          <div className="rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Closing Support</h3>
-            <p className="text-gray-600 text-sm">
+            <p className="subheading text-gray-600">
               Full support through the closing process ensuring smooth transactions.
             </p>
           </div>
@@ -348,30 +339,8 @@ export default function Rent() {
       </section>
 
 
-      <section className="py-10 md:py-10 bg-gray-100">
-        <div className="mx-auto px-6 md:px-12">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 md:gap-12">
-            {/* Left Content */}
-            <div className="flex-1">
-              <h2 className="text-[20px] md:text-[30px] lg:text-[30px] font-semibold text-[#001730] mb-2">
-                Ready to Find Your Perfect Space ?
-              </h2>
-              <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[60%] h-[1.5px] bg-gray-300 my-2 md:my-2"></div>
-              <p className="text-base md:text-base text-[#333333] leading-relaxed">
-                Your dream property is just a click away. Whether you're looking for a new home, a strategic investment, or expert real estate advice, Al Asmakh is here to assist you every step of the way. Take the first step towards your real estate goals and explore our available properties or get in touch with our team for personalized assistance.
-              </p>
-            </div>
+      <DreamPropertySection />
 
-            {/* Right Button */}
-            <div className="flex-shrink-0">
-              <button className="bg-[#001730] text-white px-8 py-4 rounded-lg font-medium text-base md:text-lg hover:bg-[#002d52] transition-all duration-300 flex items-center gap-3 shadow-lg">
-                Contact Team
-                <FaArrowRight size={18} />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

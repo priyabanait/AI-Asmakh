@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useRef, useState, useEffect } from "react";
 import { ArrowLeft, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight, FaArrowLeft, FaChevronUp, FaChevronDown } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function PropertyDetails() {
@@ -45,6 +45,7 @@ export default function PropertyDetails() {
   ];
   const scrollRef = useRef(null);
   const [showScrollButton, setShowScrollButton] = useState(false);
+  const [activeTab, setActiveTab] = useState("overview");
 
   const scrollRight = () => {
     if (scrollRef.current) {
@@ -176,11 +177,33 @@ export default function PropertyDetails() {
             {/* Description box */}
             <div className="bg-white p-4 sm:p-6 rounded-xl shadow">
               <div className="flex gap-2 sm:gap-4 mb-4">
-                <button className="bg-white px-3 sm:px-5 py-2 rounded-md shadow text-[#10284C] font-semibold text-xs sm:text-base">
+                <button
+                  onClick={() => setActiveTab("overview")}
+                  className={`flex items-center gap-2 px-3 sm:px-5 py-2 rounded-md shadow text-xs sm:text-base font-semibold transition-all ${activeTab === "overview"
+                    ? "bg-white text-[#10284C]"
+                    : "bg-gray-200 text-gray-500"
+                    }`}
+                >
                   Overview
+                  {activeTab === "overview" ? (
+                    <FaChevronDown size={14} />
+                  ) : (
+                    <FaChevronUp size={14} />
+                  )}
                 </button>
-                <button className="bg-white px-3 sm:px-5 py-2 rounded-md shadow text-gray-500 text-xs sm:text-base">
+                <button
+                  onClick={() => setActiveTab("virtual")}
+                  className={`flex items-center gap-2 px-3 sm:px-5 py-2 rounded-md shadow text-xs sm:text-base font-semibold transition-all ${activeTab === "virtual"
+                    ? "bg-white text-[#10284C]"
+                    : "bg-gray-200 text-gray-500"
+                    }`}
+                >
                   360 Virtual Tour
+                  {activeTab === "virtual" ? (
+                    <FaChevronDown size={14} />
+                  ) : (
+                    <FaChevronUp size={14} />
+                  )}
                 </button>
               </div>
               <h2 className="text-lg sm:text-xl mx-4 sm:mx-10 font-semibold text-[#10284C] mb-3">

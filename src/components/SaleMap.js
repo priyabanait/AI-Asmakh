@@ -138,7 +138,7 @@ export default function Sale() {
         </div>
 
         {/* Desktop Version */}
-        <div className="absolute left-1/2 bottom-20 mb-16  transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
+        <div className="absolute left-1/2 bottom-20 mb-[10%]  transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
           <div className="border border-white/10 backdrop-blur-[10px] bg-white/30 rounded-md p-4 lg:p-6 shadow-lg">
             {/* Buttons Section */}
             <div className="flex justify-center gap-4 mb-4">
@@ -196,7 +196,7 @@ export default function Sale() {
         </div>
       </div>
 
-      <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-14 relative z-30">
+      <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-[8%] relative z-30">
         <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md 
                   gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
 
@@ -223,7 +223,7 @@ export default function Sale() {
             return (
               <div
                 key={index}
-                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
+                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-2 
                      rounded-md shadow-lg hover:bg-[#10284C] transition"
               >
                 <div className="flex items-center gap-3">
@@ -258,9 +258,9 @@ export default function Sale() {
       <div className="hidden lg:block min-h-screen ">
         {/* Header Bar */}
         <div className="bg-white  border-gray-200 px-2 lg:px-4">
-          <div className="hidden lg:flex max-w-full mb-7 bg-gray-50  mx-auto  items-center justify-between">
+          <div className="hidden lg:flex max-w-full mb-5 bg-gray-50  mx-auto  items-center justify-between">
             {/* LIST/MAP Toggle Buttons */}
-            <div className="flex items-center  bg-[#001730] rounded-md p-0.5">
+            <div className="flex items-center  bg-[#001730] mt-5 rounded-md p-0.5">
               {/* LIST Button */}
               <button
                 onClick={() => setViewMode("LIST")}

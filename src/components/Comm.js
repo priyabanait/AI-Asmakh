@@ -71,7 +71,7 @@ export default function Commercial() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[95vh] lg:min-h-[98vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[95vh] lg:min-h-[95vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
           src="/c4630f1da5043e1a5c0d91a308c6487bfbad67a8.jpg"
@@ -85,7 +85,7 @@ export default function Commercial() {
         <div className="absolute inset-0" />
 
         {/* 🔍 Search Bar (Half on BG, Half outside) */}
-        <div className="absolute left-1/2 lg:bottom-[240px] bottom-56 shadow-md transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:w-[50%] px-4 lg:px-0">
+        <div className="absolute left-1/2 lg:bottom-[360px] bottom-56 shadow-md transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:w-[50%] px-4 lg:px-0">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 shadow-md lg:gap-6  mb-10 lg:mb-10">
             {[
               { value: "34", label: "Total Projects" },
@@ -112,34 +112,37 @@ export default function Commercial() {
 
 
 
-        <div className="absolute w-full flex justify-center px-4 lg:px-40 bottom-14 lg:bottom-[-25px]">
-          <div
-            className="
-      grid w-full overflow-x-auto lg:overflow-visible
-      border border-white/20 lg:mx-24 bg-[#8C8C8C66]
-      p-3 lg:p-8 lg:px-8 rounded-md shadow-md gap-3 lg:gap-4
-      grid-cols-3  lg:grid-cols-3
-      justify-center 
-    "
-          >
-            {["LUXURY", "COMMERCIAL", "INDUSTRIAL"].map((label, index) => (
+        {/* Desktop Filter Items - Moved to bottom of hero */}
+        <div className="hidden lg:flex absolute w-full justify-center px-4 lg:px-40 bottom-14 lg:bottom-[80px] z-20">
+          <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 lg:mx-24 p-4 rounded-md shadow-md 
+                  gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {/* Filter Items */}
+            {["Property Type", "Location", "Status", "Date"].map((label, index) => (
               <div
                 key={index}
-                className="
-          flex items-center justify-center bg-[#0B1F3A] text-white
-          px-4 py-2 rounded-md shadow-lg hover:bg-[#10284C] transition
-        "
+                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
+                     rounded-md shadow-lg hover:bg-[#10284C] transition"
               >
-                <span className="text-xs lg:text-sm font-medium">{label}</span>
+                <div className="flex items-center gap-3">
+                  {/* Icon + Divider */}
+                  <div className="flex items-center gap-2">
+                    <MapPin size={16} />
+                    <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
+                  </div>
+
+                  {/* Label */}
+                  <span className="text-sm font-medium">{label}</span>
+                </div>
+
+                {/* Down Arrow */}
+                <ArrowDown size={16} className="opacity-80" />
               </div>
             ))}
           </div>
         </div>
 
-
-
         {/* Mobile Filters Button - Absolute positioned in hero section */}
-        <div className="absolute left-1/2 bottom-[-45px] mb-4 transform -translate-x-1/2 z-20 w-[100%] px-4 lg:hidden">
+        <div className="absolute left-1/2 bottom-[50px] mb-4 transform -translate-x-1/2 z-20 w-[100%] px-4 lg:hidden">
           <div ref={filtersRef} className="flex flex-col gap-3 bg-white/20 backdrop-blur-[10px] border border-white/10 p-3 px-10  rounded-md shadow-md">
             {/* Single Filters Button for Mobile */}
             <div
@@ -191,38 +194,33 @@ export default function Commercial() {
         </div>
       </section>
 
-      {/* Desktop Filter Items */}
-      <div className="hidden lg:flex  w-full justify-center lg:pt-0 pt-0 lg:-mt-44 lg:mb-8 relative z-50">
-        <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md 
-                  gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
-          {/* Filter Items */}
-          {["Property Type", "Location", "Status", "Date"].map((label, index) => (
+      {/* LUXURY/COMMERCIAL/INDUSTRIAL Box - Moved to top after section */}
+      <div className="w-full flex justify-center px-4 lg:px-40 lg:pt-0 pt-0 lg:-mt-[280px] lg:mb-8 relative z-50">
+        <div
+          className="
+      grid w-full overflow-x-auto lg:overflow-visible
+      border border-white/20 lg:mx-24 bg-[#8C8C8C66]
+      p-3 lg:p-8 lg:px-8 rounded-md shadow-md gap-3 lg:gap-4
+      grid-cols-3  lg:grid-cols-3
+      justify-center 
+    "
+        >
+          {["LUXURY", "COMMERCIAL", "INDUSTRIAL"].map((label, index) => (
             <div
               key={index}
-              className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-3 
-                   rounded-md shadow-lg hover:bg-[#10284C] transition"
+              className="
+          flex items-center justify-center bg-[#0B1F3A] text-white
+          px-4 py-2 rounded-md shadow-lg hover:bg-[#10284C] transition
+        "
             >
-              <div className="flex items-center gap-3">
-                {/* Icon + Divider */}
-                <div className="flex items-center gap-2">
-                  <MapPin size={16} />
-                  <div className="h-5 w-[1px] bg-gray-400 opacity-60"></div>
-                </div>
-
-                {/* Label */}
-                <span className="text-sm font-medium">{label}</span>
-              </div>
-
-              {/* Down Arrow */}
-              <ArrowDown size={16} className="opacity-80" />
+              <span className="text-xs lg:text-sm font-medium">{label}</span>
             </div>
           ))}
         </div>
       </div>
 
 
-      <div className="w-[100%] h-[1px] bg-gray-300 my-4 mt-14  lg:my-6 lg:mt-6 px-4  lg:px-10"></div>
+      <div className="w-[100%] h-[1px] bg-gray-300 my-4 mt-20  lg:my-6 lg:mt-32 px-4  lg:px-10"></div>
       <div className="text-gray-600 text-center lg:text-right px-4 lg:px-10 text-xs lg:text-sm font-medium">
         Showing 10 of 50
       </div>
@@ -232,7 +230,7 @@ export default function Commercial() {
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
 
 
-      <div className="grid grid-cols-1 mt-10 lg:mt-14 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-4   lg:px-10 xl:px-20 p-4 lg:p-6">
+      <div className="grid grid-cols-1 mt-10 lg:mt-22 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-4   lg:px-10 xl:px-20 p-4 lg:p-6">
         {properties.map((property) => (
           <div
             key={property.id}

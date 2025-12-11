@@ -158,6 +158,27 @@ a {
   .menu-transition {
     transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  /* Universal Heading Text Class */
+  .heading {
+    @apply text-sm sm:text-2xl lg:mx-0 uppercase md:text-[30px] lg:text-[30px];
+  }
+
+  /* Universal Subheading Text Class */
+  .subheading {
+    @apply text-[10px] sm:text-[11px] lg:mx-0 md:text-[12px] lg:text-xs;
+  }
+
+  /* Universal Glass Effect Class */
+  .glass-effect {
+    @apply border border-white/10 backdrop-blur-sm bg-white/20;
+  }
+
+  /* Universal Button Design Class */
+  .btn-details {
+    @apply flex items-center justify-center gap-2 bg-[#10284C] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg text-sm md:text-base;
+    font-size: clamp(13px, 1.1vw, 16px);
+  }
 }
 
 /* Custom scrollbar with glass effect */
@@ -742,7 +763,7 @@ html {
 
 
 #my-heading {
-  font-size: 23px;        /* text-sm */
+  font-size: 23px;       /* text-sm */
   text-transform: uppercase;
   margin-left: 5rem;      /* mx-20 (80px) */
   margin-right: 5rem;

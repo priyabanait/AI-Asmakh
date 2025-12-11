@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { CircleDot } from "lucide-react";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import DreamPropertySection from "./DreamPropertySection";
 
 function AboutUs() {
   const [isVisible, setIsVisible] = useState({});
@@ -56,15 +57,15 @@ function AboutUs() {
           {/* Transparent Box for Heading */}
           <div
             ref={(el) => (sectionRefs.current['hero'] = el)}
-            className={`bg-black/10 backdrop-blur-md border border-white/20 rounded-md px-4 md:px-10 py-6 md:py-10 shadow-lg max-w-[900px] mx-auto transition-all duration-1000 ${isVisible['hero'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            className={`glass-effect rounded-md px-4 md:px-10 py-6 md:py-10 shadow-lg max-w-[900px] mx-auto transition-all duration-1000 ${isVisible['hero'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
           >
-            <h1 className="text-[#10284C] text-[20px] md:text-[30px] lg:text-[30px] font-semibold mb-2">
+            <h1 className="heading text-[#10284C] font-semibold mb-2">
               BUILDING LEGACY THAT LASTS
             </h1>
             <div className={`w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] mt-8 bg-gray-400 mb-3 md:mb-4 mx-auto transition-all duration-1000 delay-200 ${isVisible['hero'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
               }`}></div>
-            <p className="text-[#10284C] text-sm md:text-sm lg:text-sm font-medium">
+            <p className="subheading text-[#10284C] font-medium">
               Our enduring commitment to quality and service ensures that every property we offer stands as a testament to trust, innovation, and excellence.
 
             </p>
@@ -84,14 +85,14 @@ function AboutUs() {
               <div
                 key={index}
                 style={{ transitionDelay: `${400 + index * 100}ms` }}
-                className={`bg-black/10 backdrop backdrop-blur-md border border-white/20 rounded-md p-3 md:p-6 md:px-14 text-[#10284C] transition-all duration-700 hover:scale-105 hover:shadow-lg ${isVisible['stats'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+                className={`glass-effect rounded-md p-3 md:p-6 md:px-14 text-[#10284C] transition-all duration-700 hover:scale-105 hover:shadow-lg ${isVisible['stats'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                   }`}
               >
                 <h2 className="text-base md:text-2xl font-semibold mb-1">
                   {item.value}
                 </h2>
                 <div className="w-[80%] sm:w-[70%] md:w-[60%] lg:w-[90%] h-[1px] bg-gray-400 my-2 md:my-3 md:mb-4 mx-auto"></div>
-                <p className="text-[#10284C] text-[10px] md:text-sm">
+                <p className="subheading text-[#10284C]">
                   {item.label}
                 </p>
               </div>
@@ -116,14 +117,14 @@ function AboutUs() {
 
 
             {/* Title */}
-            <h2 className={`text-[#10284C] text-[20px] md:text-[30px] lg:text-[30px] font-semibold mb-4 relative transition-all duration-1000 ${isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+            <h2 className={`heading text-[#10284C] font-semibold mb-4 relative transition-all duration-1000 ${isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
               }`}>
               OUR VALUE
 
             </h2>
 
             {/* Subtitle */}
-            <p className={`text-gray-600 text-base md:text-base max-w-4xl mx-auto transition-all duration-1000 delay-200 ${isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            <p className={`subheading text-gray-600 max-w-4xl mx-auto transition-all duration-1000 delay-200 ${isVisible['valueHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
               Our core values are the foundation of everything we do, from client interactions to property curation.
             </p>
@@ -194,13 +195,13 @@ function AboutUs() {
           ref={(el) => (sectionRefs.current['legacyHeader'] = el)}
           className="text-center max-w-3xl mb-8 md:mb-16 px-4 md:px-0"
         >
-          <h2 className={`text-xl md:text-2xl font-semibold tracking-wide transition-all duration-1000 ${isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+          <h2 className={`heading font-semibold tracking-wide transition-all duration-1000 ${isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
             }`}>
             A LEGACY OF EXCELLENCE SINCE 1930
           </h2>
           <div className={`w-[30%] sm:w-[30%] md:w-[30%] lg:w-[30%] h-[1px] bg-gray-400 my-3 mx-auto transition-all duration-1000 delay-200 ${isVisible['legacyHeader'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
             }`}></div>
-          <p className={`text-gray-500 mt-3 text-sm md:text-base leading-relaxed transition-all duration-1000 delay-300 ${isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          <p className={`subheading text-gray-500 mt-3 leading-relaxed transition-all duration-1000 delay-300 ${isVisible['legacyHeader'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}>
             With decades of expertise and a passion for innovation, Al Asmakh Real
             Estate is shaping timeless real estate dreams into reality, crafting
@@ -256,11 +257,11 @@ function AboutUs() {
               {/* Text */}
               <div className={`text-center md:text-left max-w-md mx-auto md:mx-0 transition-all duration-700 delay-200 ${isVisible['timeline2'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
                 }`}>
-                <h3 className="text-[#001B5E] font-semibold text-lg mb-2">
+                <h3 className="heading text-[#001B5E] font-semibold mb-2">
                   Foundations of a Vision
                 </h3>
                 <div className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] bg-gray-200 my-3 mx-auto md:mx-0"></div>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="subheading text-gray-500 leading-relaxed">
                   Founded during Qatar's early development phase, laying the
                   cornerstone for what would become one of the country's most
                   trusted and pioneering real estate companies.
@@ -294,14 +295,14 @@ function AboutUs() {
                 }`}
             >
               {/* Heading */}
-              <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
+              <h2 className="heading font-semibold tracking-wide inline-block relative">
                 A New Era of Living
                 {/* Line directly below the heading */}
                 <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
               </h2>
 
               {/* Paragraph */}
-              <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
+              <p className="subheading text-gray-500 mt-4 leading-relaxed">
                 Amid Qatar's booming oil economy, Al Asmakh Real Estate played a vital role
                 in pioneering modern residential developments that set the tone for the
                 nation's urban evolution.
@@ -339,11 +340,11 @@ function AboutUs() {
               {/* Text */}
               <div className={`text-center md:text-left max-w-md mx-auto md:mx-0 transition-all duration-700 delay-200 ${isVisible['timeline4'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
                 }`}>
-                <h3 className="text-[#001B5E] font-semibold text-lg mb-2">
+                <h3 className="heading text-[#001B5E] font-semibold mb-2">
                   A New Chapter of Growth
                 </h3>
                 <div className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] bg-gray-200 my-3 mx-auto md:mx-0"></div>
-                <p className="text-gray-500 text-sm leading-relaxed">
+                <p className="subheading text-gray-500 leading-relaxed">
                   Under the leadership of Ibrahim Hassan Al Asmakh, the company underwent a strategic transformation, strengthening its foundation and expanding its influence across Qatar's real estate sector.
                 </p>
               </div>
@@ -369,14 +370,14 @@ function AboutUs() {
               <div className={`max-w-md mx-auto md:mx-0 text-center md:text-right transition-all duration-700 ${isVisible['timeline5'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
                 }`}>
                 {/* Heading */}
-                <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
+                <h2 className="heading font-semibold tracking-wide inline-block relative">
                   Expanding Leadership Horizons
                   {/* Line directly below the heading */}
                   <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
                 </h2>
 
                 {/* Paragraph */}
-                <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
+                <p className="subheading text-gray-500 mt-4 leading-relaxed">
                   During this period, Ibrahim Hassan Al Asmakh extended his leadership influence beyond real estate, serving as Vice Chairman of the Qatar Tourism Agency, contributing to the nation's growth in both tourism and property development
                 </p>
               </div>
@@ -449,14 +450,14 @@ function AboutUs() {
             {/* Text Block - Left */}
             <div className="max-w-md mx-auto md:mx-0 md:mr-auto text-center md:text-right">
               {/* Heading */}
-              <h2 className="text-xl md:text-2xl font-semibold tracking-wide inline-block relative">
+              <h2 className="heading font-semibold tracking-wide inline-block relative">
                 Regency Group Holding
                 {/* Line directly below the heading */}
                 <span className="block w-[30%] h-[1px] bg-gray-400 mt-2 mx-auto md:ml-auto"></span>
               </h2>
 
               {/* Paragraph */}
-              <p className="text-gray-500 mt-4 text-sm md:text-base leading-relaxed">
+              <p className="subheading text-gray-500 mt-4 leading-relaxed">
                 Al Asmakh Real Estate became part of Regency Group Holding, enhancing its financial strength, operational efficiency, and capacity to deliver large-scale developments across Qatar.
               </p>
             </div>
@@ -498,23 +499,20 @@ function AboutUs() {
             ref={(el) => (sectionRefs.current['future'] = el)}
             className="text-center max-w-3xl mb-8 md:mb-16 px-4 md:px-0"
           >
-            <h2 className={`text-xl md:text-2xl font-semibold tracking-wide transition-all duration-1000 ${isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+            <h2 className={`heading font-semibold tracking-wide transition-all duration-1000 ${isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
               }`}>
               Defining the Future of Luxury Living
             </h2>
             <div className={`w-[30%] sm:w-[30%] md:w-[30%] lg:w-[30%] h-[1px] bg-gray-200 my-3 mx-auto transition-all duration-1000 delay-200 ${isVisible['future'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
               }`}></div>
-            <p className={`text-gray-500 mt-3 text-sm md:text-base leading-relaxed transition-all duration-1000 delay-300 ${isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            <p className={`subheading text-gray-500 mt-3 leading-relaxed transition-all duration-1000 delay-300 ${isVisible['future'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}>
               Guided by the Qatar National Vision 2030, the company continues to expand its portfolio of premium developments, shaping modern lifestyles through architectural innovation and world-class quality.
             </p>
           </div>
         </div>
       </section>
-      <section
-        ref={(el) => (sectionRefs.current['formSection'] = el)}
-        className="relative w-full h-auto min-h-screen lg:h-screen flex items-center py-8 lg:py-0"
-      >
+      <section className="relative w-full h-auto lg:h-screen flex items-center py-6 lg:py-0">
         {/* Background Image */}
         <Image
           src="/WhatsApp Image 2025-11-07 at 10.45.55 PM.jpeg"
@@ -524,64 +522,66 @@ function AboutUs() {
         />
 
         {/* Content Container */}
-        <div className="relative z-10 flex flex-col md:flex-row w-full h-full px-4 md:px-12 lg:px-14 items-center justify-between py-8 lg:py-0">
+        <div className="relative z-10 flex flex-col lg:flex-row w-full h-full px-4 lg:px-14 items-start justify-between py-6 lg:py-6 2xl:py-6 3xl:py-6 4xl:py-6 5xl:py-6">
           {/* Left Side Title - Overlaid on background */}
-          <div className={`text-white md:w-1/2 flex flex-col lg:mt-40 mt-8 md:mt-20 mb-6 md:mb-0 h-full transition-all duration-1000 ${isVisible['formSection'] ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
-            }`}>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl text-center lg:text-left font-semibold mb-3">
+          <div className="text-white lg:w-1/2 flex flex-col mt-6 lg:mt-8 2xl:mt-10 3xl:mt-12 4xl:mt-14 5xl:mt-16 mb-4 lg:mb-0 h-full">
+
+
+            <h1 className="heading mb-2 md:mb-3 lg:mb-4">
               How Can We Help You Today?
-            </h2>
-            <div className={`h-[0.5px] w-[70%] bg-white mx-auto lg:mx-0 mb-4 transition-all duration-1000 delay-200 ${isVisible['formSection'] ? 'opacity-100 scale-x-100' : 'opacity-0 scale-x-0'
-              }`}></div>
+
+            </h1>
+
+            <div className="h-[0.5px] w-[70%] bg-white mx-auto lg:mx-0 mb-3 lg:mb-4"></div>
           </div>
 
           {/* Right Side - Form Panel and Map */}
-          <div className={`md:w-1/2 max-w-2xl w-full flex flex-col transition-all duration-1000 delay-300 ${isVisible['formSection'] ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
-            }`}>
+          <div className="lg:w-1/2 max-w-2xl w-full flex flex-col lg:mt-8 2xl:mt-10 3xl:mt-12 4xl:mt-14 5xl:mt-16">
             {/* Form Panel - Translucent */}
-            <div className="bg-blue-50/10 backdrop-blur-sm p-4 md:p-6 lg:px-16 rounded-lg shadow-xl relative overflow-visible">
+            <div className="glass-effect p-4 lg:p-6 lg:px-16 rounded-md shadow-xl relative overflow-visible">
               {/* Form Header */}
-              <h3 className="text-[#10284C] md:px-10 text-xs md:text-sm lg:text-base text-center font-medium mb-3">
-                Fill out the form below and our experts will get back to you within 24 hour
-              </h3>
-              <div className="h-[1px] w-40 md:w-60 bg-white 300 mb-4 mx-auto"></div>
+              <div>
+                <h3 className="subheading text-[#10284C] lg:px-10 text-center font-medium mb-2 lg:mb-3">
+                  Fill out the form below and our experts will get back to you within 24 hour
+                </h3>
+                <div className="h-[1px] w-40 lg:w-60 bg-white 300 mb-3 lg:mb-4 mx-auto"></div>
+              </div>
 
-
-              <form className="space-y-4">
+              <form className="space-y-3 lg:space-y-4">
                 {/* First Row: Name and Email */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
                   <div>
-                    <label className="block text-[#10284C] text-sm font-medium mb-2">Name</label>
+                    <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Name</label>
                     <input
                       type="text"
                       placeholder="John Carter"
-                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                      className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C]"
                     />
                   </div>
                   <div>
-                    <label className="block text-[#10284C] text-sm font-medium mb-2">Email</label>
+                    <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Email</label>
                     <input
                       type="email"
                       placeholder="example@email.com"
-                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                      className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C]"
                     />
                   </div>
                 </div>
 
                 {/* Second Row: Phone and Property Type */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4">
                   <div>
-                    <label className="block text-[#10284C] text-sm font-medium mb-2">Phone</label>
+                    <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Phone</label>
                     <input
                       type="text"
                       placeholder="(123) 456 - 789"
-                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                      className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C]"
                     />
                   </div>
                   <div>
-                    <label className="block text-[#10284C] text-sm font-medium mb-2">Property Type</label>
+                    <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Property Type</label>
                     <select
-                      className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 text-gray-500 focus:outline-none focus:border-[#10284C] transition-all duration-300 hover:border-[#10284C]/50"
+                      className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm text-gray-500 focus:outline-none focus:border-[#10284C]"
                     >
                       <option>Choose a Type</option>
                       <option>Apartment</option>
@@ -593,27 +593,27 @@ function AboutUs() {
 
                 {/* Message Textarea */}
                 <div>
-                  <label className="block text-[#10284C] text-sm font-medium mb-2">Message</label>
+                  <label className="block text-[#10284C] text-xs lg:text-sm font-medium mb-1.5 lg:mb-2">Message</label>
                   <textarea
                     placeholder="Tell us more about your requirement like budget ,area & others .."
-                    rows={4}
-                    className="w-full bg-white border border-gray-300 rounded-md px-4 py-2.5 focus:outline-none focus:border-[#10284C] resize-none transition-all duration-300 hover:border-[#10284C]/50"
+                    rows={3}
+                    className="w-full bg-white border border-gray-300 rounded-md px-3 lg:px-4 py-2 lg:py-2.5 text-sm focus:outline-none focus:border-[#10284C] resize-none"
                   ></textarea>
                 </div>
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="bg-[#10284C] text-white px-6 md:px-8 py-2 md:py-2.5 rounded-md flex items-center justify-center md:justify-end gap-2 hover:bg-[#0d2142] hover:scale-105 transition-all duration-300 w-full md:w-auto"
+                  className="bg-[#10284C] text-white px-6 lg:px-8 py-2 lg:py-2.5 rounded-md flex items-center justify-center lg:justify-end gap-2 hover:bg-[#0d2142] transition w-full lg:w-auto"
                 >
-                  <span>Submit</span>
-                  <FaArrowRight size={14} className="ml-4 md:ml-10" />
+                  <span className="text-sm">Submit</span>
+                  <FaArrowRight size={12} className="lg:w-[14px] lg:h-[14px] ml-2 lg:ml-10" />
                 </button>
               </form>
             </div>
 
             {/* Map Section - Below the blur card */}
-            <div className="mt-4 mb-4 lg:mb-0 lg:mt-6 w-full h-[15vh] md:h-[20vh] rounded-md overflow-hidden bg-gray-200 border border-gray-300 relative transition-transform duration-300 hover:scale-105">
+            <div className="mt-3 mb-4 lg:mb-0 lg:mt-6 w-full h-[15vh] lg:h-[20vh] rounded-md overflow-hidden bg-gray-200 border border-gray-300 relative">
               <Image
                 src="/675.png"
                 alt="Map"
