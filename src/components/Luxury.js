@@ -71,7 +71,7 @@ export default function Commercial() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[70vh] lg:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[95vh] lg:min-h-[98vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
           src="/images_pages/luxury.png"
@@ -85,7 +85,7 @@ export default function Commercial() {
         <div className="absolute inset-0" />
 
         {/* 🔍 Search Bar (Half on BG, Half outside) */}
-        <div className="absolute left-1/2 lg:bottom-[110px] bottom-56 shadow-md transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:w-[50%] px-4 lg:px-0">
+        <div className="absolute left-1/2 lg:bottom-[240px] bottom-56 shadow-md transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:w-[50%] px-4 lg:px-0">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 shadow-md lg:gap-6  mb-10 lg:mb-10">
             {[
               { value: "34", label: "Total Projects" },
@@ -95,7 +95,7 @@ export default function Commercial() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center  bg-black/10 backdrop-blur-md border border-white/20 rounded-md p-3  lg:p-6 text-white h-28 lg:h-32"
+                className="flex flex-col items-center  border border-white/10 backdrop-blur-[10px] bg-white/20  rounded-md p-3  lg:p-6 text-white h-28 lg:h-32"
               >
                 <h2 className="text-lg  lg:text-2xl font-semibold mb-2">
                   {item.value}
@@ -112,7 +112,7 @@ export default function Commercial() {
 
 
 
-        <div className="absolute w-full flex justify-center px-4 lg:px-40 bottom-14 lg:bottom-[-45px]">
+        <div className="absolute w-full flex justify-center px-4 lg:px-40 bottom-14 lg:bottom-[-25px]">
           <div
             className="
       grid w-full overflow-x-auto lg:overflow-visible
@@ -140,7 +140,7 @@ export default function Commercial() {
 
         {/* Mobile Filters Button - Absolute positioned in hero section */}
         <div className="absolute left-1/2 bottom-[-45px] mb-4 transform -translate-x-1/2 z-20 w-[100%] px-4 lg:hidden">
-          <div ref={filtersRef} className="flex flex-col gap-3 bg-[#8C8C8C66] border border-white/20 p-3 px-10  rounded-md shadow-md">
+          <div ref={filtersRef} className="flex flex-col gap-3 bg-white/20 backdrop-blur-[10px] border border-white/10 p-3 px-10  rounded-md shadow-md">
             {/* Single Filters Button for Mobile */}
             <div
               onClick={() => setShowFilters(!showFilters)}
@@ -192,9 +192,9 @@ export default function Commercial() {
       </section>
 
       {/* Desktop Filter Items */}
-      <div className="hidden lg:flex w-full justify-center pt-16 ">
-        <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 px-20 rounded-md shadow-md 
-                  gap-4 grid-cols-1 lg:grid-cols-4">
+      <div className="hidden lg:flex  w-full justify-center lg:pt-0 pt-0 lg:-mt-44 lg:mb-8 relative z-50">
+        <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md 
+                  gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
           {/* Filter Items */}
           {["Property Type", "Location", "Status", "Date"].map((label, index) => (
@@ -232,7 +232,7 @@ export default function Commercial() {
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
 
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-4   lg:px-10 xl:px-20 p-4 lg:p-6">
+      <div className="grid grid-cols-1 mt-10 lg:mt-14 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 px-4   lg:px-10 xl:px-20 p-4 lg:p-6">
         {properties.map((property) => (
           <div
             key={property.id}

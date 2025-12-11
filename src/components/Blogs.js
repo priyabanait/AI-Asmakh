@@ -60,7 +60,7 @@ export default function Buy() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[70vh] sm:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[90vh] lg:min-h-[90vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
           src="/images_pages/blogs.png"
@@ -74,9 +74,9 @@ export default function Buy() {
         <div className="absolute inset-0" />
 
         {/* 🔍 Search Bar (Half on BG, Half outside) */}
-        <div className="absolute left-1/2 bottom-[150px] lg:bottom-[100px] transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] px-4 sm:px-0  ">
-          <div className="bg-[#8C8C8C66] backdrop-blur-md border border-[#8C8C8C66] rounded-md p-10 sm:p-6 lg:p-10 shadow-lg">
-            <p className="text-center font-semibold text-lg sm:text-base md:text-lg">Find Knowledge that did not know !</p>
+        <div className="absolute left-1/2 bottom-20 mb-16 transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
+          <div className="border border-white/10 backdrop-blur-[10px] bg-white/30 rounded-md p-4 lg:p-6 shadow-lg">
+            <p className="text-center font-semibold text-lg sm:text-base md:text-lg lg:text-xl text-[#10284C]">Find Knowledge that did not know !</p>
           </div>
         </div>
 
@@ -133,11 +133,11 @@ export default function Buy() {
         </div>
 
         {/* Desktop Filter Items - Half on BG, Half outside */}
-        <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-20 w-full hidden md:flex justify-center px-4 lg:px-10">
+        <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-14 relative z-30">
           <div
             className="
-      grid w-full bg-[#8C8C8C66] p-4 lg:mx-24 px-20 rounded-md shadow-md gap-4
-      grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+      grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md gap-4
+      grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
     "
           >
             {/* Filter Items */}

@@ -78,7 +78,7 @@ export default function Buy() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[80vh] lg:min-h-[70vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[95vh] lg:min-h-[98vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
           src="/images_pages/services lease.png"
@@ -92,8 +92,8 @@ export default function Buy() {
         <div className="absolute inset-0" />
 
         {/* Hero Text Box - Mobile and Desktop */}
-        <div className="absolute left-1/2 bottom-[355px] lg:bottom-[160px] mb-4 transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:w-[58%] px-4 lg:px-0">
-          <div className="bg-[#8C8C8C66] backdrop-blur-md border border-[#8C8C8C66] rounded-md p-4  lg:p-12 shadow-lg">
+        <div className="absolute left-1/2 bottom-20 mb-16 transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
+          <div className="border border-white/10 backdrop-blur-[10px] bg-white/30 rounded-md p-4 lg:p-6 shadow-lg">
             <p className="text-center text-xl  lg:text-3xl font-semibold text-white">LUXURY PROPERTIES FOR LEASE</p>
             <div className="w-[60%]  lg:w-[40%] h-[1px] bg-gray-300 lg:mb-2 mt-4  lg:mt-8 mx-auto my-2 lg:my-4"></div>
             <p className="text-[10px] lg:text-xs text-white text-center">Discover our exclusive collection of premium residential and commercial properties available for lease in the most desirable locations.</p>
@@ -101,7 +101,7 @@ export default function Buy() {
         </div>
 
         {/* Stats Cards */}
-        <div className="absolute left-1/2 bottom-[145px] lg:bottom-[-20px] transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:w-[65%] px-4 lg:px-0">
+        <div className="absolute left-1/2 bottom-[145px] lg:bottom-[110px] transform -translate-x-1/2 translate-y-1/2 z-20 w-[90%] lg:w-[65%] px-4 lg:px-0">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-6 mb-10 lg:mb-10">
             {[
               { value: "05", label: "Residential" },
@@ -111,7 +111,7 @@ export default function Buy() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center bg-black/10 backdrop-blur-md border border-white/20 rounded-md p-3 lg:p-4 lg:p-6 text-white h-28 lg:h-32 lg:h-32 lg:h-32"
+                className="flex flex-col items-center  border border-white/10 backdrop-blur-[10px] bg-white/20  rounded-md p-3 lg:p-4 lg:p-6 text-white h-28 lg:h-32"
               >
                 <h2 className="text-lg  lg:text-2xl font-semibold mb-2">
                   {item.value}
@@ -127,7 +127,7 @@ export default function Buy() {
 
         {/* Mobile Filters Button - Absolute positioned in hero section */}
         <div className="absolute left-1/2 bottom-[-45px] mb-4 transform -translate-x-1/2 z-20 w-[100%] px-4 lg:hidden">
-          <div ref={filtersRef} className="flex flex-col gap-3 bg-[#8C8C8C66] border border-white/20 p-3 px-10 rounded-md shadow-md">
+          <div ref={filtersRef} className="flex flex-col gap-3 bg-white/20 backdrop-blur-[10px] border border-white/10 p-3 px-10 rounded-md shadow-md">
             {/* Single Filters Button for Mobile */}
             <div
               onClick={() => setShowFilters(!showFilters)}
@@ -179,9 +179,9 @@ export default function Buy() {
       </section>
 
       {/* Desktop Filter Items */}
-      <div className="hidden lg:flex w-full justify-center pt-20">
-        <div className="grid w-full bg-[#8C8C8C66] p-4 lg:mx-20 px-20 rounded-md shadow-md 
-                  gap-4 grid-cols-1 lg:grid-cols-4">
+      <div className="hidden lg:flex  w-full justify-center lg:pt-0 pt-0 lg:-mt-44 lg:mb-8 relative z-50">
+        <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md 
+                  gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
           {/* Filter Items */}
           {["Location", "Type", "Featured", "Date"].map((label, index) => (
@@ -218,7 +218,7 @@ export default function Buy() {
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
 
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6 px-4  lg:px-20 p-4 lg:p-6 ">
+      <div className="grid grid-cols-1 mt-10 lg:mt-14 lg:grid-cols-3 gap-4 lg:gap-6 px-4  lg:px-20 p-4 lg:p-6 ">
         {properties.map((property) => (
           <div
             key={property.id}
