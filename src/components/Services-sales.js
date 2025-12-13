@@ -96,7 +96,7 @@ export default function Rent() {
               EXPERT REAL ESTATE SALES
             </h2>
             {/* Divider */}
-            <div className="w-full h-[1px] bg-gray-400 my-3 sm:my-4 lg:mr-40"></div>
+            <div className="w-[80%] h-[1px] bg-gray-400 my-3 sm:my-4 lg:mr-40"></div>
             {/* Subtitle */}
             <p className="subheading mb-10 font-semibold text-[#10284C] lg:mr-40">
               Whether buying or selling, our experienced team provides personalized

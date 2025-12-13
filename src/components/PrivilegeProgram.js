@@ -242,9 +242,9 @@ export default function PrivilegeProgram() {
 
 
         <p
-          id="desc "
-          style={{ color: "#919191", fontSize: "16px" }}
-          className="mb-8"
+          style={{ fontSize: "clamp(13px, 0.8vw, 17px)", color: "#919191" }}
+
+          className="mb-7"
 
         >
 
@@ -341,10 +341,11 @@ export default function PrivilegeProgram() {
                         <p
                           style={{
                             color: "#4A5568",
-                            fontSize: "13px"
+
                           }}
                           // id="desc"
-                          className="p-0 leading-relaxed mb-0 text-[13px]"
+
+                          className=" subheading p-0 leading-relaxed mb-0 "
                         >
                           {item.description}
                         </p>
@@ -415,8 +416,8 @@ export default function PrivilegeProgram() {
                 </h3>
                 <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
-                  style={{ fontSize: "13px", color: "#4A5568" }}
-                  className="p-0 leading-relaxed mb-0 text-[13px] md:text-[13px]"
+                  style={{ color: "#4A5568", fontSize: "clamp(13px, 0.8vw, 17px)" }}
+                  className="p-0 leading-relaxed mb-0  "
                 >
                   {item.description}
                 </p>
@@ -461,8 +462,8 @@ export default function PrivilegeProgram() {
                 </h3>
                 <div className="w-[90%] h-[1px] bg-gray-300 mx-auto my-2 transition-all duration-300 group-hover:w-full"></div>
                 <p
-                  style={{ fontSize: "13px", color: "#4A5568" }}
-                  className="p-0 leading-relaxed mb-0 text-[13px] md:text-[13px]"
+                  style={{ fontSize: "clamp(13px, 0.8vw, 17px)", color: "#4A5568" }}
+                  className="p-0 leading-relaxed mb-0 "
                 >
                   {item.description}
                 </p>

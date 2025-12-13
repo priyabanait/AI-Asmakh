@@ -264,7 +264,7 @@ export default function AlAsmakhTower() {
           </div>
 
           <p
-            style={{ color: "#919191", fontSize: "15px" }}
+            style={{ color: "#919191", fontSize: "clamp(13px, 0.8vw, 17px)" }}
             className="mb-6 mr-60 lg:mb-16 leading-relaxed text-[15px] md:text-[15px]"
           >
             {projects[activeSlide].description}
@@ -341,7 +341,7 @@ export default function AlAsmakhTower() {
             EXPLORE BY AREA
           </h2>
           <div className="flex-1 h-px bg-gray-300 my-3 md:my-4 mx-auto w-[40%] md:w-[20%] mb-3 md:mb-4"></div>
-          <p className="text-gray-500  text-[16px ] md:text-[16px]  max-w-2xl mx-auto mb-8 md:mb-12 text-center   px-2 md:px-0">
+          <p style={{ fontSize: "clamp(13px, 0.8vw, 17px)" }} className="text-gray-500   max-w-2xl mx-auto mb-8 md:mb-12 text-center   px-2 md:px-0">
             Browse luxury homes and investments across Qatar's finest districts,
             each offering its own lifestyle, charm, and opportunity.
           </p>

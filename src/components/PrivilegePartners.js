@@ -364,17 +364,11 @@ export default function Profit() {
     2xl:max-w-4xl 
     3xl:max-w-5xl 
     4xl:max-w-6xl 
-    5xl:max-w-7xl  /* FIX FOR 5K MONITORS */
+    5xl:max-w-7xl 
 
     mb-8 lg:mb-12 2xl:mb-14 3xl:mb-16 4xl:mb-20 5xl:mb-24
-    
-    text-[16px] 
-    lg:text-base 
-    2xl:text-[16px] 
-    3xl:text-xl 
-    4xl:text-2xl 
-    5xl:text-3xl
-  "
+ 
+  " style={{ fontSize: "clamp(13px, 0.8vw, 17px)" }}
         >
           From luxury residences to commercial developments, we deliver trusted
           services that turn your
@@ -427,7 +421,7 @@ export default function Profit() {
                     height={14}
                     className="mr-1.5 lg:mr-2 lg:w-4 lg:h-4 2xl:w-5 2xl:h-5 3xl:w-6 3xl:h-6 4xl:w-7 4xl:h-7 5xl:w-8 5xl:h-8"
                   />
-                  <span className="line-clamp-1">{property.location}</span>
+                  <span className="line-clamp-1" style={{ fontSize: "clamp(13px, 0.8vw, 17px)" }}>{property.location}</span>
                 </div>
 
                 {/* Bed/Bath/Area Info */}

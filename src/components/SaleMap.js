@@ -2,7 +2,10 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Search, Mic, MapPin, ArrowDown, Bed, Bath, Square, ArrowRight, Leaf, Home, Map as MapIcon, SlidersHorizontal } from "lucide-react";
+import {
+  Search, Mic, MapPin, ArrowDown, Bed, Bath, Square, ArrowRight, Leaf, Home,
+  Map as MapIcon, SlidersHorizontal
+} from "lucide-react";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaList } from "react-icons/fa";
@@ -61,7 +64,7 @@ export default function Sale() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[90vh] lg:min-h-[90vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[80vh] lg:min-h-[80vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
           src="/images_pages/listings.png"
@@ -81,10 +84,10 @@ export default function Sale() {
             {/* Transaction Type Selector - Separate Box */}
             <div className="border border-white/10 backdrop-blur-sm bg-white/20  rounded-md border-[#8C8C8C66]  p-3 shadow-md">
               <div className="flex justify-center gap-2">
-                <button className="px-8 py-2 rounded-md bg-gray-400 text-white font-medium shadow transition">
+                <button className="px-8 py-1.5 rounded-md bg-gray-400 text-white font-medium shadow transition">
                   RENT
                 </button>
-                <button className="px-8 py-2 rounded-md bg-[#10284C] text-white font-medium shadow transition">
+                <button className="px-8 py-1.5 rounded-md bg-[#10284C] text-white font-medium shadow transition">
                   BUY
                 </button>
               </div>
@@ -138,16 +141,16 @@ export default function Sale() {
         </div>
 
         {/* Desktop Version */}
-        <div className="absolute left-1/2 bottom-20 mb-[10%]  transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
+        <div className="absolute left-1/2 bottom-20 mb-[6%]  transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden lg:block">
           <div className="border border-white/10 backdrop-blur-[10px] bg-white/30 rounded-md p-4 lg:p-6 shadow-lg">
             {/* Buttons Section */}
             <div className="flex justify-center gap-4 mb-4">
 
-              <button className="px-20 py-2 rounded-md  backdrop-blur-[20px] bg-white/10 border border-white/40
+              <button className="px-20 py-1.5 rounded-md bg-[#0B1F3A]/40 text-white  backdrop-blur-[20px]  border border-white/40
  font-medium shadow  transition text-[#10284C]">
                 RENT
               </button>
-              <button className="px-20 py-2 rounded-md bg-[#10284C] text-white font-medium shadow  transition">
+              <button className="px-20 py-1.5 rounded-md bg-[#10284C] text-white font-medium shadow  transition">
                 BUY
               </button>
             </div>
@@ -160,7 +163,8 @@ export default function Sale() {
               <input
                 type="text"
                 placeholder="Explore and discover everything about our trusted agents..."
-                className="flex-1 text-gray-800 text-sm lg:text-base bg-transparent outline-none placeholder:text-gray-500"
+                className="flex-1 text-gray-500 text-[8px] lg:text-base bg-transparent outline-none
+                 placeholder:text-[10px] lg:placeholder:text-base placeholder:text-gray-400"
               />
               <Mic className="text-gray-500 h-5 w-5 ml-3" />
             </div>
@@ -196,8 +200,8 @@ export default function Sale() {
         </div>
       </div>
 
-      <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-[8%] relative z-30">
-        <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-20 rounded-md shadow-md 
+      <div className="hidden lg:flex w-full justify-center lg:pt-0 pt-0 lg:-mt-[2%] relative z-30">
+        <div className="grid w-full border border-white/10 backdrop-blur-[10px] bg-white/20 p-4 lg:mx-10 rounded-md shadow-md 
                   gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
 
           {/* Filter Items */}
@@ -223,7 +227,7 @@ export default function Sale() {
             return (
               <div
                 key={index}
-                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-2 
+                className="flex items-center justify-between bg-[#0B1F3A] text-white px-4 py-1.5 
                      rounded-md shadow-lg hover:bg-[#10284C] transition"
               >
                 <div className="flex items-center gap-3">
@@ -234,7 +238,7 @@ export default function Sale() {
                   </div>
 
                   {/* Label */}
-                  <span className="text-sm font-medium">{label}</span>
+                  <span className="text-[13px] ">{label}</span>
                 </div>
 
                 {/* Down Arrow */}
@@ -243,61 +247,73 @@ export default function Sale() {
             );
           })}
           {/* More Filters Button */}
-          <button className="flex items-center justify-center  bg-[#0B1F3A]/40 text-white px-6 py-3 rounded-md  font-medium shadow-lg hover:bg-[#5c1eff] transition">
-            <span>+ More Filters</span>
+          <button className="flex text-[13px] items-center 
+          justify-center  bg-[#0B1F3A]/40 text-white px-6 py-2 
+          rounded-md  font-medium shadow-lg hover:bg-[#5c1eff] transition">
+            <span className="text-[13px]">+ More Filters</span>
           </button>
         </div>
       </div>
 
-      <div className="hidden lg:block w-[100%] h-[1px] bg-gray-300 my-4  px-10"></div>
 
       {/* ---------- READY TO FIND SECTION ---------- */}
+      {/* <div className="hidden lg:block w-[100%] h-[1px] bg-gray-300 my-4  px-10"></div> */}
 
 
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
       <div className="hidden lg:block min-h-screen ">
+
+
+
         {/* Header Bar */}
-        <div className="bg-white  border-gray-200 px-2 lg:px-4">
-          <div className="hidden lg:flex max-w-full mb-5 bg-gray-50  mx-auto  items-center justify-between">
-            {/* LIST/MAP Toggle Buttons */}
-            <div className="flex items-center  bg-[#001730] mt-5 rounded-md p-0.5">
+        <div className="bg-white border-gray-200 px-2 bg-gray-50 mt-6 lg:px-4">
+          <div className="hidden lg:flex max-w-full mb-5 bg-gray-50 mx-auto items-center gap-4">
+
+            {/* Showing Count (Left) */}
+            <div className="text-gray-400 text-sm font-medium whitespace-nowrap">
+              Showing 5 of 50
+            </div>
+
+            {/* CENTER LINE */}
+            <div className="flex-1 h-[1px] bg-gray-300"></div>
+
+            {/* LIST / MAP Buttons (Right) */}
+            <div className="flex items-center gap-2">
               {/* LIST Button */}
               <button
                 onClick={() => setViewMode("LIST")}
-                className={`flex items-center gap-1.5 px-2 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "LIST"
-                  ? "bg-white text-[#001730]"
-                  : "text-white"
+                className={`flex items-center gap-1.5 px-6 py-2 rounded-md text-base font-semibold transition-all
+    ${viewMode === "LIST"
+                    ? "border border-white/40 backdrop-blur-md bg-[#e3e2d8]/40 text-[#001730] shadow-[0_4px_14px_rgba(0,0,0,0.15)]"
+                    : "text-gray-600"
                   }`}
               >
-
-
-                <FaList size={12} />
-                <span className="text-[10px]">List</span>
+                <FaList size={14} />
+                <span className="text-[15px]">List</span>
               </button>
+
+
+              {/* Divider */}
+              <div className="h-4 w-[1px] bg-gray-300 mx-0.5"></div>
 
               {/* MAP Button */}
               <button
                 onClick={() => setViewMode("MAP")}
-                className={`flex items-center gap-1.5 px-2 py-1.5 rounded-md text-sm font-medium transition-all ${viewMode === "MAP"
-                  ? "bg-white text-[#001730]"
-                  : "text-white"
+                className={`flex items-center gap-1.5 px-6 py-2 rounded-md text-base font-semibold transition-all ${viewMode === "MAP"
+                  ? "border border-white/40 backdrop-blur-md bg-[#e3e2d8]/40 text-[#001730] shadow-[0_4px_14px_rgba(0,0,0,0.15)]"
+
+                  : "text-gray-600"
                   }`}
               >
-
-                <FaMapLocationDot size={12} />
-
-                <span className="text-[10px]">Map</span>
+                <FaMapLocationDot size={14} />
+                <span className="text-[15px]">Map</span>
               </button>
             </div>
 
-
-
-            {/* Showing Count */}
-            <div className="text-gray-600 text-sm font-medium">
-              Showing 5 of 50
-            </div>
           </div>
         </div>
+
+
 
         {/* Main Content: List and Map */}
         <div className="hidden lg:flex h-[calc(100vh-120px)]">

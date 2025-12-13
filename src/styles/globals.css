@@ -166,7 +166,7 @@ a {
 
   /* Universal Subheading Text Class */
   .subheading {
-    @apply text-[10px] sm:text-[11px] lg:mx-0 md:text-[12px] lg:text-xs;
+    font-size: clamp(13px, 0.8vw, 17px);
   }
 
   /* Universal Glass Effect Class */
