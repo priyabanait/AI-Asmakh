@@ -99,10 +99,10 @@ export default function ContactHeadOffice() {
         {/* Content (Centered Box) */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-4 md:px-8">
           <div className="glass-effect rounded-md px-6 md:px-10 py-8 md:py-20 shadow-lg max-w-[900px] mx-auto text-center">
-            <h1 className="heading text-white font-semibold mb-2">
+            <h1 className="text-[26px] text-white font-semibold mb-2">
               CONTACT OUR HEAD OFFICE
             </h1>
-            <div className="w-[40%] sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] mt-2 bg-white mb-3 md:mb-4 mx-auto"></div>
+            <div className="w-[40%] mt-5 sm:w-[40%] md:w-[40%] lg:w-[40%] h-[1px] mt-2 bg-white mb-3 md:mb-4 mx-auto"></div>
             <p className="subheading text-white/80 font-medium">
               Get in touch with our head office team for corporate inquiries, partnerships, and general information.
             </p>
@@ -405,7 +405,7 @@ export default function ContactHeadOffice() {
 
         <div className="md:mx-10 mx-auto relative z-10">
           {/* Form Container */}
-          <div className="bg-gray-200 rounded-lg shadow-lg p-8 md:p-12">
+          <div className="glass-effect bg-white/20 backdrop-blur-md rounded-lg shadow-lg p-8 md:p-12 border border-white/10">
             {/* Title */}
             <h2 className="heading font-semibold text-[#001730] text-center mb-4">
               LET'S CONNECT
@@ -576,15 +576,15 @@ export default function ContactHeadOffice() {
                       padding: "0 8px",
                     }}
                   >
-                    <div className="relative bg-gray-200 rounded-lg p-3 shadow-md overflow-hidden">
-                      {/* Background Image */}
-                      <Image
-                        src="/office_location_background 1.png"
-                        alt="Office Background"
-                        fill
-                        className="object-fill opacity-20"
-                      />
-
+                    <div
+                      style={{
+                        backgroundImage: 'url(/images/office_location.png)',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'left center',
+                        backgroundRepeat: 'no-repeat',
+                      }}
+                      className="relative bg-[#EEEEEE] rounded-lg p-3 shadow-md overflow-hidden"
+                    >
                       <div className="relative z-10">
                         <h3 className="text-lg font-bold text-[#001730] mb-1">{office.title}</h3>
                         <p className="text-sm text-gray-500 mb-4">{office.subtitle}</p>
@@ -640,15 +640,16 @@ export default function ContactHeadOffice() {
           {/* Desktop Grid - Hidden on mobile */}
           <div className="hidden lg:grid grid-cols-5 gap-4">
             {offices.map((office, index) => (
-              <div key={index} className="relative bg-[#EEEEEE] rounded-lg p-3 shadow-md overflow-hidden">
-                {/* Background Image */}
-                <Image
-                  src="/office_location_background 1.png"
-                  alt="Office Background"
-                  fill
-                  className="object-fill opacity-20"
-                />
-
+              <div
+                key={index}
+                style={{
+                  backgroundImage: 'url(/images/office_location.png)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: ' center',
+                  backgroundRepeat: 'no-repeat',
+                }}
+                className="relative bg-[#EEEEEE] rounded-lg p-3 shadow-md overflow-hidden"
+              >
                 <div className="relative z-10">
                   <h3 className="text-lg font-bold text-[#001730] mb-1">{office.title}</h3>
                   <p className="text-sm text-gray-500 mb-4">{office.subtitle}</p>

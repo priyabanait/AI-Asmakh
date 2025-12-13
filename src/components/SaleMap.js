@@ -160,10 +160,14 @@ export default function Sale() {
               <div className="p-2 bg-[#10284C] rounded-md mr-2 flex items-center justify-center h-[28px] w-[28px]">
                 <Search className="text-white h-4 w-4" />
               </div>
+
+
+
               <input
                 type="text"
                 placeholder="Explore and discover everything about our trusted agents..."
-                className="flex-1 text-gray-500 text-[8px] lg:text-base bg-transparent outline-none
+                className="flex-1 text-gray-500 text-[8px] lg:text-base
+                 bg-transparent outline-none
                  placeholder:text-[10px] lg:placeholder:text-base placeholder:text-gray-400"
               />
               <Mic className="text-gray-500 h-5 w-5 ml-3" />

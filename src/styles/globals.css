@@ -179,6 +179,19 @@ a {
     @apply flex items-center justify-center gap-2 bg-[#10284C] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg text-sm md:text-base;
     font-size: clamp(13px, 1.1vw, 16px);
   }
+
+  /* Universal Button with Arrow Alignment Class */
+  .btn-with-arrow {
+    @apply flex items-center justify-between gap-2;
+  }
+  
+  .btn-with-arrow span {
+    @apply flex-shrink-0;
+  }
+  
+  .btn-with-arrow svg {
+    @apply flex-shrink-0;
+  }
 }
 
 /* Custom scrollbar with glass effect */

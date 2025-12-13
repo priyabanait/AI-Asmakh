@@ -50,7 +50,9 @@ export default function Hero() {
 
 
           {/* Line */}
-          <div className="w-[90%] h-[0.2px] mt-2 lg:mt-3 bg-[#FFFFFF] mx-auto  lg:mx-0 mb-3  lg:mb-2"></div>
+
+
+          <div className="w-[95%] h-[0.2px] mt-2 lg:mt-3 bg-gray-400 mx-auto  lg:mx-0 mb-3  lg:mb-2"></div>
 
           {/* DESCRIPTION */}
           <p
@@ -94,7 +96,7 @@ export default function Hero() {
             </button>
 
           </div>
-          <div className="w-[90%] h-[0.2px]  bg-[#FFFFFF] my-2 "></div>
+          <div className="w-[90%] h-[0.2px] bg-gray-400  bg my-2 "></div>
           {/* <div className="p-4 bg-gray-400 rounded-[3px] shadow-md gap-4 flex flex-wrap lg:hidden">
 
 <button

@@ -131,14 +131,15 @@ export default function Rent() {
             </div>
           </div>
 
+
           {/* Contact Team Button - Below the box */}
           <div className="w-full max-w-5xl mx-auto mt-4 lg:mt-6">
-            <div className="flex-shrink-0 lg:mr-40">
-              <button className="btn-details">
-                <span>Contact Team</span>
-                <FaArrowRight size={12} className="md:w-[14px] md:h-[14px] ml-4 md:ml-16" />
-              </button>
-            </div>
+
+            <button className="bg-[#001730] w-[24%] text-white px-6 py-4 rounded-md font-medium text-[12px] lg:text-[12px] hover:bg-[#002d52] transition-all duration-300 flex items-center justify-between shadow-lg">
+              <span>Contact Team</span>
+              <FaArrowRight size={16} />
+            </button>
+
           </div>
         </div>
 
@@ -274,13 +275,13 @@ export default function Rent() {
 
 
       {/* ---------- LIST AND MAP VIEW SECTION ---------- */}
-      <section className="w-full bg-gray-200 py-16 px-6 md:px-20">
+      <section className="w-full  py-16 px-6 md:px-20">
         {/* Section Heading */}
         <div className="text-center mb-12">
           <h2 className="heading font-semibold text-[#10284C] mb-2">
             COMPREHENSIVE SALES SERVICES
           </h2>
-          <div className="w-[30%] h-[1.5px] bg-gray-300 my-2  mx-auto md:my-3"></div>
+          <div className="w-[30%] h-[1.5px]  my-2  mx-auto md:my-3"></div>
           <p className="subheading text-gray-500">
             From initial consultation to closing, we provide full-service real estate sales support.
           </p>
@@ -289,7 +290,7 @@ export default function Rent() {
         {/* Service Boxes */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {/* Card 1 */}
-          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6 bg-[#EEEEEE] shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Market Analysis</h3>
             <p className="subheading text-gray-600">
               Comprehensive market research and competitive analysis to price your property optimally.
@@ -297,7 +298,7 @@ export default function Rent() {
           </div>
 
           {/* Card 2 */}
-          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6  bg-[#EEEEEE] shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Property Valuation</h3>
             <p className="subheading text-gray-600">
               Professional property appraisal and valuation services using latest market data.
@@ -305,7 +306,7 @@ export default function Rent() {
           </div>
 
           {/* Card 3 */}
-          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6  bg-[#EEEEEE] shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Expert Negotiation</h3>
             <p className="subheading text-gray-600">
               Skilled negotiation to secure the best possible terms for buyers and sellers.
@@ -313,7 +314,7 @@ export default function Rent() {
           </div>
 
           {/* Card 4 */}
-          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6  bg-[#EEEEEE] shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Transaction Management</h3>
             <p className="subheading text-gray-600">
               Complete transaction coordination from contract to closing with legal support.
@@ -321,7 +322,7 @@ export default function Rent() {
           </div>
 
           {/* Card 5 */}
-          <div className="glass-effect rounded-md p-6 shadow-md transition-all">
+          <div className="glass-effect rounded-md p-6  bg-[#EEEEEE] shadow-md transition-all">
             <h3 className="text-[#10284C] font-semibold mb-2">Buyer Matching</h3>
             <p className="subheading text-gray-600">
               Extensive network and marketing to connect sellers with qualified buyers.

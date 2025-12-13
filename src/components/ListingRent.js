@@ -192,30 +192,24 @@ export default function Sale() {
 
                 {/* Location */}
                 <div className="flex items-center text-[#10284C] text-sm mb-3">
-                  <Image
-                    src="/Vector.png"
-                    alt="Location"
-                    width={12}
-                    height={12}
-                    className="mr-2"
-                  />
+                  <MapPin size={12} className="mr-2" />
                   <span>{property.location}</span>
                 </div>
 
                 {/* Bed/Bath/Area Info */}
                 <div className="grid grid-cols-3 gap-2 text-[#10284C] text-sm mb-4">
                   <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
-                    <Image src="/Icon (1).png" alt="Beds" width={18} height={18} />
+                    <Bed size={18} />
                     <span>{property.bedrooms}</span>
                   </div>
 
                   <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
-                    <Image src="/Icon.png" alt="Baths" width={18} height={18} />
+                    <Bath size={18} />
                     <span>{property.bathrooms}</span>
                   </div>
 
                   <div className="flex items-center gap-1 bg-white shadow p-2 px-4 rounded-md">
-                    <Image src="/Icon (2).png" alt="Area" width={18} height={18} />
+                    <Square size={18} />
                     <span>{property.area}</span>
                   </div>
                 </div>
@@ -377,13 +371,7 @@ export default function Sale() {
 
                   {/* Location */}
                   <div className="flex items-center text-[#10284C] text-sm mb-3">
-                    <Image
-                      src="/Vector.png"
-                      alt="Location"
-                      width={12}
-                      height={12}
-                      className="mr-2"
-                    />
+                    <MapPin size={12} className="mr-2" />
                     <span>{property.location}</span>
                   </div>
 
@@ -392,37 +380,19 @@ export default function Sale() {
 
                     {/* Beds */}
                     <div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4  rounded-md justify-center">
-                      <Image
-                        src="/Icon (1).png"
-                        alt="Beds"
-                        width={16}
-                        height={16}
-                        className="w-[18px] h-[18px]"
-                      />
+                      <Bed size={18} className="w-[18px] h-[18px]" />
                       <span className="text-xs lg:text-sm">{property.bedrooms}</span>
                     </div>
 
                     {/* Baths */}
                     <div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4   rounded-md justify-center">
-                      <Image
-                        src="/Icon.png"
-                        alt="Baths"
-                        width={16}
-                        height={16}
-                        className="w-[18px] h-[18px]"
-                      />
+                      <Bath size={18} className="w-[18px] h-[18px]" />
                       <span className="text-xs lg:text-sm">{property.bathrooms}</span>
                     </div>
 
                     {/* Area */}
                     <div className="flex items-center gap-1 bg-gray-50 shadow p-2 px-4  rounded-md justify-center">
-                      <Image
-                        src="/Icon (2).png"
-                        alt="Area"
-                        width={16}
-                        height={16}
-                        className="w-[18px] h-[18px]"
-                      />
+                      <Square size={18} className="w-[18px] h-[18px]" />
                       <span className="text-xs lg:text-sm">{property.area}</span>
                     </div>
 
@@ -434,9 +404,9 @@ export default function Sale() {
                   <div className="flex items-center justify-between">
                     <p className="text-base font-bold text-[#10284C]">{property.price} QAR</p>
 
-                    <button className="bg-[#10284C] text-white text-sm font-semibold px-5 py-2 rounded flex items-center gap-2 transition hover:bg-[#1b3a70]">
+                    <button className="bg-[#10284C] text-white text-sm font-medium px-5 py-2 rounded-md flex items-center justify-between gap-2 shadow-lg transition-all duration-300 hover:bg-[#002d52]">
                       <span>Details</span>
-                      <FaArrowRight size={14} className="ml-3" />
+                      <FaArrowRight size={14} />
                     </button>
                   </div>
                 </div>
@@ -471,38 +441,20 @@ export default function Sale() {
                             {property.title}
                           </h3>
                           <div className="flex items-center text-[#10284C] text-sm mb-3">
-                            <Image
-                              src="/Vector.png"
-                              alt="Location"
-                              width={12}
-                              height={12}
-                              className="mr-2"
-                            />
+                            <MapPin size={12} className="mr-2" />
                             <span>{property.location}</span>
                           </div>
                           <div className="flex items-center justify-between text-[#10284C] text-xs lg:text-sm mb-3 lg:mb-4 gap-1">
                             <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
-                              <Bed size={14} className="lg:w-[18px] lg:h-[18px]" />
+                              <Bed size={18} className="lg:w-[18px] lg:h-[18px]" />
                               <span>{property.bedrooms}</span>
                             </div>
                             <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
-                              <Image
-                                src="/Icon.png"
-                                alt="Baths"
-                                width={14}
-                                height={14}
-                                className="lg:w-[18px] lg:h-[18px]"
-                              />
+                              <Bath size={18} className="lg:w-[18px] lg:h-[18px]" />
                               <span>{property.bathrooms}</span>
                             </div>
                             <div className="flex items-center gap-1 shadow p-1.5 lg:p-2 lg:px-6 px-2 rounded-md" style={{ backgroundColor: 'rgba(255, 255, 255, 0.30)' }}>
-                              <Image
-                                src="/Icon (2).png"
-                                alt="Area"
-                                width={14}
-                                height={14}
-                                className="lg:w-[18px] lg:h-[18px]"
-                              />
+                              <Square size={18} className="lg:w-[18px] lg:h-[18px]" />
                               <span>{property.area}</span>
                             </div>
                           </div>
@@ -513,9 +465,9 @@ export default function Sale() {
                             {property.price} QAR
                           </p>
 
-                          <button className="flex items-center gap-2 bg-[#001730] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#002d52] transition-colors">
+                          <button className="bg-[#001730] text-white px-4 py-2 rounded-md text-sm font-medium flex items-center justify-between gap-2 shadow-lg transition-all duration-300 hover:bg-[#002d52]">
                             <span>Details</span>
-                            <ArrowRight size={16} className="ml-10" />
+                            <ArrowRight size={16} />
                           </button>
                         </div>
                       </div>
@@ -526,7 +478,7 @@ export default function Sale() {
 
               {/* Load More Properties Button */}
               <div className="mt-6 mb-4">
-                <button className="w-full bg-[#001730] text-white py-3 rounded-md font-medium hover:bg-[#002d52] transition-colors flex items-center justify-between px-8">
+                <button className="w-full bg-[#001730] text-white py-3 rounded-md font-medium flex items-center justify-between gap-2 shadow-lg transition-all duration-300 hover:bg-[#002d52] px-8">
                   <span>Load More Properties</span>
                   <ArrowRight size={18} />
                 </button>

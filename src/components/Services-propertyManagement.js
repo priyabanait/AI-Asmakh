@@ -178,13 +178,13 @@ export default function Rent() {
           </div>
 
           {/* Contact Team Button - Below the box */}
-          <div className="mt-4 lg:mt-6">
-            <div className="flex-shrink-0 lg:mr-40">
-              <button className="btn-details">
-                <span>Contact Team</span>
-                <FaArrowRight size={12} className="md:w-[14px] md:h-[14px] ml-4 md:ml-16" />
-              </button>
-            </div>
+          <div className="w-full max-w-5xl mx-auto mt-4 lg:mt-6">
+
+            <button className="bg-[#001730] w-[24%] text-white px-6 py-4 rounded-md font-medium text-[12px] lg:text-[12px] hover:bg-[#002d52] transition-all duration-300 flex items-center justify-between shadow-lg">
+              <span>Contact Team</span>
+              <FaArrowRight size={16} />
+            </button>
+
           </div>
         </div>
 

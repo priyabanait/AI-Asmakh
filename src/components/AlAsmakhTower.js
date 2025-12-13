@@ -168,11 +168,11 @@ export default function AlAsmakhTower() {
                 {/* DETAILS BUTTON */}
                 <div className="flex justify-center md:justify-start">
                   <button
-                    className="flex items-center justify-center gap-2 bg-[#10284C] text-white px-4 md:px-6 py-2 md:py-3 rounded-lg hover:bg-[#022d5e] transition-all duration-300 shadow-md hover:shadow-lg text-sm md:text-base"
+                    className="flex items-center justify-between gap-2 bg-[#10284C] text-white px-4 md:px-6 py-2 md:py-3 rounded-md font-medium shadow-lg transition-all duration-300 hover:bg-[#002d52] text-sm md:text-base"
                     style={{ fontSize: "clamp(13px, 1.1vw, 16px)" }}
                   >
                     <span>Details</span>
-                    <FaArrowRight size={12} className="md:w-[14px] md:h-[14px] ml-4 md:ml-16" />
+                    <FaArrowRight size={12} className="md:w-[14px] md:h-[14px]" />
                   </button>
                 </div>
 
@@ -271,11 +271,11 @@ export default function AlAsmakhTower() {
           </p>
 
 
-          <button className="bg-[#10284C] text-white text-xs lg:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl 5xl:text-2xl font-semibold px-4 lg:px-5 2xl:px-6 3xl:px-7 4xl:px-8 5xl:px-10 py-1.5 lg:py-2 2xl:py-3 3xl:py-3 4xl:py-4 5xl:py-5 rounded flex items-center justify-center gap-2  w-fit transition hover:bg-[#1b3a70]">
+          <button className="bg-[#10284C] text-white text-xs lg:text-sm 2xl:text-base 3xl:text-lg 4xl:text-xl 5xl:text-2xl font-medium px-4 lg:px-5 2xl:px-6 3xl:px-7 4xl:px-8 5xl:px-10 py-1.5 lg:py-2 2xl:py-3 3xl:py-3 4xl:py-4 5xl:py-5 rounded-md flex items-center justify-between gap-2 w-fit shadow-lg transition-all duration-300 hover:bg-[#002d52]">
             <span>Details</span>
             <FaArrowRight
               size={12}
-              className="lg:w-[14px] lg:h-[14px] 2xl:w-[18px] 2xl:h-[18px] 3xl:w-[22px] 3xl:h-[22px] 4xl:w-[26px] 4xl:h-[26px] 5xl:w-[32px] 5xl:h-[32px] ml-4 lg:ml-20 2xl:ml-24 3xl:ml-28 4xl:ml-32 5xl:ml-40"
+              className="lg:w-[14px] lg:h-[14px] 2xl:w-[18px] 2xl:h-[18px] 3xl:w-[22px] 3xl:h-[22px] 4xl:w-[26px] 4xl:h-[26px] 5xl:w-[32px] 5xl:h-[32px]"
             />
           </button>
 

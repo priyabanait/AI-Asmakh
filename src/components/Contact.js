@@ -51,7 +51,7 @@ export default function MeetOurAgents() {
   return (
     <div>
       {/* ---------- HERO SECTION ---------- */}
-      <section className="relative w-full min-h-[95vh] lg:min-h-[95vh] flex flex-col items-center justify-center overflow-visible">
+      <section className="relative w-full min-h-[85vh] lg:min-h-[85vh] flex flex-col items-center justify-center overflow-visible">
         {/* Background Image */}
         <Image
           src="/WhatsApp Image 2025-11-08 at 10.47.12 PM.jpeg"
@@ -79,7 +79,7 @@ export default function MeetOurAgents() {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-6 lg:mt-4 mb-10 lg:mb-16 w-[90%] sm:w-[80%] md:w-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-6 lg:mt-4 w-[90%] sm:w-[80%] md:w-auto px-4">
             {[
               { value: "50+", label: "Expert Agents" },
               { value: "1,200+", label: "Properties Sold" },
@@ -102,26 +102,7 @@ export default function MeetOurAgents() {
           </div>
         </div>
 
-        {/* 🔍 Search Bar (Half on BG, Half outside) */}
-        <div className="absolute left-1/2 bottom-20 transform -translate-x-1/2 translate-y-1/2 z-20 w-[70%] lg:w-[60%] hidden md:block">
-          <div className="glass-effect rounded-md p-4 lg:p-4 shadow-lg">
-            {/* Buttons Section */}
 
-
-            {/* Search Bar */}
-            <div className="bg-white rounded-md shadow-lg flex items-center px-4 mx-20 py-3">
-              <div className="p-2 bg-[#10284C] rounded-md mr-2 flex items-center justify-center h-[28px] w-[28px]">
-                <Search className="text-white h-4 w-4" />
-              </div>
-              <input
-                type="text"
-                placeholder="Explore and discover everything about our trusted agents..."
-                className="flex-1 text-gray-800 text-sm md:text-base bg-transparent outline-none placeholder:text-gray-500"
-              />
-              <Mic className="text-gray-500 h-5 w-5 ml-3" />
-            </div>
-          </div>
-        </div>
 
         {/* Mobile Filters Button - Absolute positioned in hero section */}
         <div className="absolute left-1/2 bottom-[-45px] mb-4 transform -translate-x-1/2 z-20 w-[90%] px-4 md:hidden">
@@ -277,13 +258,13 @@ export default function MeetOurAgents() {
 
                 {/* Buttons */}
                 <div className="flex flex-row gap-2">
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-[#10284C] text-white py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-[#0d1f3a] transition">
-                    Call Agent
-                    <FaArrowRight size={12} className="sm:w-[14px] sm:h-[14px] ml-6" />
+                  <button className="flex-1 flex items-center p-2 justify-between gap-2 bg-[#10284C] text-white py-2 rounded-lg text-[12px] sm:text-[12px] font-medium hover:bg-[#0d1f3a] transition">
+                    <span>Call Agent</span>
+                    <FaArrowRight size={12} className="sm:w-[14px] sm:h-[14px]" />
                   </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 bg-[#10284C] text-white py-2 rounded-lg text-xs sm:text-sm font-medium hover:bg-[#0d1f3a] transition">
-                    Send Email
-                    <FaArrowRight size={12} className="sm:w-[14px] sm:h-[14px] ml-6" />
+                  <button className="flex-1 flex p-4 items-center justify-between gap-2 bg-[#10284C] text-white py-2 rounded-lg text-[12px] sm:text-[12px] font-medium hover:bg-[#0d1f3a] transition">
+                    <span>Send Email</span>
+                    <FaArrowRight size={12} className="sm:w-[14px] sm:h-[14px]" />
                   </button>
                 </div>
               </div>
